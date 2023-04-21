@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./firebase";
+
+// 실행부분
 
 function App() {
   return (
