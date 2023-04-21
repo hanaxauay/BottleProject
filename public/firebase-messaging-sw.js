@@ -1,7 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getMessaging } from "firebase/messaging/sw";
+importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js');
+importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging-compat.js');
 
-const firebaseApp = initializeApp({
+firebase.initializeApp({
   apiKey: "AIzaSyDWHYb1YSHqJRvWqyyGr8mrTrPWsBjsrNA",
   authDomain: "sending-54ad7.firebaseapp.com",
   databaseURL: "https://Sending.firebaseio.com",
@@ -12,4 +12,4 @@ const firebaseApp = initializeApp({
   measurementId: "G-06C3RDYJHR",
 });
 
-const messaging = getMessaging(firebaseApp);
+const messaging = firebase.messaging();

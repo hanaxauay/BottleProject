@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
-import { useEffect } from "react";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDWHYb1YSHqJRvWqyyGr8mrTrPWsBjsrNA",
@@ -13,7 +12,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const messaging = getMessaging();
+const messaging = getMessaging(app);
 
 getToken(messaging, {
   vapidKey:
