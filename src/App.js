@@ -1,5 +1,6 @@
+import React from 'react';
 import logo from "./logo.svg";
-import "./firebase";
+import "./firebase";
 
 // 실행부분
 
