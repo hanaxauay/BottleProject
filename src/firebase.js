@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
+import { useEffect } from "react";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDWHYb1YSHqJRvWqyyGr8mrTrPWsBjsrNA",
@@ -36,7 +37,7 @@ getToken(messaging, {
   });
 
 onMessage(messaging, (payload) => {
-  console.log("왜안오냐 씨발련아");
+  console.log(alert(payload));
   console.log("Message received. 왔냐 이씨벌럼아  ", payload);
   // ...
 });
