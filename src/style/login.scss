@@ -70,9 +70,19 @@
         border-style: none;
         border-radius: 20px;
       }
-      .create_account {
-        padding-top: 10px;
-        font-size: 20px;
+      .register_btn {
+        padding-top: 8px;
+        border-style: none;
+        font-size: 16px;
+        background-color: transparent;
+        .Account {
+          text-decoration: none;
+          color: #666;
+          cursor: pointer;
+        }
+        .Account:hover {
+          color: dodgerblue;
+        }
       }
     }
   }
