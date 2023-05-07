@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import logo from "./logo.svg";
 import "./firebase";
-
+import Login from "./pages/Login";
 // 실행부분
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">hello chanho yoongu heejin hana</header>
-    </div>
+    <>
+      <Login />
+    </>
   );
 }
 export default App;
