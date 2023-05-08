@@ -30,14 +30,58 @@
     width: 50%;
     position: relative;
     .boss {
+      position: absolute;
       width: 100%;
       height: 100%;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
       img {
-        margin-top: 0px;
-        width: 50%;
-        //padding: 2vh 0;
+        margin-top: 20px;
+        width: 40%;
+        height: 30%;
+        padding: 1vh 0;
+        margin-bottom: 50px;
       }
+      .newuser {
+        display: inline-block;
+        color: #b9b9b996;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+        //margin-top: 30px;
+        margin-bottom: 40px;
+        padding-top: 0.5rem;
+        margin-right: 5px;
+        margin-top: -60px;
+        margin-left: -100px;
+        //margin-right: 80px;
+        //margin-left: 40px;
+        //vertical-align: middle;
+      }
+      
+      .register_btn {
+        display: inline-block;
+        border-style: none;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+        background-color: transparent;
+        margin-right: -103px;
+        margin-top: -74.8px;
+        vertical-align: middle;
+        .Account {
+          text-decoration: none;
+          color: #3d6fee;
+          cursor: pointer;
+        }
+        .Account:hover {
+          color: #666;
+        }
+      }
+      
       .email_input {
         input {
           color: #b9b9b996;
@@ -46,7 +90,7 @@
           border: 0px;
           outline-style: none;
           border-bottom: 1px solid gray;
-          margin-top: 60px;
+          margin-top: 30px;
           margin-bottom: 3px;
           width: 300px;
           height: 50px;
@@ -86,23 +130,6 @@
         transform: scale(1.5); /* 버튼 크기를 2.5배로 키움 */
         margin-top: 20px;
         font-weight: bold;
-      }
-      .register_btn {
-        padding-top: 8px;
-        border-style: none;
-        font-size: 25px;
-        font-weight: bold;
-        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-        background-color: transparent;
-        margin-top: 15px;
-        .Account {
-          text-decoration: none;
-          color: #3d6fee;
-          cursor: pointer;
-        }
-        .Account:hover {
-          color: #666;
-        }
       }
     }
   }

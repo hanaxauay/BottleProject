@@ -62,6 +62,15 @@ export default function Login() {
         <div className="login_content">
           <div className="boss">
             <img src={logo} alt="logo" />
+            <div className="newuser">
+              New User?
+            </div> 
+              <button className="register_btn">
+                <Link to="/register" className="Account">
+                  Sign up
+                </Link>
+              </button>
+           
             <div className="email_input ">
               <input
                 type="email"
@@ -82,13 +91,6 @@ export default function Login() {
             <button className="login_btn" onClick={setLogin}>
               SIGN IN
             </button>
-            <div>
-              <button className="register_btn">
-                <Link to="/register" className="Account">
-                  Create Your Account ➞
-                </Link>
-              </button>
-            </div>
           </div>
         </div>
       </div>
