@@ -1,0 +1,221 @@
+.container {
+  position: relative;
+  width: 1274px;
+  height: 802px;
+  align-items: flex-start;
+    .register_content {
+      position: absolute;
+      left: 642px;
+      top: 0;
+      width: 632px;
+      height: 802px;
+        .left {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 642px;
+          height: 802px;
+          background-image: url('../images/left.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .right {
+          position: absolute;
+          left: 642px;
+          top: 0;
+          width: 632px;
+          height: 802px;
+          background-image: url('../images/right.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+        }
+
+        .create-your-account {
+          color: #1e1e1e;
+          font-size: 40px;
+          font-weight: bold;
+          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+          position: absolute;
+          left: 58.7127%;
+          right: 5.573%;
+          top: 18.5786%;
+          bottom: 74.4389%;
+          flex-direction: column;
+  
+          @media (min-width: 1200px) {
+            left: 704.5616px;
+            right: 96.2597px;
+            top: 185.7861px;
+            bottom: 746.0706px;
+            }
+          }
+          
+        .alreadycount {
+          color: #b9b9b996;
+          font-size: 15px;
+          font-weight: bold;
+          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+          position: absolute;
+          left: 955px;
+          right: 400px;
+          top: 201px;
+          bottom: 568px;
+          flex-direction: column;
+        }
+
+        .name_input {
+          input {
+            color: #b9b9b996;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+            position: absolute;
+            border-bottom: 1px solid gray;
+            left: 945px;
+            right: 480px;
+            top: 354px;
+            bottom: 497px;
+            flex-direction: column;
+          }
+        }
+        .nickname_input {
+          input {
+            color: #b9b9b996;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+            position: absolute;
+            border-bottom: 1px solid gray;
+            left: 1070px;
+            right: 260px;
+            top: 354px;
+            bottom: 496px;
+            flex-direction: column;
+
+          }
+        }
+        
+        .phone_input {
+          input {
+            color: #b9b9b996;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            border-bottom: 1px solid gray;
+            left: 783px;
+            right: 387.89px;
+            top: 354.4px;
+            bottom: 418.13px;
+            flex-direction: column;
+          }
+        }
+        
+        .email_input {
+          input {
+            color: #b9b9b996;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+            position: absolute;
+            border-bottom: 1px solid gray;
+            left: 945px;
+            right: 430px;
+            top: 431px;
+            bottom: 321px;
+            flex-direction: column;
+          }
+        
+        }
+
+        .clik {
+          color: #b9b9b996;
+          font-size: 15px;
+          font-weight: bold;
+          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          position: absolute;
+          left: 83.3595%;
+          right: 13.0298%;
+          top: 50.2494%;
+          bottom: 46.1347%;
+          flex-direction: column;
+        }
+        .click_btn {
+          width: 100px;
+          height: 40px;
+          line-height: 40px;
+          color: #fff;
+          background-color: #b9b9b996;
+          border-style: none;
+          border-radius: 20px;
+        }
+
+
+        .password_input {
+          input {
+            color: #b9b9b996;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            border-bottom: 1px solid gray;
+            left: 783px;
+            right: 357.23px;
+            top: 441.92px;
+            bottom: 321.75px;
+            flex-direction: column;
+          }
+        }
+
+        .reenterpassword_input {
+          input {
+            color: #b9b9b996;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            border-bottom: 1px solid gray;
+            left: 783px;
+            right: 178.91px;
+            top: 497.6px;
+            bottom: 277.34px;
+            flex-direction: column;
+          }
+          }
+        }
+        .login_btn {
+          width: 100px;
+          height: 40px;
+          line-height: 40px;
+          color: #fff;
+          background-color: dodgerblue;
+          border-style: none;
+          border-radius: 20px;
+        }
+
+
+
+
+.sign-up {
+  position: absolute;
+  top: 581px;
+  height: 27px;
+  width: 95px;
+  left: 724px;
+  font-size: 120px;
+  display: inline-block;
+  font-family: var(--font-itf-devanagari);
+  color: var(--color-white);
+  text-align: left;
+}
+      }
+    
+  
+  

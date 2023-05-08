@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/login.scss";
-import loginImg from "../images/login_title.png";
+import Img from "../images/left.png";
 import logo from "../images/logo.png";
 import { useRef } from "react";
 import axios from "axios";
@@ -43,8 +43,8 @@ export default function Login() {
   return (
     <>
       <div className="container">
-        <div className="login_title">
-          <img src={loginImg} alt="login_title" />
+        <div className="left">
+          <img src={Img} alt="left" />
         </div>
         <div className="login_content">
           <div className="boss">
