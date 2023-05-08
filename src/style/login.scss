@@ -34,54 +34,74 @@
       height: 100%;
       text-align: center;
       img {
-        width: 60%;
-        padding: 2vh 0;
+        margin-top: 0px;
+        width: 50%;
+        //padding: 2vh 0;
       }
       .email_input {
         input {
-          font-size: 18px;
+          color: #b9b9b996;
+          font-size: 20px;
+          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
           border: 0px;
           outline-style: none;
           border-bottom: 1px solid gray;
+          margin-top: 60px;
+          margin-bottom: 3px;
           width: 300px;
           height: 50px;
         }
       }
       .password_input {
         input {
-          font-size: 18px;
+          color: #b9b9b996;
+          font-size: 20px;
+          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
           border: 0px;
           outline-style: none;
           border-bottom: 1px solid gray;
+          margin-top: 3px;
+          margin-bottom: 5px;
           width: 300px;
           height: 50px;
         }
       }
       .search_password {
-        color: #666;
+        color: #b9b9b996;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
         padding-top: 10px;
+        margin-top: 0px;
+        margin-bottom: 30px;
       }
       .login_btn {
-        width: 100px;
-        height: 40px;
+        font-size: 16px;
         line-height: 40px;
         color: #fff;
         background-color: dodgerblue;
         border-style: none;
-        border-radius: 20px;
+        border-radius: 35px;
+        padding: 3px 30px; /* 버튼 내부 여백 설정 */
+        transform: scale(1.5); /* 버튼 크기를 2.5배로 키움 */
+        margin-top: 20px;
+        font-weight: bold;
       }
       .register_btn {
         padding-top: 8px;
         border-style: none;
-        font-size: 16px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
         background-color: transparent;
+        margin-top: 15px;
         .Account {
           text-decoration: none;
-          color: #666;
+          color: #3d6fee;
           cursor: pointer;
         }
         .Account:hover {
-          color: dodgerblue;
+          color: #666;
         }
       }
     }

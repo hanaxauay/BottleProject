@@ -65,7 +65,7 @@ export default function Login() {
             <div className="email_input ">
               <input
                 type="email"
-                placeholder="email"
+                placeholder="Email"
                 ref={loginEmailInput}
                 onChange={onChangeInput}
               />
@@ -73,19 +73,19 @@ export default function Login() {
             <div className="password_input">
               <input
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 ref={loginPwInput}
                 onChange={onChangePwd}
               />
             </div>
             <p className="search_password">Forgot Password ?</p>
             <button className="login_btn" onClick={setLogin}>
-              LOGIN
+              SIGN IN
             </button>
             <div>
               <button className="register_btn">
                 <Link to="/register" className="Account">
-                  Create Your Account
+                  Create Your Account ➞
                 </Link>
               </button>
             </div>

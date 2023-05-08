@@ -42,7 +42,7 @@
       font-size: 50px;
       font-weight: bold;
       font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-      margin-top: 30px;
+      margin-top: 80px;
       margin-bottom: 0px;
     }
     .alreadyaccount {
@@ -176,14 +176,15 @@
       }
     }
     .signup_btn {
-      font-size: 15px;
+      font-size: inherit; /* 부모 엘리먼트의 폰트 크기를 상속받음 */
       color: #fff;
       background-color: dodgerblue;
       border-style: none;
-      border-radius: 40px;
-      transform: scale(2); /* 버튼 크기를 2배로 키움 */
+      border-radius: 35px;
+      padding: 10px 30px; /* 버튼 내부 여백 설정 */
+      transform: scale(1.5); /* 버튼 크기를 2.5배로 키움 */
       margin-top: 60px;
-      //font-weight: bold;
+      font-weight: bold;
       font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
     }
     }
