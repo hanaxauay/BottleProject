@@ -17,7 +17,7 @@ export default function Login() {
         </div>
         <div className="login_content">
           <div className="boss">
-            <div className="register_content">
+            
               <h1>Create Your Account.</h1>
               <p>Already have Account?</p>
               <Link to="/">Sign in</Link>
@@ -37,7 +37,7 @@ export default function Login() {
                 <input type="text" placeholder="Re-enter-Password" />
               </div>
             </div>
-          </div>
+        
         </div>
       </div>
     </>
