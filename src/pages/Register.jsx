@@ -1,55 +1,41 @@
 import React from "react";
-import "../style/register.scss";
-import main from "../images/right.png";
+import "../style/login.scss";
 import Img from "../images/left.png";
+import logo from "../images/logo.png";
+import { useRef } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import crypto from "crypto-js";
+import { useState } from "react";
 
-
-
-export default function Register() {
+export default function Login() {
   return (
     <>
       <div className="container">
-      <div className="left">
-        <img src={Img} alt="left" />
-      </div>
-
+        <div className="left">
+          <img src={Img} alt="lefts" />
+        </div>
         <div className="login_content">
           <div className="boss">
-            <img src={main} alt="right" />
-            <b className="create-your-account">Create Your Account</b>
-            <p className="search_password">Already have account?</p>
-            <p className="search_password">Sign in</p>
-            <div className="name_input">
-              <input type="name" placeholder="Name" />
-            </div>
-            <div className="nickname_input">
-              <input type="nickname" placeholder="Nickname" />
-            </div>
-            <div className="phone_input ">
-              <input type="Phone" placeholder="Phone" />
-            </div>
-            <div className="email_input ">
-              <input type="email" placeholder="Email" />
-            </div>
-            <button className="login_btn">
-              Click
-            </button>
-            
-
-            <div className="password_input">
-              <input
-                type="password"
-                placeholder="Password"
-              />
-            </div>
-            <div className="reenterpassword_input ">
-              <input type="re-enter password" placeholder="Re-enter password" />
-            </div>
-            
-            <div>
-              <button className="register_btn">
-      
-              </button>
+            <div className="register_content">
+              <h1>Create Your Account.</h1>
+              <p>Already have Account?</p>
+              <Link to="/">Sign in</Link>
+              <div>
+                <input type="text" placeholder="Name" />
+              </div>
+              <div>
+                <input type="text" placeholder="Phone" />
+              </div>
+              <div>
+                <input type="text" placeholder="Email" />
+              </div>
+              <div>
+                <input type="text" placeholder="Password" />
+              </div>
+              <div>
+                <input type="text" placeholder="Re-enter-Password" />
+              </div>
             </div>
           </div>
         </div>

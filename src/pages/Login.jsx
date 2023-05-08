@@ -44,7 +44,7 @@ export default function Login() {
     <>
       <div className="container">
         <div className="left">
-          <img src={Img} alt="left" />
+          <img src={Img} alt="lefts" />
         </div>
         <div className="login_content">
           <div className="boss">
