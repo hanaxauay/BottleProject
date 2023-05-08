@@ -25,12 +25,16 @@
       }
     }
   }
-  .login_content {
+  .register_content {
     height: 100%;
     width: 50%;
     position: relative;
     .boss {
-      
+      position: absolute; // 부모의 위치를 상속받는거야.
+      top: 100px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
     }
   }
 }
