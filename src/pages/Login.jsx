@@ -5,21 +5,34 @@ import logo from "../images/logo.png";
 import { useRef } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import crypto from "crypto-js";
+import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 import { useState } from "react";
 
 export default function Login() {
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const loginEmailInput = useRef(); //email input
   const loginPwInput = useRef(); // pwd input
 
-  // password 암호화 작업 -> setPassword 에 암호화 된 비밀번호 세팅
+  // Email 암호화 작업 -> setEmail 에 암호화 된 Email 세팅
   const onChangeInput = (e) => {
-    setPassword(crypto.AES.encrypt(e.target.value, "kong").toString());
+    setEmail(
+      crypto.AES.encrypt(
+        e.target.value,
+        process.env.REACT_APP_AES_SECRET_EMAIL
+      ).toString()
+    );
   };
 
-  // 암호화 잘되었는지 출력 한번해보기
-  console.log("암호화 된 비밀번호 :  ", password);
+  // Password 암호화 작업 -> setPassword 에 암호화 된 password 세팅
+  const onChangePwd = (e) => {
+    setPassword(
+      SHA256(
+        e.target.value,
+        process.env.REACT_APP_AES_SECRET_PASSWORD
+      ).toString()
+    );
+  };
 
   // Login button 눌렸을떄 setLogin 함수 호출.
   const setLogin = async () => {
@@ -29,7 +42,7 @@ export default function Login() {
     try {
       // http://localhost:8080/login 으로 보내줌.
       const resSetLogin = await axios.post(`/login`, {
-        email: loginEmailInput.current.value,
+        email: email,
         password: password,
       });
       // 백엔드에서 데이터 잘 받아줬으면 -> 성공
@@ -50,14 +63,19 @@ export default function Login() {
           <div className="boss">
             <img src={logo} alt="logo" />
             <div className="email_input ">
-              <input type="email" placeholder="email" ref={loginEmailInput} />
+              <input
+                type="email"
+                placeholder="email"
+                ref={loginEmailInput}
+                onChange={onChangeInput}
+              />
             </div>
             <div className="password_input">
               <input
                 type="password"
                 placeholder="password"
                 ref={loginPwInput}
-                onChange={onChangeInput}
+                onChange={onChangePwd}
               />
             </div>
             <p className="search_password">Forgot Password ?</p>
