@@ -23,9 +23,11 @@ export default function Login() {
             <div className="alreadyaccount">
               Already have Account?
             </div>
-            <div className="sign">
-              <Link to="/">ㅤSign in</Link>
-            </div>
+            <button className="sign_btn">
+              <Link to="/" className="login">ㅤ
+                Sign in
+              </Link>
+            </button>
             
             <div className="name_input">
               <input type="name" placeholder="Name" />

@@ -54,10 +54,26 @@
       margin-top: 0px;
       margin-bottom: 30px;
       padding-top: 0.5rem; 
+      margin-right: -25px;
   
     }
-    .sign {
-      display: inline-block; /* 옆으로 나열 */
+    .sign_btn {
+      border-style: none;
+      font-size: 25px;
+      font-weight: bold;
+      background-color: transparent;
+      margin-right: 2px;
+      .login {
+        text-decoration: none;
+        color: #3d6fee;
+        cursor: pointer;
+      }
+      .login:hover {
+        color: #666;
+      }
+    }
+    /*.sign {
+      display: inline-block; // 옆으로 나열 
       color: #3d6fee;
       font-size: 25px;
       font-weight: bold;
@@ -65,7 +81,7 @@
       flex-direction: column;
       margin-top: 10px;
       padding-top: 0.5rem; 
-    }
+    }*/
   
     .name_input {
       input {
