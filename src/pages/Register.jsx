@@ -17,24 +17,48 @@ export default function Login() {
         </div>
         <div className="register_content">
           <div className="boss">
-            <h1>Create Your Account.</h1>
-            <p>Already have Account?</p>
-            <Link to="/">Sign in</Link>
-            <div>
-              <input type="text" placeholder="Name" />
+            <div className="createaccount">
+              Create Your Account
             </div>
-            <div>
-              <input type="text" placeholder="Phone" />
+            <div className="alreadyaccount">
+              Already have Account?
             </div>
-            <div>
-              <input type="text" placeholder="Email" />
+            <div className="sign">
+              <Link to="/">ㅤSign in</Link>
             </div>
-            <div>
-              <input type="text" placeholder="Password" />
+            
+            <div className="name_input">
+              <input type="name" placeholder="Name" />
             </div>
-            <div>
-              <input type="text" placeholder="Re-enter-Password" />
+            <div className="nickname_input">
+              <input type="nickname" placeholder="Nick name" />
             </div>
+            
+
+            
+            <div className="phone_input">
+              <input type="phone" placeholder="Phone" />
+            </div>
+            
+            <div className="input_container">
+              <div className="email_input">
+                <input type="email" placeholder="Email" />
+              </div>
+             <button className="clickemail_btn">
+                Click
+              </button>
+            </div>
+
+
+            <div className="password_input">
+              <input type="password" placeholder="Password" />
+            </div>
+            <div className="repassword_input">
+              <input type="repassword" placeholder="Re-enter-Password" />
+            </div>
+            <button className="signup_btn">
+              SIGN UP
+            </button>
           </div>
         </div>
       </div>
