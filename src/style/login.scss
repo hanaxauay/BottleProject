@@ -7,22 +7,28 @@
   left: 50%;
   display: flex;
   transform: translate(-50%, 15%);
-  .left {
+  /*.left {
     height: 100%;
     width: 50%;
     position: relative;
     img {
       height: 100%;
       width: 100%;
-    }
-    .title_text {
+    }*/
+    .textbox {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      p {
-        font-size: 80px;
-      }
+      left: 297px;
+      top: 93px;
+      transform: translate(9%, 10%);
+      width: 795px;
+      height: 41px;
+      flex-direction: column;
+      margin-top: 0;
+      color: #020202;
+      font-size: 30px;
+      font-weight: bold;
+      font-style: italic;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
     }
   }
   .login_content {
@@ -38,30 +44,89 @@
       flex-direction: column;
       align-items: center;
     
-      img {
+      /*img {
         margin-top: 20px;
         width: 40%;
         height: 30%;
         padding: 1vh 0;
         margin-bottom: 50px;
-      }
-      .newuser {
-        display: inline-block;
-        color: #b9b9b996;
-        font-size: 20px;
+      }*/
+      .email {
+        display: inline-block; /* 옆으로 나열 */
+        color: #020202;
+        font-size: 30px;
         font-weight: bold;
-        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-        //margin-top: 30px;
-        margin-bottom: 40px;
-        padding-top: 0.5rem;
-        margin-right: 5px;
-        margin-top: -60px;
-        margin-left: -100px;
-        //margin-right: 80px;
-        //margin-left: 40px;
-        //vertical-align: middle;
+        font-style: italic;
+        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans','Liberation Sans', sans-serif;
+        position: absolute;
+        left: -500px;
+        top: 291px;
+        width: 88px;
+        height: 38px;
+        flex-direction: column;
+        margin-top: -10px;
       }
-      
+      .emailbox1 {
+        position: absolute;
+        left: -600px;
+        top: 354px;
+        width: 405px;
+        height: 53px;
+        background-color: #c2c2c2;
+        margin-top: 10px;
+        z-index: 1;
+      }
+      .emailbox2 {
+        position: absolute;
+        left: -595px;
+        top: 354px;
+        width: 394px;
+        height: 47px;
+        background-color: #D0D0D0;
+        margin-top: 13px;
+        overflow: visible;
+        z-index: 2;
+      }
+      .emailbar1 {
+        position: absolute;
+        left: -595px;
+        top: 369px;
+        width: 2px;
+        height: 42px;
+        background-color: #030303;
+        z-index: 3;
+      }
+      .email_input {
+        input {
+          display: inline-block; /* 옆으로 나열 */
+          color: #020202;
+          font-size: 30px;
+          font-weight: bold;
+          font-style: italic;
+          font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans','Liberation Sans', sans-serif;
+          position: absolute;
+          left: -500px;
+          top: 401px;
+          width: 88px;
+          height: 38px;
+          flex-direction: column;
+          margin-top: 40px;
+        }
+      }
+      .password_input {
+        input {
+          color: #b9b9b996;
+          font-size: 20px;
+          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+          border: 0px;
+          outline-style: none;
+          border-bottom: 1px solid gray;
+          margin-top: 3px;
+          margin-bottom: 5px;
+          width: 300px;
+          height: 50px;
+        }
+      }
       .register_btn {
         display: inline-block;
         border-style: none;
@@ -79,35 +144,6 @@
         }
         .Account:hover {
           color: #666;
-        }
-      }
-      
-      .email_input {
-        input {
-          color: #b9b9b996;
-          font-size: 20px;
-          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-          border: 0px;
-          outline-style: none;
-          border-bottom: 1px solid gray;
-          margin-top: 30px;
-          margin-bottom: 3px;
-          width: 300px;
-          height: 50px;
-        }
-      }
-      .password_input {
-        input {
-          color: #b9b9b996;
-          font-size: 20px;
-          font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-          border: 0px;
-          outline-style: none;
-          border-bottom: 1px solid gray;
-          margin-top: 3px;
-          margin-bottom: 5px;
-          width: 300px;
-          height: 50px;
         }
       }
       .search_password {
@@ -133,4 +169,4 @@
       }
     }
   }
-}
+

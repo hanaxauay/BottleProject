@@ -1,7 +1,8 @@
 import React from "react";
 import "../style/login.scss";
-import Img from "../images/left.png";
-import logo from "../images/logo.png";
+import Img from "../images/leftbase.png";
+import logo from "../images/rightbase.png";
+import base from "../images/base.png";
 import { useRef } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -56,21 +57,16 @@ export default function Login() {
   return (
     <>
       <div className="container">
-        <div className="left">
-          <img src={Img} alt="lefts" />
-        </div>
+      <img src={base} alt="base" />
+      <div className="textbox">
+        .*☆*☆。..。.☆*。。환영해 &apos;ㅇ...*☆。..。.☆*。。
+      </div>
         <div className="login_content">
           <div className="boss">
-            <img src={logo} alt="logo" />
-            <div className="newuser">
-              New User?
-            </div> 
-              <button className="register_btn">
-                <Link to="/register" className="Account">
-                  Sign up
-                </Link>
-              </button>
-           
+            <div className="email">이메일</div>
+            <div className="emailbox1"></div>
+            <div className="emailbox2"></div>
+            <div className="emailbar1"></div>
             <div className="email_input ">
               <input
                 type="email"
@@ -78,7 +74,7 @@ export default function Login() {
                 ref={loginEmailInput}
                 onChange={onChangeInput}
               />
-            </div>
+              </div>
             <div className="password_input">
               <input
                 type="password"
@@ -87,6 +83,11 @@ export default function Login() {
                 onChange={onChangePwd}
               />
             </div>
+            <button className="register_btn">
+                <Link to="/register" className="Account">
+                  Sign up
+                </Link>
+              </button>
             <p className="search_password">Forgot Password ?</p>
             <button className="login_btn" onClick={setLogin}>
               SIGN IN
