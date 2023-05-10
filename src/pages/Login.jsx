@@ -1,7 +1,5 @@
 import React from "react";
 import "../style/login.scss";
-import Img from "../images/leftbase.png";
-import logo from "../images/rightbase.png";
 import base from "../images/base.png";
 import { useRef } from "react";
 import axios from "axios";
@@ -59,7 +57,7 @@ export default function Login() {
       <div className="container">
       <img src={base} alt="base" />
       <div className="textbox">
-        .*☆*☆。..。.☆*。。환영해 &apos;ㅇ...*☆。..。.☆*。。
+        .*☆*☆。..。.☆*。。오랜만 &apos;ㅇ...*☆。..。.☆*。。
       </div>
         <div className="login_content">
           <div className="boss">
@@ -94,10 +92,6 @@ export default function Login() {
             <button className="login_btn" onClick={setLogin}>
               로그인하기
             </button>
-          <div className="regibox1"></div>
-          <div className="regibox2"></div>
-          <div className="regibar1"></div>
-          <div className="regibar2"></div>
           <p className="search_email">이메일찾기 |</p>
           <p className="search_password">비밀번호찾기 |</p>
              <button className="register_btn">
