@@ -67,31 +67,44 @@ export default function Login() {
             <div className="emailbox1"></div>
             <div className="emailbox2"></div>
             <div className="emailbar1"></div>
+            <div className="emailbar2"></div>
             <div className="email_input ">
               <input
                 type="email"
-                placeholder="Email"
                 ref={loginEmailInput}
                 onChange={onChangeInput}
               />
-              </div>
-            <div className="password_input">
+            </div>
+          <div className="password">비밀번호</div>
+          <div className="passbox1"></div>
+          <div className="passbox2"></div>
+          <div className="passbar1"></div>
+          <div className="passbar2"></div>
+          <div className="password_input">
               <input
                 type="password"
-                placeholder="Password"
                 ref={loginPwInput}
                 onChange={onChangePwd}
               />
-            </div>
-            <button className="register_btn">
+          </div>
+          <div className="loginbox1"></div>
+          <div className="loginbox2"></div>
+          <div className="loginbar1"></div>
+          <div className="loginbar2"></div>
+            <button className="login_btn" onClick={setLogin}>
+              로그인하기
+            </button>
+          <div className="regibox1"></div>
+          <div className="regibox2"></div>
+          <div className="regibar1"></div>
+          <div className="regibar2"></div>
+          <p className="search_email">이메일찾기 |</p>
+          <p className="search_password">비밀번호찾기 |</p>
+             <button className="register_btn">
                 <Link to="/register" className="Account">
-                  Sign up
+                  가입하기
                 </Link>
               </button>
-            <p className="search_password">Forgot Password ?</p>
-            <button className="login_btn" onClick={setLogin}>
-              SIGN IN
-            </button>
           </div>
         </div>
       </div>
