@@ -17,7 +17,7 @@
     }*/
     .textbox {
       position: absolute;
-      left: 300px;
+      left: 380px;
       top: 65px;
       transform: translate(-12%, 10%);
       width: 795px;
@@ -50,7 +50,7 @@
       font-size: 22px;
       font-weight: bold;
       position: absolute;
-      left: -430px;
+      left: -425px;
       top: 177px;
       width: 88px;
       height: 38px;
@@ -120,8 +120,8 @@
       font-size: 22px;
       font-weight: bold;
       position: absolute;
-      left: -430px;
-      top: 230px;
+      left: -434px;
+      top: 228px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -131,7 +131,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -350px;
-      top: 206px;
+      top: 202px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -142,7 +142,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 150px;
+      top: 202px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -154,7 +154,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 215px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -164,7 +164,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 215px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -172,14 +172,16 @@
     }
     .nickname_input {
       input {
-        color: #b9b9b996;
-        font-size: 20px;
-        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-        border: 0px;
-        outline-style: none;
-        border-bottom: 1px solid gray;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        display: inline-block; /* 옆으로 나열 */
+        color: #020202;
+        position: absolute;
+        left: -344px;
+        top: 218px;
+        width: 260px;
+        height: 24px;
+        flex-direction: column;
+        border-color: transparent; /*테두리 투명*/
+        z-index: 3;
       }
     }
     .phone {
@@ -188,8 +190,8 @@
       font-size: 22px;
       font-weight: bold;
       position: absolute;
-      left: -430px;
-      top: 275px;
+      left: -426px;
+      top: 268px;
       width: 75px;
       height: 38px;
       flex-direction: column;
@@ -199,7 +201,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -350px;
-      top: 206px;
+      top: 254px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -210,7 +212,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 150px;
+      top: 254px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -222,7 +224,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 267px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -232,7 +234,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 267px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -241,14 +243,16 @@
     
     .phone_input {
       input {
-        color: #b9b9b996;
-        font-size: 20px;
-        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-        border: 0px;
-        outline-style: none;
-        border-bottom: 1px solid gray;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        display: inline-block; /* 옆으로 나열 */
+        color: #020202;
+        position: absolute;
+        left: -344px;
+        top: 270px;
+        width: 260px;
+        height: 24px;
+        flex-direction: column;
+        border-color: transparent; /*테두리 투명*/
+        z-index: 3;
       }
     }
     .input_container {
@@ -261,8 +265,8 @@
       font-size: 22px;
       font-weight: bold;
       position: absolute;
-      left: -430px;
-      top: 345px;
+      left: -434px;
+      top: 333px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -272,7 +276,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -350px;
-      top: 206px;
+      top: 306px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -283,7 +287,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 150px;
+      top: 306px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -295,7 +299,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 319px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -305,7 +309,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 319px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -313,38 +317,93 @@
     }
     .email_input {
       input {
-        color: #b9b9b996;
-        font-size: 20px;
-        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-        border: 0px;
-        outline-style: none;
-        border-bottom: 1px solid gray;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-left: 168px;
-        margin-right: 10px; //click
+        display: inline-block; /* 옆으로 나열 */
+        color: #020202;
+        position: absolute;
+        left: -344px;
+        top: 322px;
+        width: 260px;
+        height: 24px;
+        flex-direction: column;
+        border-color: transparent; /*테두리 투명*/
+        z-index: 3;
       }
     }
+    .eclick_box1 {
+      display: inline-block; /* 옆으로 나열 */
+      position: absolute;
+      left: -57px;
+      top: 314px;
+      width: 33px;
+      height: 27px;
+      background-color: #ffffff;
+      margin-top: 10px;
+      z-index: 1;
+    }
+    .eclick_box2 {
+      display: inline-block; /* 옆으로 나열 */
+      position: absolute;
+      left: -55.5px;
+      top: 313px;
+      width: 29px;
+      height: 22px;
+      background-color: #DEDFE2;
+      margin-top: 13px;
+      overflow: visible;
+      z-index: 2;
+    }
+    .eclick_bar1 {
+      display: inline-block; /* 옆으로 나열 */
+      position: absolute;
+      left: -27px;
+      top: 324px;
+      width: 3px;
+      height: 27px;
+      background-color: #636363;
+      z-index: 4;
+    }
+    .eclick_bar2 {
+      display: inline-block; /* 옆으로 나열 */
+      position: absolute;
+      left: -57px;
+      top: 348px;
+      width: 32px;
+      height: 3px;
+      background-color: #636363;
+      z-index: 5;
+    }
     .clickemail_btn {
-      font-size: 17px;
-      color: #fff;
-      background-color: #b9b9b996;
+      display: inline-block; /* 옆으로 나열 */
       border-style: none;
-      border-radius: 10px;
-      //transform: scale(2); /* 버튼 크기를 2배로 키움 */
-      margin-top: 60px;
+      position: absolute;
+      font-size: 24px;
+      left: -54px;
+      top: 327.7px;
+      width: 27px;
+      height: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      background-color: #BDBEC3;
       font-weight: bold;
       font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-      margin-top: 0px;
+      z-index: 6;   
     }
+    .icon-wrapper {
+      /* 아이콘 크기 조절 */
+      width: 30px;
+      height: 34px;
+    }
+    
     .password{
       display: inline-block; /* 옆으로 나열 */
       color: #020202;
       font-size: 22px;
       font-weight: bold;
       position: absolute;
-      left: -430px;
-      top: 390px;
+      left: -443px;
+      top: 385px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -354,7 +413,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -350px;
-      top: 206px;
+      top: 358px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -365,7 +424,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 150px;
+      top: 358px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -377,7 +436,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 371px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -387,7 +446,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 371px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -395,14 +454,16 @@
     }
     .password_input {
       input {
-        color: #b9b9b996;
-        font-size: 20px;
-        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-        border: 0px;
-        outline-style: none;
-        border-bottom: 1px solid gray;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        display: inline-block; /* 옆으로 나열 */
+        color: #020202;
+        position: absolute;
+        left: -344px;
+        top: 374px;
+        width: 260px;
+        height: 24px;
+        flex-direction: column;
+        border-color: transparent; /*테두리 투명*/
+        z-index: 3;
       }
     }
     .repassword {
@@ -411,8 +472,8 @@
       font-size: 22px;
       font-weight: bold;
       position: absolute;
-      left: -430px;
-      top: 440px;
+      left: -443px;
+      top: 423px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -422,7 +483,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -350px;
-      top: 206px;
+      top: 407px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -433,7 +494,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 150px;
+      top: 407px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -445,7 +506,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 420px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -455,7 +516,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -347px;
-      top: 163px;
+      top: 420px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -463,21 +524,23 @@
     }
     .repassword_input {
       input {
-        color: #b9b9b996;
-        font-size: 20px;
-        font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-        border: 0px;
-        outline-style: none;
-        border-bottom: 1px solid gray;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        display: inline-block; /* 옆으로 나열 */
+        color: #020202;
+        position: absolute;
+        left: -344px;
+        top: 423px;
+        width: 260px;
+        height: 24px;
+        flex-direction: column;
+        border-color: transparent; /*테두리 투명*/
+        z-index: 3;
       }
     }
     .sign_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -279px;
-      top: 506.9px;
+      top: 491.9px;
       width: 126px;
       height: 45px;
       background-color: #ffffff;
@@ -488,7 +551,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -278px;
-      top: 505px;
+      top: 490px;
       width: 125px;
       height: 42px;
       background-color: #D0D0D0;
@@ -500,7 +563,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -152px;
-      top: 517.7px;
+      top: 502.7px;
       width: 2.6px;
       height: 43px;
       background-color: #030303;
@@ -510,7 +573,7 @@
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
       left: -279px;
-      top: 560px;
+      top: 545px;
       width: 130px;
       height: 3px;
       background-color: #030303;
@@ -525,7 +588,7 @@
       background-color: #c2c2c2;
       position: absolute;
       left: -275px;
-      top: 520px;
+      top: 505px;
       width: 120px;
       height: 36px;
       z-index: 6;
@@ -541,7 +604,7 @@
       left: -285px;
       width: 120px;
       height: 36px;
-      margin-top: 570px;
+      margin-top: 555px;
       background: none;
       border: none;
       cursor: pointer;

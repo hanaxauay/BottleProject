@@ -1,12 +1,8 @@
 import React from "react";
 import "../style/register.scss";
 import base from "../images/base.png";
-import logo from "../images/logo.png";
-import { useRef } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
-import crypto from "crypto-js";
-import { useState } from "react";
+import { BiCheck } from 'react-icons/bi';
 
 export default function Login() {
   return (
@@ -32,30 +28,52 @@ export default function Login() {
             <div className="nickname_bar1"></div>
             <div className="nickname_bar2"></div>
             <div className="nickname_input">
-              <input type="nickname" placeholder="Nick name" />
+              <input type="nickname"/>
             </div>
             
-
+        
             <div className="phone">핸드폰번호</div>
+            <div className="phone_box1"></div>
+            <div className="phone_box2"></div>
+            <div className="phone_bar1"></div>
+            <div className="phone_bar2"></div>
             <div className="phone_input">
               <input type="phone"  />
             </div>
             
             <div className="input_container">
               <div className="email">이메일</div>
+              <div className="email_box1"></div>
+              <div className="email_box2"></div>
+              <div className="email_bar1"></div>
+              <div className="email_bar2"></div>
               <div className="email_input">
-                <input type="email" placeholder="Email" />
+                <input type="email" />
               </div>
+              <div className="eclick_box1"></div>
+              <div className="eclick_box2"></div>
+              <div className="eclick_bar1"></div>
+              <div className="eclick_bar2"></div>
              <button className="clickemail_btn">
-                Click
+                <span className="icon-wrapper">
+                  <BiCheck size={30} />
+                </span>
               </button>
             </div>
 
             <div className="password">비밀번호</div>
+            <div className="password_box1"></div>
+            <div className="password_box2"></div>
+            <div className="password_bar1"></div>
+            <div className="password_bar2"></div>
             <div className="password_input">
-              <input type="password" placeholder="Password" />
+              <input type="password" />
             </div>
             <div className="repassword">비밀번호재입력</div>
+            <div className="repassword_box1"></div>
+            <div className="repassword_box2"></div>
+            <div className="repassword_bar1"></div>
+            <div className="repassword_bar2"></div>
             <div className="repassword_input">
               <input type="repassword"/>
             </div>
@@ -68,7 +86,7 @@ export default function Login() {
             </button>
             <button className="login_btn">
               <Link to="/" className="login">ㅤ
-                로그인하기
+               | 로그인하기 |
               </Link>
             </button>
           </div>
