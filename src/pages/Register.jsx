@@ -27,6 +27,10 @@ export default function Login() {
               <input type="name" />
             </div>
             <div className="nickname">닉네임</div>
+            <div className="nickname_box1"></div>
+            <div className="nickname_box2"></div>
+            <div className="nickname_bar1"></div>
+            <div className="nickname_bar2"></div>
             <div className="nickname_input">
               <input type="nickname" placeholder="Nick name" />
             </div>
