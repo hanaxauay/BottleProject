@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import { Route, Routes } from "react-router-dom";
 import Register from "./pages/Register";
 import Main from "./pages/Main";
+import Mypage from "./pages/Mypage";
 // 실행부분
 
 function App() {
@@ -15,8 +16,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         {/* 로그인 성공시 Main 으로 넘길예정. */}
         <Route path="/main" element={<Main />} />
+        <Route path="/mypage" element={<Mypage />} />
       </Routes>
     </>
   );
 }
+
 export default App;
