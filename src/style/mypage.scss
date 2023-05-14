@@ -38,6 +38,15 @@
             background-color: #00017F;
             z-index: 3;
         }
+        .title {
+           color: #000;
+           font-size: 35px;
+           font-family: "DungGeunMo", sans-serif;
+           font-weight: bold;
+           position: absolute;
+           left: 45%;
+           top: 76px;
+        }
         .topline1 {
             position: absolute;
             left: 0px;
@@ -70,9 +79,10 @@
       .logo {
         color: #000;
         font-size: 22px;
+        font-family: "DungGeunMo", sans-serif;
         font-weight: bold;
         position: absolute;
-        top: 320px;
+        top: 280px;
       }
       }
       
@@ -139,6 +149,7 @@
          background-color: #ffffff;
          color: #00017F;
          font-size: 25px;
+         font-family: "DungGeunMo";
          font-weight: bold;
          display: flex;
          justify-content: center; /* 가로 중앙 정렬 */
@@ -149,8 +160,9 @@
           display: inline-block;
           position: absolute;
           font-size: 20px;
+          font-family: "DungGeunMo";
           font-weight: bold;
-          left: -8%;
+          left: -8.7%;
           top: 60%;
           right: 9%;
           height: 8%;
@@ -165,6 +177,7 @@
         .communi_btn2 {
           position: absolute;
          font-size: 20px;
+         font-family: "DungGeunMo";
          font-weight: bold;
           left: -5%;
           top: 65%;
@@ -181,7 +194,8 @@
         .communi_btn3 {
           position: absolute;
           font-size: 20px;
-         font-weight: bold;
+          font-family: "DungGeunMo";
+          font-weight: bold;
           left: -5%;
           top: 70%;
           right: 9%;
@@ -203,6 +217,7 @@
         background-color: #ffffff;
         color: #00017F;
         font-size: 25px;
+        font-family: "DungGeunMo";
         font-weight: bold;
         display: flex;
         justify-content: center; /* 가로 중앙 정렬 */
@@ -213,8 +228,9 @@
         display: inline-block;
         position: absolute;
         font-size: 20px;
+        font-family: "DungGeunMo";
         font-weight: bold;
-        left: 295px;
+        left: 290px;
         top: 60%;
         right: 130px;
         height: 7%;
@@ -229,12 +245,13 @@
       .account_btn2 {
         position: absolute;
        font-size: 20px;
+       font-family: "DungGeunMo";
        font-weight: bold;
-       left: 312px;
-        top: 65%;
-        right: 9%;
-        height: 8%;
-        width: 70%;
+       left: 310px;
+       top: 65%;
+       right: 9%;
+       height: 8%;
+       width: 70%;
        z-index: 5;
        cursor: pointer;
        background-color: transparent;
@@ -243,20 +260,21 @@
        color: #ffffff; /* 버튼의 글자 색상 지정 */
     }
       .account_btn3 {
-        position: absolute;
-        font-size: 20px;
+       position: absolute;
+       font-size: 20px;
+       font-family: "DungGeunMo";
        font-weight: bold;
-        left: 378px;
-        top: 70%;
-        right: 9%;
-        height: 8%;
-        width: 50%;
-        z-index: 6;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        color: #ffffff; /* 버튼의 글자 색상 지정 */
+       left: 372px;
+       top: 70%;
+       right: 9%;
+       height: 8%;
+       width: 50%;
+       z-index: 6;
+       cursor: pointer;
+       background-color: transparent;
+       border: none;
+       outline: none;
+       color: #ffffff; /* 버튼의 글자 색상 지정 */
       }
 
       }    

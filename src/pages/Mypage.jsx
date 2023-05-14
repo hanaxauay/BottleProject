@@ -11,12 +11,29 @@ export default function Mypage() {
          <div className="topbox1"> </div>
          <div className="topbox2"> </div>
          <div className="topbox3"> </div>
+         <div className="title">마이페이지</div>
          <div className="topline1"> </div>
          <div className="topline2"> </div>
         </div>
 
         <div className="left_container">
-         <div className="logo"> 환영해 </div>
+        <div className="logo">
+        {"┼─…──〃──…─＊─…──〃──…─┼"}
+        <br />
+        {"│ (/)＿/"}
+        <br />
+        {"： (∧_∧)ノ∽♥ 저 왔어요오 \" -\"＊"}
+        <br />
+        {"│s(　　 )　　　　　환영ㅎH죠요오／♥"}
+        <br />
+        {"│　빤딱★　　　　　환영안ㅎㅐ주면a"}
+        <br />
+        {"├─〃──…──〃┼ 내 ?l픈 Ol빨로 `з`"}
+        <br />
+        {"│△▶ 친구들아 ：ㄲH물어★ 줄꼬ㅇㅖ요오;^ ^"}
+        </div>
+
+
         </div>
         <div className="right_container">
           <div className="text_box1"></div>

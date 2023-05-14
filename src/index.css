@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("./fonts/DungGeunMo.ttf");
+  font-display: swap;
+}
