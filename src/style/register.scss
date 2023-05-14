@@ -1,66 +1,117 @@
-.container {
-  width: 65vw;
-  height: 80vh;
-  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+.register_content {
+  height: 600px; // 상위 컨테이너의 높이 설정
+  width: 100%;
   position: relative;
-  top: 50%;
-  left: 50%;
   display: flex;
-  transform: translate(-50%, 15%);
-  /*.left {
-    height: 100%;
-    width: 50%;
-    position: relative;
-    img {
-      height: 100%;
+  .top {
+      position:absolute;
       width: 100%;
-    }*/
-    .textbox {
-      position: absolute;
-      left: 380px;
-      top: 65px;
-      transform: translate(-12%, 10%);
-      width: 795px;
-      height: 41px;
-      flex-direction: column;
-      color: #020202;
-      font-size: 25px;
-      font-weight: bold;
-      font-style: italic;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-    }
-  }
-  .register_content {
-    height: 100%;
-    width: 50%;
-    position: relative;
-    
-    .boss {
-      position: absolute; // 부모의 위치를 상속받는거야.
-      width: 100%;
-      height: 100%;
+      height: 12%;
+      top: 0;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-
-    .name {
-      display: inline-block; /* 옆으로 나열 */
-      color: #020202;
-      font-size: 22px;
-      font-weight: bold;
-      position: absolute;
-      left: -425px;
-      top: 177px;
-      width: 88px;
-      height: 38px;
-      flex-direction: column;
-      margin-top: -10px;
+      .topbox1 {
+          position: absolute;
+          left: 0;
+          top: -5px;
+          right: 0;
+          height: 50px;
+          background-color: #BEBFD5;
+      }
+      .topbox2 {
+          position: absolute;
+          left: 2px;
+          top: 3px;
+          right: 2px;
+          height: 39px;
+          background-color: #545296;
+          z-index: 2;
+      }
+      .topbox3 {
+          position: absolute;
+          left: 5px;
+          top: 6px;
+          right: 5px;
+          height: 33px;
+          background-color: #00017F;
+          z-index: 3;
+      }
+      .title {
+         color: #000;
+         font-size: 35px;
+         font-family: "DungGeunMo", sans-serif;
+         font-weight: bold;
+         position: absolute;
+         left: 43%;
+         top: 76px;
+      }
+      .topline1 {
+          position: absolute;
+          left: 0px;
+          top: 115px;
+          right: 0px;
+          height: 7px;
+          background-color: #FFFF;
+          z-index: 1;
+      }
+      .topline2 {
+          position: absolute;
+          left: 0px;
+          top: 115px;
+          right: 0px;
+          height: 5px;
+          background-color: #000;
+          z-index: 2;
+      }
     }
+    .left_container {
+      position: absolute;
+      top: 12%; 
+      bottom: 0; /* Stretch to the bottom of the parent container */
+      left: 0;
+      width: 43%;
+      display: flex;
+      flex: 1;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+     .logo {
+       color: #000;
+       font-size: 22px;
+       font-family: "DungGeunMo", sans-serif;
+       font-weight: bold;
+       position: absolute;
+       top: 280px;
+     }
+    }
+    .right_container {
+      position: absolute;
+      top: 12%; /* Adjust the top position as needed */
+      right: 0;
+      width: 57%;
+      height: 100%; /* Occupies 75% of the parent's height */
+      text-align: center;
+      display: flex;
+      flex: 1;
+      .name {
+       display: inline-block; /* 옆으로 나열 */
+       color: #020202;
+       font-size: 22px;
+       font-family: "DungGeunMo", sans-serif;
+       font-weight: bold;
+       position: absolute;
+       left: 18%;
+       top: 177px;
+       width: 88px;
+       height: 38px;
+       flex-direction: column;
+       margin-top: -10px;
+      }
     .name_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -350px;
+      left: 37%;
       top: 150px;
       width: 280px;
       height: 40px;
@@ -71,7 +122,7 @@
     .name_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
+      left: 37.36%;
       top: 150px;
       width: 274px;
       height: 34px;
@@ -83,7 +134,7 @@
     .name_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
+      left: 37.4%;
       top: 163px;
       width: 0.8px;
       height: 34px;
@@ -93,7 +144,7 @@
     .name_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
+      left: 37.4%;
       top: 163px;
       width: 274px;
       height: 0.8px;
@@ -105,7 +156,7 @@
         display: inline-block; /* 옆으로 나열 */
         color: #020202;
         position: absolute;
-        left: -344px;
+        left: 37.8%;
         top: 166px;
         width: 260px;
         height: 24px;
@@ -118,10 +169,11 @@
       display: inline-block; /* 옆으로 나열 */
       color: #020202;
       font-size: 22px;
+      font-family: "DungGeunMo", sans-serif;
       font-weight: bold;
       position: absolute;
-      left: -434px;
-      top: 228px;
+      left: 18%;
+      top: 233px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -130,8 +182,8 @@
     .nickname_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -350px;
-      top: 202px;
+      left: 37%;
+      top: 208px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -141,8 +193,8 @@
     .nickname_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 202px;
+      left: 37.36%;
+      top: 208px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -153,8 +205,8 @@
     .nickname_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 215px;
+      left: 37.4%;
+      top: 221px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -163,8 +215,8 @@
     .nickname_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 215px;
+      left: 37.4%;
+      top: 221px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -175,8 +227,8 @@
         display: inline-block; /* 옆으로 나열 */
         color: #020202;
         position: absolute;
-        left: -344px;
-        top: 218px;
+        left: 37.8%;
+        top: 224px;
         width: 260px;
         height: 24px;
         flex-direction: column;
@@ -188,10 +240,11 @@
       display: inline-block; /* 옆으로 나열 */
       color: #020202;
       font-size: 22px;
+      font-family: "DungGeunMo", sans-serif;
       font-weight: bold;
       position: absolute;
-      left: -426px;
-      top: 268px;
+      left: 19%;
+      top: 289px;
       width: 75px;
       height: 38px;
       flex-direction: column;
@@ -200,8 +253,8 @@
     .phone_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -350px;
-      top: 254px;
+      left: 37%;
+      top: 266px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -211,8 +264,8 @@
     .phone_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 254px;
+      left: 37.36%;
+      top: 266px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -223,8 +276,8 @@
     .phone_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 267px;
+      left: 37.4%;
+      top: 279px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -233,8 +286,8 @@
     .phone_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 267px;
+      left: 37.4%;
+      top: 278px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -246,8 +299,8 @@
         display: inline-block; /* 옆으로 나열 */
         color: #020202;
         position: absolute;
-        left: -344px;
-        top: 270px;
+        left: 37.8%;
+        top: 281px;
         width: 260px;
         height: 24px;
         flex-direction: column;
@@ -263,10 +316,11 @@
       display: inline-block; /* 옆으로 나열 */
       color: #020202;
       font-size: 22px;
+      font-family: "DungGeunMo", sans-serif;
       font-weight: bold;
       position: absolute;
-      left: -434px;
-      top: 333px;
+      left: 18%;
+      top: 361px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -275,8 +329,8 @@
     .email_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -350px;
-      top: 306px;
+      left: 37%;
+      top: 328px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -286,8 +340,8 @@
     .email_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 306px;
+      left: 37.36%;
+      top: 328px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -298,8 +352,8 @@
     .email_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 319px;
+      left: 37.4%;
+      top: 341px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -308,8 +362,8 @@
     .email_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 319px;
+      left: 37.4%;
+      top: 341px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -320,8 +374,8 @@
         display: inline-block; /* 옆으로 나열 */
         color: #020202;
         position: absolute;
-        left: -344px;
-        top: 322px;
+        left: 37.8%;
+        top: 344px;
         width: 260px;
         height: 24px;
         flex-direction: column;
@@ -332,8 +386,8 @@
     .eclick_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -57px;
-      top: 314px;
+      left: 73%;
+      top: 335px;
       width: 33px;
       height: 27px;
       background-color: #ffffff;
@@ -343,10 +397,10 @@
     .eclick_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -55.5px;
-      top: 313px;
+      left: 73.2%;
+      top: 334px;
       width: 29px;
-      height: 22px;
+      height: 23px;
       background-color: #DEDFE2;
       margin-top: 13px;
       overflow: visible;
@@ -355,19 +409,19 @@
     .eclick_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -27px;
-      top: 324px;
+      left: 76.8%;
+      top: 345px;
       width: 3px;
-      height: 27px;
+      height: 28px;
       background-color: #636363;
       z-index: 4;
     }
     .eclick_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -57px;
-      top: 348px;
-      width: 32px;
+      left: 73%;
+      top: 370px;
+      width: 34px;
       height: 3px;
       background-color: #636363;
       z-index: 5;
@@ -377,8 +431,8 @@
       border-style: none;
       position: absolute;
       font-size: 24px;
-      left: -54px;
-      top: 327.7px;
+      left: 73.5%;
+      top: 349px;
       width: 27px;
       height: 19px;
       display: flex;
@@ -387,7 +441,7 @@
       color: #000000;
       background-color: #BDBEC3;
       font-weight: bold;
-      font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+      font-family: "DungGeunMo", sans-serif;
       z-index: 6;   
     }
     .icon-wrapper {
@@ -400,10 +454,11 @@
       display: inline-block; /* 옆으로 나열 */
       color: #020202;
       font-size: 22px;
+      font-family: "DungGeunMo", sans-serif;
       font-weight: bold;
       position: absolute;
-      left: -443px;
-      top: 385px;
+      left: 18%;
+      top: 417px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -412,8 +467,8 @@
     .password_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -350px;
-      top: 358px;
+      left: 37%;
+      top: 390px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -423,8 +478,8 @@
     .password_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 358px;
+      left: 37.36%;
+      top: 390px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -435,8 +490,8 @@
     .password_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 371px;
+      left: 37.4%;
+      top: 403px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -445,8 +500,8 @@
     .password_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 371px;
+      left: 37.4%;
+      top: 403px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -457,8 +512,8 @@
         display: inline-block; /* 옆으로 나열 */
         color: #020202;
         position: absolute;
-        left: -344px;
-        top: 374px;
+        left: 37.8%;
+        top: 406px;
         width: 260px;
         height: 24px;
         flex-direction: column;
@@ -470,10 +525,11 @@
       display: inline-block; /* 옆으로 나열 */
       color: #020202;
       font-size: 22px;
+      font-family: "DungGeunMo", sans-serif;
       font-weight: bold;
       position: absolute;
-      left: -443px;
-      top: 423px;
+      left: 18%;
+      top: 473px;
       width: 88px;
       height: 38px;
       flex-direction: column;
@@ -482,8 +538,8 @@
     .repassword_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -350px;
-      top: 407px;
+      left: 37%;
+      top: 453px;
       width: 280px;
       height: 40px;
       background-color: #c2c2c2;
@@ -493,8 +549,8 @@
     .repassword_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 407px;
+      left: 37.36%;
+      top: 453px;
       width: 274px;
       height: 34px;
       background-color: #D0D0D0;
@@ -505,8 +561,8 @@
     .repassword_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 420px;
+      left: 37.4%;
+      top: 466px;
       width: 0.8px;
       height: 34px;
       background-color: #030303;
@@ -515,8 +571,8 @@
     .repassword_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -347px;
-      top: 420px;
+      left: 37.4%;
+      top: 466px;
       width: 274px;
       height: 0.8px;
       background-color: #030303;
@@ -527,8 +583,8 @@
         display: inline-block; /* 옆으로 나열 */
         color: #020202;
         position: absolute;
-        left: -344px;
-        top: 423px;
+        left: 37.8%;
+        top: 469px;
         width: 260px;
         height: 24px;
         flex-direction: column;

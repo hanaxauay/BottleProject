@@ -4,16 +4,39 @@ import base from "../images/base.png";
 import { Link } from "react-router-dom";
 import { BiCheck } from 'react-icons/bi';
 
-export default function Login() {
+export default function Register() {
   return (
     <>
-      <div className="container">
-      <img src={base} alt="base" />
-      <div className="textbox">
-        .*☆*☆。..。.☆*。。환영해 &apos;ㅇ...*☆。..。.☆*。。
-      </div>
-        <div className="register_content">
-          <div className="boss">
+      <div className="register_content">
+        
+        <div className="top">
+         <div className="topbox1"> </div>
+         <div className="topbox2"> </div>
+         <div className="topbox3"> </div>
+         <div className="title">회원가입페이지</div>
+         <div className="topline1"> </div>
+         <div className="topline2"> </div>
+        </div>
+
+        <div className="left_container">
+        <div className="logo">
+        {"┼─…──〃──…─＊─…──〃──…─┼"}
+        <br />
+        {"│ (/)＿/"}
+        <br />
+        {"： (∧_∧)ノ∽♥ 저 왔어요오 \" -\"＊"}
+        <br />
+        {"│s(　　 )　　　　　환영ㅎH죠요오／♥"}
+        <br />
+        {"│　빤딱★　　　　　환영안ㅎㅐ주면a"}
+        <br />
+        {"├─〃──…──〃┼ 내 ?l픈 Ol빨로 `з`"}
+        <br />
+        {"│△▶ 친구들아 ：ㄲH물어★ 줄꼬ㅇㅖ요오;^ ^"}
+        </div>
+
+        </div>
+        <div className="right_container">
             <div className="name">이름</div>
             <div className="name_box1"></div>
             <div className="name_box2"></div>
@@ -91,7 +114,6 @@ export default function Login() {
             </button>
           </div>
         </div>
-      </div>
     </>
-  );
+    );
 }

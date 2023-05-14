@@ -1,6 +1,5 @@
 import React from "react";
 import "../style/login.scss";
-import base from "../images/base.png";
 import { useRef } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
