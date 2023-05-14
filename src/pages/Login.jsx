@@ -54,19 +54,42 @@ export default function Login() {
 
   return (
     <>
-      <div className="container">
-      <img src={base} alt="base" />
-      <div className="textbox">
-        .*☆*☆。..。.☆*。。오랜만 &apos;ㅇ...*☆。..。.☆*。。
-      </div>
-        <div className="login_content">
-          <div className="boss">
-            <div className="email">이메일</div>
-            <div className="emailbox1"></div>
-            <div className="emailbox2"></div>
-            <div className="emailbar1"></div>
-            <div className="emailbar2"></div>
-            <div className="email_input ">
+      <div className="login_content">
+        
+        <div className="top">
+         <div className="topbox1"> </div>
+         <div className="topbox2"> </div>
+         <div className="topbox3"> </div>
+         <div className="title">로그인페이지</div>
+         <div className="topline1"> </div>
+         <div className="topline2"> </div>
+        </div>
+
+        <div className="left_container">
+        <div className="logo">
+        {"┼─…──〃──…─＊─…──〃──…─┼"}
+        <br />
+        {"│ (/)＿/"}
+        <br />
+        {"： (∧_∧)ノ∽♥ 저 왔어요오 \" -\"＊"}
+        <br />
+        {"│s(　　 )　　　　　환영ㅎH죠요오／♥"}
+        <br />
+        {"│　빤딱★　　　　　환영안ㅎㅐ주면a"}
+        <br />
+        {"├─〃──…──〃┼ 내 ?l픈 Ol빨로 `з`"}
+        <br />
+        {"│△▶ 친구들아 ：ㄲH물어★ 줄꼬ㅇㅖ요오;^ ^"}
+        </div>
+
+        </div>
+        <div className="right_container">
+           <div className="email">이메일</div>
+           <div className="emailbox1"></div>
+           <div className="emailbox2"></div>
+           <div className="emailbar1"></div>
+           <div className="emailbar2"></div>
+           <div className="email_input ">
               <input
                 type="email"
                 ref={loginEmailInput}
@@ -101,7 +124,6 @@ export default function Login() {
               </button>
           </div>
         </div>
-      </div>
     </>
   );
 }
