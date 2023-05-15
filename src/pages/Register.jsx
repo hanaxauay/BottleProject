@@ -2,6 +2,8 @@ import React from "react";
 import "../style/register.scss";
 import { Link } from "react-router-dom";
 import { BiCheck } from 'react-icons/bi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 export default function Register() {
   return (
@@ -12,6 +14,29 @@ export default function Register() {
          <div className="topbox1"> </div>
          <div className="topbox2"> </div>
          <div className="topbox3"> </div>
+
+         <div className="sicon_box1"> </div>
+         <div className="sicon_box2"> </div>
+         <div className="sicon_box3"> )୨</div>
+         <div className="sicon_bar1"> </div>
+         <div className="sicon_bar2"></div>
+         
+         <div className="home_box1"> </div>
+         <div className="home_box2"> </div>
+         <div className="home_bar1"> </div>
+         <div className="home_bar2"> </div>
+         <button className="home_btn">
+           <Link to="/" className="home">
+             <FontAwesomeIcon icon={faHome} />ㅤ
+           </Link>       
+         </button>
+
+         <div className="ficon_box1"> </div>
+         <div className="ficon_box2"> </div>
+         <div className="ficon_box3"> ୧(</div>
+         <div className="ficon_bar1"> </div>
+         <div className="ficon_bar2"> </div>
+
          <div className="title">회원가입페이지</div>
          <div className="topline1"> </div>
          <div className="topline2"> </div>
@@ -107,7 +132,7 @@ export default function Register() {
               가입하기
             </button>
             <button className="login_btn">
-              <Link to="/" className="login">ㅤ
+              <Link to="/login" className="login">ㅤ
                | 로그인하기 |
               </Link>
             </button>

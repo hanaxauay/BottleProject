@@ -12,10 +12,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {/* 로그인 성공시 Main 으로 넘길예정. */}
-        <Route path="/main" element={<Main />} />
+        <Route path="/" element={<Main />} />
+        {/* 로그인 성공시 mypage 으로 넘길예정. */}
         <Route path="/mypage" element={<Mypage />} />
       </Routes>
     </>

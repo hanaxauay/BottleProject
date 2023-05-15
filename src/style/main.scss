@@ -38,6 +38,179 @@
             background-color: #00017F;
             z-index: 3;
         }
+        .sicon_box1 {
+            position: absolute;
+            left: 96.7%;
+            top: 11%;
+            right: 5px;
+            height: 40%;
+            width: 2.4%;
+            background-color: #ffffff;
+            z-index: 4;
+        }
+        .sicon_box2 {
+            position: absolute;
+            left: 96.78%;
+            top: 12.5%;
+            right: 5px;
+            height: 39%;
+            width: 2.1%;
+            background-color: #C2C2C2;
+            z-index: 5;
+        }
+        .sicon_box3 {
+            position: absolute;
+            left: 96.89%;
+            top: 14.7%;
+            right: 5px;
+            height: 32%;
+            width: 2.1%;
+            z-index: 6;
+            background-color: #ffffff;
+        }
+        .sicon_bar1 {
+            position: absolute;
+            left: 96.6%;
+            top: 49%;
+            right: 5px;
+            height: 5%;
+            width: 2.5%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .sicon_bar2 {
+            position: absolute;
+            left: 98.9%;
+            top: 11.45831%;
+            right: 5px;
+            height: 42%;
+            width: 0.2%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .home_box1 {
+            position: absolute;
+            left: 93.6%;
+            top: 11%;
+            right: 5px;
+            height: 40%;
+            width: 2.4%;
+            background-color: #ffffff;
+            z-index: 4;
+        }
+        .home_box2 {
+            position: absolute;
+            left: 93.68%;
+            top: 12.5%;
+            right: 5px;
+            height: 39%;
+            width: 2.1%;
+            background-color: #C2C2C2;
+            z-index: 5;
+        }
+        .home_bar1 {
+            position: absolute;
+            left: 93.5%;
+            top: 49%;
+            right: 5px;
+            height: 5%;
+            width: 2.5%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .home_bar2 {
+            position: absolute;
+            left: 95.8%;
+            top: 11.45831%;
+            right: 5px;
+            height: 42%;
+            width: 0.2%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .home_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            font-size: 20px;
+            font-family: "DungGeunMo";
+            font-weight: bold;
+            left: 93.79%;
+            top: 14.7%;
+            right: 5px;
+            height: 32%;
+            width: 2.1%;
+            z-index: 5;
+            background-color: #ffffff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            .home {
+                text-decoration: none;
+                color: #000000;
+              }
+              .home:hover {
+                color: #666;
+              }
+              .icon-wrapper {
+                top: 10%;
+                color: #ffffff; /* 바탕색: 하얀색 */
+                background-color: #000000; /* 테두리 색: 검은색 */
+                border-radius: 50%;
+                padding: 4px;
+                border: 2px solid #666;
+              }
+        }
+        .ficon_box1 {
+            margin-left: 9%; /* 아이콘을 오른쪽으로 이동 */
+            color: #ffffff; /* 바탕색: 하얀색 */
+            background-color: #000000; /* 테두리 색: 검은색 */
+            border-radius: 50%;
+            padding: 4px;
+            border: 2px solid #666;
+        }
+        .ficon_box2 {
+            position: absolute;
+            left: 90.53%;
+            top: 12.5%;
+            right: 5px;
+            height: 39%;
+            width: 2.1%;
+            background-color: #C2C2C2;
+            z-index: 5;
+        }
+        .ficon_box3 {
+            position: absolute;
+            left: 90.62%;
+            top: 14.7%;
+            right: 5px;
+            height: 32%;
+            width: 2.1%;
+            z-index: 6;
+            background-color: #ffffff;
+        }
+        .ficon_bar1 {
+            position: absolute;
+            left: 90.33%;
+            top: 49%;
+            right: 5px;
+            height: 5%;
+            width: 2.5%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .ficon_bar2 {
+            position: absolute;
+            left: 92.64%;
+            top: 11.45831%;
+            right: 5px;
+            height: 42%;
+            width: 0.2%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        
         .title {
            color: #000;
            font-size: 35px;
@@ -200,28 +373,41 @@
         height: 7%;
         width: 70%;
         z-index: 4;
-        cursor: pointer;
-        background-color: transparent;
+        background: none;
         border: none;
         outline: none;
-        color: #ffffff; /* 버튼의 글자 색상 지정 */
+        cursor: pointer;
+        .login {
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .login:hover {
+            color: #666;
+          }
     }
       .register_btn {
+        display: inline-block;
         position: absolute;
-       font-size: 20px;
-       font-family: "DungGeunMo";
-       font-weight: bold;
-       left: 16%;
-       top: 86%;
-       right: 9%;
-       height: 8%;
-       width: 70%;
-       z-index: 5;
-       cursor: pointer;
-       background-color: transparent;
-       border: none;
-       outline: none;
-       color: #ffffff; /* 버튼의 글자 색상 지정 */
+        font-size: 20px;
+        font-family: "DungGeunMo";
+        font-weight: bold;
+        left: 16%;
+        top: 86%;
+        right: 9%;
+        height: 8%;
+        width: 70%;
+        z-index: 5;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        .register {
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .register:hover {
+            color: #666;
+          }
     }
 
      }    
