@@ -595,8 +595,8 @@
     .sign_box1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -279px;
-      top: 491.9px;
+      left: 46.4%;
+      top: 540px;
       width: 126px;
       height: 45px;
       background-color: #ffffff;
@@ -606,8 +606,8 @@
     .sign_box2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -278px;
-      top: 490px;
+      left: 46.5%;
+      top: 538px;
       width: 125px;
       height: 42px;
       background-color: #D0D0D0;
@@ -618,8 +618,8 @@
     .sign_bar1 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -152px;
-      top: 502.7px;
+      left: 61.8%;
+      top: 550px;
       width: 2.6px;
       height: 43px;
       background-color: #030303;
@@ -628,9 +628,9 @@
     .sign_bar2 {
       display: inline-block; /* 옆으로 나열 */
       position: absolute;
-      left: -279px;
-      top: 545px;
-      width: 130px;
+      left: 46.4%;
+      top: 592px;
+      width: 129px;
       height: 3px;
       background-color: #030303;
       z-index: 5;
@@ -640,11 +640,11 @@
       position: absolute;
       font-size: 20px;
       font-weight: bold;
-      font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+      font-family: "DungGeunMo", sans-serif;
       background-color: #c2c2c2;
       position: absolute;
-      left: -275px;
-      top: 505px;
+      left: 46.8%;
+      top: 553px;
       width: 120px;
       height: 36px;
       z-index: 6;
@@ -655,10 +655,11 @@
       color: #030303;
       font-size: 16px;
       font-weight: bold;
-      font-family: ITF Devanagari, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+      font-family: "DungGeunMo", sans-serif;
       position: absolute;
-      left: -285px;
-      width: 120px;
+      left: 43.7%;
+      top: 50px;
+      width: 150px;
       height: 36px;
       margin-top: 555px;
       background: none;
