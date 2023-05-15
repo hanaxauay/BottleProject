@@ -1,6 +1,5 @@
 import React from "react";
 import "../style/register.scss";
-import base from "../images/base.png";
 import { Link } from "react-router-dom";
 import { BiCheck } from 'react-icons/bi';
 
