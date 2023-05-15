@@ -13,6 +13,24 @@ export default function Login() {
   const [password, setPassword] = useState();
   const loginEmailInput = useRef(); //email input
   const loginPwInput = useRef(); // pwd input
+  const aes128SecretKey = "abcdefghijklmnop"; // key 값 16 바이트
+  const aes128Iv = "ShVmYq3t6w9y$B&E"; //iv 16 바이트
+  var aes128EncodeData = "";
+  var aes128DecodeData = "";
+
+
+  /* [aes128Encode 이벤트 함수 정의] */
+  const aes128Encode = (secretKey, Iv, data) => {
+
+    // [aes 인코딩 수행 실시 : cbc 모드]
+    const cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(secretKey), {
+      iv: CryptoJS.enc.Utf8.parse(Iv), // [Enter IV (Optional) 지정 방식]
+      padding: CryptoJS.pad.Pkcs7,
+      mode: CryptoJS.mode.CBC // [cbc 모드 선택]
+    });
+
+    return cipher.toString();
+  };
 
   // Email 암호화 작업 -> setEmail 에 암호화 된 Email 세팅
   const onChangeInput = (e) => {
@@ -42,7 +60,7 @@ export default function Login() {
     try {
       // http://localhost:8080/login 으로 보내줌.
       const resSetLogin = await axios.post(`/login`, {
-        email: email,
+        email: aes128Encode(aes128SecretKey, aes128Iv, email),
         password: password,
       });
       // 백엔드에서 데이터 잘 받아줬으면 -> 성공
