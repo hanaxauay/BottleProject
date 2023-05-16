@@ -6,8 +6,10 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./pages/Register";
 import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";
+import "./index.css";
 // 실행부분
 
+// 전체 를 불러오는 부분인데.
 function App() {
   return (
     <>
