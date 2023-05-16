@@ -43,7 +43,7 @@ export default function Login() {
         mode: CryptoJS.mode.CBC, // [cbc 모드 선택]
       }
     );
-    setEmail(cipher.toString());
+    return cipher.toString();
   };
 
   // Login button 눌렸을떄 setLogin 함수 호출.
@@ -53,11 +53,11 @@ export default function Login() {
     }
     var aes128SecretKey = "0123456789abcdef"; // key 값 16 바이트
     var aes128Iv = "0123456789abcdef"; //iv 16 바이트
-    aes128Encode(aes128SecretKey, aes128Iv, loginEmailInput.current.value);
+    //aes128Encode(aes128SecretKey, aes128Iv, loginEmailInput.current.value);
     try {
       // http://localhost:8080/login 으로 보내줌.
       const resSetLogin = await axios.post(`/login`, {
-        email: email,
+        email: aes128Encode(aes128SecretKey, aes128Iv, loginEmailInput.current.value),
         password: password,
       });
       // 백엔드에서 데이터 잘 받아줬으면 -> 성공
