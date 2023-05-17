@@ -8,7 +8,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import CryptoJS from "crypto-js";
-import LoginComponents from "../components/\bLoginComponents";
+import LoginComponents from "../components/LoginComponents";
 export default function Login() {
   return (
     <>
