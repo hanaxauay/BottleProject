@@ -53,7 +53,7 @@ export default function LoginComponents() {
     }
     var aes128SecretKey = "0123456789abcdef"; // key 값 16 바이트
     var aes128Iv = "0123456789abcdef"; //iv 16 바이트
-    //aes128Encode(aes128SecretKey, aes128Iv, loginEmailInput.current.value);
+
     try {
       // http://localhost:8080/login 으로 보내줌.
       const resSetLogin = await axios.post(`/login`, {
@@ -65,6 +65,7 @@ export default function LoginComponents() {
         password: password,
       });
       // 백엔드에서 데이터 잘 받아줬으면 -> 성공
+      window.location.href = "/";
       console.log(resSetLogin.data);
     } catch (error) {
       console.error(error);
