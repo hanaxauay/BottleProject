@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./firebase";
 import Login from "./pages/Login";
 import { Route, Routes } from "react-router-dom";

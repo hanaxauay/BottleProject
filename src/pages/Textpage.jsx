@@ -3,8 +3,23 @@ import "../style/textpage.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
+import axios from "axios";
+import CryptoJS from "crypto-js";
+import crypto, { HmacSHA256, SHA256 } from "crypto-js";
+import { useRef } from 'react';
+
+
+
+
 
 export default function Textpage() {
+  const [title, setTitle] = useState();
+  const [text, settext] = useState();
+
+  const titleInput = useRef();
+  const textInput = useRef();
+
     return (
     <>
       <div className="textpage_content">
@@ -65,6 +80,34 @@ export default function Textpage() {
           <div className="text_box3"></div>
           <div className="text_line1"></div>
           <div className="text_line2"></div>
+          <div className="text_title ">쪽지 제목을 입력하세요</div>
+          <div className="title_line1">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+          <div className="title_main"> 제목: </div>
+
+          {/* input 칸 입력 */}
+          <div className="title_input">
+            <input type="title" ref={titleInput} />
+          </div>
+
+          <div className="title_line2">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+          <div className="category_box2">쪽지시작</div>
+          <div className="title_line3">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+
+          {/* input 칸 입력 */}
+          <div className="text_input">
+            <input type="text" ref={textInput} />
+          </div>
+
+          <button className="login_btn">
+            <Link to="/login" className="login">ㅤ
+             1. 로그인하기
+            </Link>
+          </button>
+          <button className="register_btn">
+            <Link to="/register" className="register">ㅤ
+             2. 회원가입하기
+            </Link>
+          </button>
         </div>
       </div>
     </>
