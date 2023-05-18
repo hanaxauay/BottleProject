@@ -340,11 +340,17 @@
           height: 8%;
           width: 70%;
           z-index: 4;
-          cursor: pointer;
           background-color: transparent;
           border: none;
           outline: none;
-          color: #ffffff; /* 버튼의 글자 색상 지정 */
+          cursor: pointer;
+          .text {
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .text:hover {
+            color: #666;
+          }
       }
         .communi_btn2 {
           position: absolute;

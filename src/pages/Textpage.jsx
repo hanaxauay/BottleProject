@@ -97,19 +97,26 @@ export default function Textpage() {
           <div className="text_input">
             <input type="text" ref={textInput} />
           </div>
-
+          <div className="title_line4">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+          {/* 뒤로가기 버튼 */}
           <button className="back_btn">
             <Link to="/mypage" className="back">ㅤ
              &lt; 뒤로가기
             </Link>
           </button>
+
           <button className="theme_btn">
+            {/* 테마 페이지로 이동 */}
             <Link to="/theme" className="theme">ㅤ
              ㅁ 테마보기
             </Link>
           </button>
+
           <button className="send_btn">
-             ㅁ 테마보기
+            {/* 내가 보낸 쪽지함으로 이동 */}
+            <Link to="/sending" className="sending">ㅤ
+             보내기 &gt;
+            </Link>
           </button>
         </div>
       </div>

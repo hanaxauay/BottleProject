@@ -69,7 +69,9 @@ export default function Mypage() {
           <div className="text_line2"></div>
           <div className="category_box1">소통</div>
           <button className="communi_btn1">
+            <Link to="/textpage" className="text">ㅤ
             1. 쪽지보내기
+            </Link>
           </button>
           <button className="communi_btn2">
             2. 내가보낸쪽지보기
