@@ -316,7 +316,7 @@
        .text_title {
          position: absolute;
          left: 20%;
-         top: 17%;
+         top: 15%;
          height: 8%;
          width: 50%;
          color: #ffffff;
@@ -331,7 +331,7 @@
        .title_line1 {
         position: absolute;
         left:2%;
-        top: 23%;
+        top: 20.5%;
         color: #ffffff;
         font-size: 25px;
         font-family: "DungGeunMo";
@@ -345,7 +345,7 @@
             display: inline-block; /* 옆으로 나열 */
             position: absolute;
             left: 9%;
-            top: 29%;
+            top: 27%;
             color: #ffffff;
             font-size: 25px;
             font-family: "DungGeunMo";
@@ -363,7 +363,7 @@
                 color: #ffffff;
                 position: absolute;
                 left: 17%;
-                top: 29%;
+                top: 26%;
                 height: 5%;
                 width: 30%;
                 flex-direction: column;
@@ -377,7 +377,7 @@
         .title_line2 {
             position: absolute;
             left:2%;
-            top: 35%;
+            top: 31%;
             color: #ffffff;
             font-size: 25px;
             font-family: "DungGeunMo";
@@ -391,7 +391,7 @@
        .category_box2 {
         position: absolute;
         left: 36%;
-        top: 39%;
+        top: 35%;
         height: 8%;
         width: 30%;
         color: #ffffff;
@@ -403,28 +403,10 @@
         align-items: center; /* 세로 중앙 정렬 */
         z-index: 5;
       }
-      .text_input {
-        input{
-            display: inline-block; /* 옆으로 나열 */
-            background-color: #ffffff;
-            color: #ffffff;
-            position: absolute;
-            left: 17%;
-            top: 53%;
-            height: 50%;
-            width: 30%;
-            flex-direction: column;
-            border-color: transparent; /*테두리 투명*/
-            outline: none; /* 파란색 테두리 제거 */
-            font-family: "DungGeunMo", sans-serif;
-            font-size: 19px;
-            z-index: 6;
-        }
-    }
     .title_line3 {
         position: absolute;
         left:2%;
-        top: 44%;
+        top: 40.1%;
         color: #ffffff;
         font-size: 25px;
         font-family: "DungGeunMo";
@@ -434,39 +416,56 @@
         align-items: center; /* 세로 중앙 정렬 */
         z-index: 6;
        }
-
-      .login_btn {
+       .text_input {
+        input{
+            display: inline-block; /* 옆으로 나열 */
+            background-color: #ffffff;
+            color: #ffffff;
+            position: absolute;
+            left: 17%;
+            top: 46.7%;
+            height: 50%;
+            width: 60%;
+            flex-direction: column;
+            border-color: transparent; /*테두리 투명*/
+            outline: none; /* 파란색 테두리 제거 */
+            font-family: "DungGeunMo", sans-serif;
+            font-size: 19px;
+            z-index: 6;
+        }
+    }
+      .back_btn {
         display: inline-block;
         position: absolute;
         font-size: 20px;
         font-family: "DungGeunMo";
         font-weight: bold;
-        left: 15%;
-        top: 82%;
-        right: 130px;
-        height: 7%;
+        left: -25%;
+        top: 107%;
+        right: 9%;
+        height: 8%;
         width: 70%;
         z-index: 4;
         background: none;
         border: none;
         outline: none;
         cursor: pointer;
-        .login {
+        .back {
             text-decoration: none;
             color: #ffffff;
           }
-          .login:hover {
+          .back:hover {
             color: #666;
           }
     }
-      .register_btn {
+      .theme_btn {
         display: inline-block;
         position: absolute;
         font-size: 20px;
         font-family: "DungGeunMo";
         font-weight: bold;
-        left: 16%;
-        top: 86%;
+        left: 10%;
+        top: 107%;
         right: 9%;
         height: 8%;
         width: 70%;
@@ -475,14 +474,39 @@
         border: none;
         outline: none;
         cursor: pointer;
-        .register {
+        .theme {
             text-decoration: none;
             color: #ffffff;
           }
-          .register:hover {
+          .theme:hover {
+            color: #666;
+          }
+      }
+      .send_btn {
+        display: inline-block;
+        position: absolute;
+        font-size: 20px;
+        font-family: "DungGeunMo";
+        font-weight: bold;
+        left: 10%;
+        top: 107%;
+        right: 9%;
+        height: 8%;
+        width: 70%;
+        z-index: 5;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        .theme {
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .theme:hover {
             color: #666;
           }
     }
+
 
      }    
 }

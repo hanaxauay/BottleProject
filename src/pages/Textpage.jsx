@@ -50,7 +50,7 @@ export default function Textpage() {
          <div className="ficon_bar1"> </div>
          <div className="ficon_bar2"> </div>
 
-         <div className="title">홈페이지</div>
+         <div className="title">쪽지페이지</div>
          <div className="topline1"> </div>
          <div className="topline2"> </div>
         </div>
@@ -90,7 +90,7 @@ export default function Textpage() {
           </div>
 
           <div className="title_line2">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
-          <div className="category_box2">쪽지시작</div>
+          <div className="category_box2">글을 입력하세요</div>
           <div className="title_line3">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
 
           {/* input 칸 입력 */}
@@ -98,15 +98,18 @@ export default function Textpage() {
             <input type="text" ref={textInput} />
           </div>
 
-          <button className="login_btn">
-            <Link to="/login" className="login">ㅤ
-             1. 로그인하기
+          <button className="back_btn">
+            <Link to="/mypage" className="back">ㅤ
+             &lt; 뒤로가기
             </Link>
           </button>
-          <button className="register_btn">
-            <Link to="/register" className="register">ㅤ
-             2. 회원가입하기
+          <button className="theme_btn">
+            <Link to="/theme" className="theme">ㅤ
+             ㅁ 테마보기
             </Link>
+          </button>
+          <button className="send_btn">
+             ㅁ 테마보기
           </button>
         </div>
       </div>
