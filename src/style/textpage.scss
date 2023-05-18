@@ -1,0 +1,316 @@
+.textpage_content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    .top {
+        position:absolute;
+        width: 100%;
+        height: 12%;
+        top: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .topbox1 {
+            position: absolute;
+            left: 0;
+            top: -5px;
+            right: 0;
+            height: 50px;
+            background-color: #BEBFD5;
+        }
+        .topbox2 {
+            position: absolute;
+            left: 2px;
+            top: 3px;
+            right: 2px;
+            height: 39px;
+            background-color: #545296;
+            z-index: 2;
+        }
+        .topbox3 {
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            right: 5px;
+            height: 33px;
+            background-color: #00017F;
+            z-index: 3;
+        }
+        .sicon_box1 {
+            position: absolute;
+            left: 96.7%;
+            top: 11%;
+            right: 5px;
+            height: 40%;
+            width: 2.4%;
+            background-color: #ffffff;
+            z-index: 4;
+        }
+        .sicon_box2 {
+            position: absolute;
+            left: 96.78%;
+            top: 12.5%;
+            right: 5px;
+            height: 39%;
+            width: 2.1%;
+            background-color: #C2C2C2;
+            z-index: 5;
+        }
+        .sicon_box3 {
+            position: absolute;
+            left: 96.89%;
+            top: 14.7%;
+            right: 5px;
+            height: 32%;
+            width: 2.1%;
+            z-index: 6;
+            background-color: #ffffff;
+        }
+        .sicon_bar1 {
+            position: absolute;
+            left: 96.6%;
+            top: 49%;
+            right: 5px;
+            height: 5%;
+            width: 2.5%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .sicon_bar2 {
+            position: absolute;
+            left: 98.9%;
+            top: 11.45831%;
+            right: 5px;
+            height: 42%;
+            width: 0.2%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .home_box1 {
+            position: absolute;
+            left: 93.6%;
+            top: 11%;
+            right: 5px;
+            height: 40%;
+            width: 2.4%;
+            background-color: #ffffff;
+            z-index: 4;
+        }
+        .home_box2 {
+            position: absolute;
+            left: 93.68%;
+            top: 12.5%;
+            right: 5px;
+            height: 39%;
+            width: 2.1%;
+            background-color: #C2C2C2;
+            z-index: 5;
+        }
+        .home_bar1 {
+            position: absolute;
+            left: 93.5%;
+            top: 49%;
+            right: 5px;
+            height: 5%;
+            width: 2.5%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .home_bar2 {
+            position: absolute;
+            left: 95.8%;
+            top: 11.45831%;
+            right: 5px;
+            height: 42%;
+            width: 0.2%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .home_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            font-size: 20px;
+            font-family: "DungGeunMo";
+            font-weight: bold;
+            left: 93.79%;
+            top: 14.7%;
+            right: 5px;
+            height: 32%;
+            width: 2.1%;
+            z-index: 5;
+            background-color: #ffffff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            .home {
+                text-decoration: none;
+                color: #000000;
+              }
+              .home:hover {
+                color: #666;
+              }
+              .icon-wrapper {
+                top: 10%;
+                color: #ffffff; /* 바탕색: 하얀색 */
+                background-color: #000000; /* 테두리 색: 검은색 */
+                border-radius: 50%;
+                padding: 4px;
+                border: 2px solid #666;
+              }
+        }
+        .ficon_box1 {
+            margin-left: 9%; /* 아이콘을 오른쪽으로 이동 */
+            color: #ffffff; /* 바탕색: 하얀색 */
+            background-color: #000000; /* 테두리 색: 검은색 */
+            border-radius: 50%;
+            padding: 4px;
+            border: 2px solid #666;
+        }
+        .ficon_box2 {
+            position: absolute;
+            left: 90.53%;
+            top: 12.5%;
+            right: 5px;
+            height: 39%;
+            width: 2.1%;
+            background-color: #C2C2C2;
+            z-index: 5;
+        }
+        .ficon_box3 {
+            position: absolute;
+            left: 90.62%;
+            top: 14.7%;
+            right: 5px;
+            height: 32%;
+            width: 2.1%;
+            z-index: 6;
+            background-color: #ffffff;
+        }
+        .ficon_bar1 {
+            position: absolute;
+            left: 90.33%;
+            top: 49%;
+            right: 5px;
+            height: 5%;
+            width: 2.5%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        .ficon_bar2 {
+            position: absolute;
+            left: 92.64%;
+            top: 11.45831%;
+            right: 5px;
+            height: 42%;
+            width: 0.2%;
+            background-color: #000000;
+            z-index: 6;
+        }
+        
+        .title {
+           color: #000;
+           font-size: 35px;
+           font-family: "DungGeunMo", sans-serif;
+           font-weight: bold;
+           position: absolute;
+           left: 45%;
+           top: 76px;
+        }
+        .topline1 {
+            position: absolute;
+            left: 0px;
+            top: 115px;
+            right: 0px;
+            height: 7px;
+            background-color: #FFFF;
+            z-index: 1;
+        }
+        .topline2 {
+            position: absolute;
+            left: 0px;
+            top: 115px;
+            right: 0px;
+            height: 5px;
+            background-color: #000;
+            z-index: 2;
+        }
+      }
+      .left_container {
+        position: absolute;
+        top: 12%; 
+        bottom: 0; /* Stretch to the bottom of the parent container */
+        left: 0;
+        width: 43%;
+        display: flex;
+        flex: 1;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+      .logo {
+        color: #000;
+        font-size: 22px;
+        font-family: "DungGeunMo", sans-serif;
+        font-weight: bold;
+        position: absolute;
+        top: 280px;
+      }
+      }
+      
+      .right_container {
+        position: absolute;
+        top: 12%; /* Adjust the top position as needed */
+        right: 0;
+        width: 57%;
+        height: 100%; /* Occupies 75% of the parent's height */
+        text-align: center;
+        display: flex;
+        flex: 1;
+        .text_box1 {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            right: 9px;
+            height: 108%;
+            background-color: #C2C2C2;
+            z-index: 1;
+        }
+        .text_box2 {
+          position: absolute;
+          left: 13px;
+          top: 12%;
+          right: 20px;
+          height: 104%;
+          background-color: #D0D0D0;
+          z-index: 2;
+       }
+       .text_box3 {
+         position: absolute;
+         left: 23px;
+         top: 14%;
+         right: 32px;
+         height: 100%;
+         background-color: #00017F;
+         z-index: 3;
+       }
+        .text_line1 {
+         position: absolute;
+         left: 12px;
+         top: 12.4%;
+         right: 32px;
+         height: 1.3%;
+         background-color: #000;
+         z-index: 4;
+       }
+        .text_line2 {
+         position: absolute;
+         top: 13%;
+         left: 12px;
+         height: 101%;
+         width: 1%;
+         background-color: #000;
+         z-index: 5;
+       }
+    }
+}
