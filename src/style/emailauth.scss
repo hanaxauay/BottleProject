@@ -1,27 +1,14 @@
 .emailauth_content {
-    height: 100%;
-    width: 100%;
+  height: 5vh;
+  width: 100%;
+  position: relative; // 부모선언
+  border: 10px solid gray;
+  .top {
     position: relative;
-    display: flex;
-    .top {
-        position:absolute;
-        width: 100%;
-        height: 50%;
-        top: 0;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .topbox1 {
-            position: absolute;
-            left: 0;
-            top: -0.5%;
-            right: 0;
-            height: 2.5%;
-            background-color: #bebfd5;
-        }
-        
-
-
-     }    
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    .topbox1 {
+    }
+  }
 }
