@@ -29,6 +29,32 @@ export default function Emailauth() {
           <div className="topline1"> </div>
           <div className="topline2"> </div>
         </div>
+
+        <div className="left_container">
+          <div className="logo">
+            {"　　　　♪∧,,∧〇 　"}
+            <br />
+            {"　♪∧,,∧・ ω・)ｏ "}
+            <br />
+            {"∧,,∧・ ω・)　 )っ° 　"}
+            <br />
+            {"(・ ω ・)　　)っ＿_フ★"}
+            <br />
+            {"(っ　)っ　＿_フ(_/彡와"}
+            <br />
+            {"　( ＿_フ(_/彡 서"}
+            <br />
+            {"　 (_/彡♪ 어"}
+          </div>
+        </div>
+        <div className="right_container">
+          <div className="text_box1"></div>
+          <div className="text_box2"></div>
+          <div className="text_box3"></div>
+          <div className="text_line1"></div>
+          <div className="text_line2"></div>
+          <div className="text_email">링크를 눌러 인증을 완료해주세요</div>
+        </div>
       </div>
     </>
   );
