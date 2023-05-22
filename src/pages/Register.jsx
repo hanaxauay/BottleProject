@@ -48,25 +48,6 @@ export default function Register() {
     return cipher.toString();
   };
 
-  // 이름 값 예외처리 숫자 들어가면 return
-  const checkName = () => {
-    if (/\d/.test(nameInput.current.value)) {
-      alert("이름에는 숫자가 들어갈 수 없습니다.");
-      return false;
-    }
-    return true;
-  };
-
-  // 전화번호 예외처리 11자리 되지않으면 return
-  const checkPhoneNumber = () => {
-    const phoneValue = phoneNumInput.current.value;
-    if (!/^\d{11}$/.test(phoneValue)) {
-      alert("전화번호는 11자리 숫자여야 합니다.");
-      return false;
-    }
-    return true;
-  };
-
   // email 형식 올바르지않으면 return
   const checkEmail = () => {
     const emailValue = mailInput.current.value;
@@ -119,13 +100,7 @@ export default function Register() {
     ) {
       return alert("필수 항목을 입력해주세요!");
     }
-    if (!checkName()) {
-      nameInput.current.value = "";
-      return;
-    }
-    if (!checkPhoneNumber()) {
-      return;
-    }
+
     if (!checkEmail()) {
       mailInput.current.value = "";
       return;
