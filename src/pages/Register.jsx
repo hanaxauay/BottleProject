@@ -10,16 +10,12 @@ import CryptoJS from "crypto-js";
 import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 export default function Register() {
   // 회원가입 useState 지정.
-  const [name, setName] = useState();
-  const [nickName, setNickName] = useState();
-  const [phoneNum, setPhoneNum] = useState();
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   // querySelector 지정.
-  const nameInput = useRef();
-  const nickNameInput = useRef();
-  const phoneNumInput = useRef();
+
   const mailInput = useRef();
   const passwordInput = useRef();
   const confirmPasswordInput = useRef();
@@ -91,9 +87,6 @@ export default function Register() {
   // 회원가입 버튼 눌렸을때 axios 통신.
   const register = async () => {
     if (
-      !nameInput.current.value ||
-      !nickNameInput.current.value ||
-      !phoneNumInput.current.value ||
       !mailInput.current.value ||
       !passwordInput.current.value ||
       !confirmPasswordInput.current.value
@@ -114,9 +107,6 @@ export default function Register() {
     var aes128Iv = process.env.REACT_APP_AES_SECRET_EMAIL; //iv 16 바이트
     try {
       const resRegister = await axios.post("/join", {
-        name: nameInput.current.value,
-        nickName: nickNameInput.current.value,
-        phoneNum: phoneNumInput.current.value,
         email: aes128Encode(aes128SecretKey, aes128Iv, mailInput.current.value),
         password: password,
       });
@@ -179,7 +169,6 @@ export default function Register() {
           </div>
         </div>
         <div className="right_container">
-
           <div className="input_container">
             <div className="email">이메일</div>
             <div className="email_box1"></div>
