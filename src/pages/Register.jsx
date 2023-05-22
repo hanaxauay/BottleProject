@@ -179,38 +179,6 @@ export default function Register() {
           </div>
         </div>
         <div className="right_container">
-          <div className="name">이름</div>
-          <div className="name_box1"></div>
-          <div className="name_box2"></div>
-          <div className="name_bar1"></div>
-          <div className="name_bar2"></div>
-
-          {/* input 칸 입력 */}
-          <div className="name_input">
-            <input type="name" ref={nameInput} />
-          </div>
-
-          <div className="nickname">닉네임</div>
-          <div className="nickname_box1"></div>
-          <div className="nickname_box2"></div>
-          <div className="nickname_bar1"></div>
-          <div className="nickname_bar2"></div>
-
-          {/* input 입력. */}
-          <div className="nickname_input">
-            <input type="nickname" ref={nickNameInput} />
-          </div>
-
-          <div className="phone">핸드폰번호</div>
-          <div className="phone_box1"></div>
-          <div className="phone_box2"></div>
-          <div className="phone_bar1"></div>
-          <div className="phone_bar2"></div>
-
-          {/* input 입력. */}
-          <div className="phone_input">
-            <input type="phone" ref={phoneNumInput} />
-          </div>
 
           <div className="input_container">
             <div className="email">이메일</div>
