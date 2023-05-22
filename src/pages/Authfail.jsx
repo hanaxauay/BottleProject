@@ -1,10 +1,10 @@
 import React from "react";
-import "../style/emailauth.scss";
+import "../style/authfail.scss";
 
-export default function Emailauth() {
+export default function Authfail() {
   return (
     <>
-      <div className="emailauth_content">
+      <div className="authfail_content">
         <div className="top">
           <div className="topbox1"></div>
           <div className="topbox2"></div>
@@ -25,7 +25,7 @@ export default function Emailauth() {
           <div className="ficon_bar1"> </div>
           <div className="ficon_bar2"> </div>
 
-          <div className="title">이메인증성공페이지</div>
+          <div className="title">이메일인증실패페이지</div>
           <div className="topline1"> </div>
           <div className="topline2"> </div>
         </div>

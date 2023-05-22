@@ -7,6 +7,8 @@ import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";
 import Textpage from "./pages/Textpage";
 import Emailauth from "./pages/Emailauth";
+import Authfail from "./pages/Authfail";
+import Authsuc from "./pages/Authsuc";
 import "./index.css";
 // 실행부분
 // 전체 를 불러오는 부분인데.
@@ -21,6 +23,8 @@ function App() {
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/textpage" element={<Textpage />} />
         <Route path="/emailauth" element={<Emailauth />} />
+        <Route path="/authfail" element={<Authfail />} /> 
+        <Route path="/authsuc" element={<Authsuc />} /> 
       </Routes>
     </>
   );
