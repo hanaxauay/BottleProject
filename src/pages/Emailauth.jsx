@@ -54,6 +54,9 @@ export default function Emailauth() {
           <div className="text_line1"></div>
           <div className="text_line2"></div>
           <div className="text_email">링크를 눌러 인증을 완료해주세요</div>
+          <button className="url_btn">
+            https://www.hansung.ac.kr/sites/hansung/index.do
+          </button>
         </div>
       </div>
     </>

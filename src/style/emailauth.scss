@@ -324,13 +324,37 @@
 }
 .text_email {
   position: absolute;
-  left: 26%;
-  top: 10%;
+  left: 22%;
+  top: 15%;
   color: #ffffff;
-  font-size: 120%;
+  font-size: 150%;
   font-family: "DungGeunMo";
   font-weight: bold;
   z-index: 6;
+}
+.url_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 120%;
+  font-family: "DungGeunMo";
+  font-weight: bold;
+  left: 9%;
+  top: 30%;
+  right: 5%;
+  z-index: 7;
+  color: #ffffff; /* 버튼 텍스트의 글씨색을 하얀색으로 설정 */
+  background-color: transparent; /* 버튼의 배경색을 투명으로 설정 */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  .url {
+    text-decoration: none;
+  }
+  .url:hover {
+    color: #666;
+  }
 }
   }
 }
