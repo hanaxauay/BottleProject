@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/authfail.scss";
+import { Link } from "react-router-dom";
 
 export default function Authfail() {
   return (
@@ -32,19 +33,21 @@ export default function Authfail() {
 
         <div className="left_container">
           <div className="logo">
-            {"　　　　♪∧,,∧〇 　"}
+            {"　｀、ヽ｀｀｀、ヽ｀｀、ヽ｀、ヽ｀ヽ　"}
             <br />
-            {"　♪∧,,∧・ ω・)ｏ "}
+            {"　｀｀、ヽ｀ヽ｀、ヽ｀、ヽヽ｀、ヽ　　"}
             <br />
-            {"∧,,∧・ ω・)　 )っ° 　"}
+            {"　ヽ｀ヽ｀、、 푸슝｀、ヽヽ｀、ヽ　　"}
             <br />
-            {"(・ ω ・)　　)っ＿_フ★"}
+            {"　ヽ｀｀ヽ ____＼从/_ヽ｀、ヽ｀、ヽヽ　"}
             <br />
-            {"(っ　)っ　＿_フ(_/彡와"}
+            {"｀ヽ｀、ヽ／＼＿＿＿＿＼　｀ヽ｀、ヽ"}
             <br />
-            {"　( ＿_フ(_/彡 서"}
+            {"　｀ヽ｀、|￣＼(∩゜Д゜;)＼｀ヽ｀、ヽ　"}
             <br />
-            {"　 (_/彡♪ 어"}
+            {"｀ヽ｀、ヽ|　 ｜￣￣∪￣｜   ｀ヽ｀、ヽ　"}
+            <br />
+            {"　｀、ヽ｀｀｀、ヽ｀｀、ヽ｀、ヽ｀ヽ　"}
           </div>
         </div>
         <div className="right_container">
@@ -53,7 +56,16 @@ export default function Authfail() {
           <div className="text_box3"></div>
           <div className="text_line1"></div>
           <div className="text_line2"></div>
-          <div className="text_email">인증실패</div>
+          <div className="email_fail"> 이메일 인증을 실패했습니다 </div>
+          <button className="try_email">
+          <Link to="/emailauth" className="login">ㅤ1.이메일 인증 다시하기
+          </Link>
+          </button>
+          <button className="try_register">
+          <Link to="/register" className="register">ㅤ
+            2.회원가입 다시하러가기
+          </Link>
+          </button>
         </div>
       </div>
     </>

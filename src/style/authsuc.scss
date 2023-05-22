@@ -322,16 +322,42 @@
       background-color: #000;
       z-index: 5;
     }
-    .text_email {
+    .email_suc {
       position: absolute;
-      left: 26%;
-      top: 10%;
+      left: 30%;
+      top: 36%;
+      height: 8%;
+      width: 45%;
+      background-color: #ffffff;
+      color: #00017F;
+      font-size: 150%;
+      font-family: "DungGeunMo";
+      font-weight: bold;
+      display: flex;
+      justify-content: center; /* 가로 중앙 정렬 */
+      align-items: center; /* 세로 중앙 정렬 */
+      z-index: 6
+    }
+    .go_login {
+      position: absolute;
+      left: 35%;
+      top: 50%;
       color: #ffffff;
-      font-size: 120%;
+      font-size: 130%;
       font-family: "DungGeunMo";
       font-weight: bold;
       z-index: 6;
-    
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      .login {
+          text-decoration: none;
+          color: #ffffff;
+        }
+        .login:hover {
+          color: #666;
+        }
     }
   }
 }

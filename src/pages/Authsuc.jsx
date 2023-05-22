@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/authsuc.scss";
+import { Link } from "react-router-dom";
 
 export default function Authsuc() {
   return (
@@ -25,25 +26,35 @@ export default function Authsuc() {
           <div className="ficon_bar1"> </div>
           <div className="ficon_bar2"> </div>
 
-          <div className="title">이메일인증페이지</div>
+          <div className="title">이메일인증성공페이지</div>
           <div className="topline1"> </div>
           <div className="topline2"> </div>
         </div>
         <div className="left_container">
           <div className="logo">
-            {"　　　　♪∧,,∧〇 　"}
+            {"♪　　♪　　•　 　.•♫ "}
             <br />
-            {"　♪∧,,∧・ ω・)ｏ "}
+            {"　♫ *　♪　　´　　♪"}
             <br />
-            {"∧,,∧・ ω・)　 )っ° 　"}
+            {"♫　.•　∧＿∧　.•　♪"}
             <br />
-            {"(・ ω ・)　　)っ＿_フ★"}
+            {"♪.　　 （´・ω・） 　*¨.　"}
             <br />
-            {"(っ　)っ　＿_フ(_/彡와"}
+            {"　♪¨　 (っ 旦o　.•　　*　♪"}
             <br />
-            {"　( ＿_フ(_/彡 서"}
+            {"　┈┈┈☆☆☆☆☆☆☆☆☆☆☆☆┈┈┈"}
             <br />
-            {"　 (_/彡♪ 어"}
+            {"♫┈┈╭┻┻┻┻┻┻┻┻┻┻┻┻╮┈┈"}
+            <br />
+            {"•*┈╭┻━━━━━━━━━━━━┻╮┈♫"}
+            <br />
+            {"　┈┃╲╱╲╱╲╱╱╲╱╱╲╱╲╱┃┈•♫"}
+            <br />
+            {".•┈┃ ♡환♡ 영♡ 해♡ ┃┈"}
+            <br />
+            {"*♪┈┃╲╱╲╱╲╱╱╲╱╱╲╱╲╱┃┈♪."}
+            <br />
+            {"♪.┈┗━━━━━━━━━━━━━━┛┈"}
           </div>
         </div>
         <div className="right_container">
@@ -52,7 +63,11 @@ export default function Authsuc() {
           <div className="text_box3"></div>
           <div className="text_line1"></div>
           <div className="text_line2"></div>
-          <div className="text_email">인증성공</div>
+          <div className="email_suc"> 이메일 인증을 성공했습니다 </div>
+          <button className="go_login">
+          <Link to="/login" className="login">ㅤ1.로그인 하러 가기
+          </Link>
+          </button>
         </div>
       </div>
     </>

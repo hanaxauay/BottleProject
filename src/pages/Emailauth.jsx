@@ -25,27 +25,32 @@ export default function Emailauth() {
           <div className="ficon_bar1"> </div>
           <div className="ficon_bar2"> </div>
 
-          <div className="title">이메인증성공페이지</div>
+          <div className="title">이메인증페이지</div>
           <div className="topline1"> </div>
           <div className="topline2"> </div>
         </div>
 
         <div className="left_container">
-          <div className="logo">
-            {"　　　　♪∧,,∧〇 　"}
-            <br />
-            {"　♪∧,,∧・ ω・)ｏ "}
-            <br />
-            {"∧,,∧・ ω・)　 )っ° 　"}
-            <br />
-            {"(・ ω ・)　　)っ＿_フ★"}
-            <br />
-            {"(っ　)っ　＿_フ(_/彡와"}
-            <br />
-            {"　( ＿_フ(_/彡 서"}
-            <br />
-            {"　 (_/彡♪ 어"}
-          </div>
+        <div className="logo">
+
+        {"　　　☆彡　｡∴｡　　　　･｡∴｡｡　☆彡 ｡　　｡∴｡｡☆　　☆彡　　　　" }
+       <br />
+       {"　　　　☆｡∴　　　｡｡　☆　　　･｡∴｡｡　☆　　　　*｡∴｡｡★　　" }
+       <br />
+       {"　　　*｡★　　　　∧__∧　☆｡　　･ﾟ　　　　　　☆｡∴　　　　" }
+        <br />
+       {"　★　　　｡∴　｡*( ｀Д´ )｡　　ﾟ　*당장 ｡　　　 ｡" }
+       <br />
+       {"　　　　☆　　｡｡(っ▄︻▇〓┳═ ･*　★　　이메일 ☆･ ｡" }
+       <br />
+       {"　　　･ﾟ*｡★　　/ ) ｡･　　･ﾟ｡　･ 　　 　　☆인증해 ☆･ ｡　　　　" }
+       {"･ ｡･　　　　　( /￣∪｡*･ﾟ　*｡★　｡･*　　｡｡∴｡　　　　　　" }
+       <br />
+       {"　　　｡∴｡　☆　　｡　　　　　･｡∴｡｡　☆　　　　　ﾟ｡　☆彡｡･*･"}
+       <br />
+       {"　　　｡∴｡　　　　･｡∴｡｡　☆　　　 ｡　　　　☆｡∴｡☆　　☆彡　　*･ﾟ" }
+</div>
+
         </div>
         <div className="right_container">
           <div className="text_box1"></div>
@@ -55,7 +60,11 @@ export default function Emailauth() {
           <div className="text_line2"></div>
           <div className="text_email">링크를 눌러 인증을 완료해주세요</div>
           <button className="url_btn">
-            https://www.hansung.ac.kr/sites/hansung/index.do
+          {"|　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　￣　|"}
+          <br />
+          {"|　　　   https://www.hansung.ac.kr/sites/hansung/index.do 　　　　　|"}
+          <br />
+          {"|　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　＿　|"}
           </button>
         </div>
       </div>
