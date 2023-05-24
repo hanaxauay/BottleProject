@@ -50,19 +50,17 @@ export default function Textpage() {
 
         <div className="left_container">
         <div className="logo">
-        {"┼─…──〃──…─＊─…──〃──…─┼"}
+        {"쾅쾅쾅쾅쾅쾅쾅쾅쾅"}
         <br />
-        {"│ (/)＿/"}
+        {"두다다다다다다다"}
         <br />
-        {"： (∧_∧)ノ∽♥ 저 왔어요오 \" -\"＊"}
+        {"두다　　　　　다다"}
         <br />
-        {"│s(　　 )　　　　　환영ㅎH죠요오／♥"}
+        {"쾅쾅（∩`・ ω ・）쾅쾅"}
         <br />
-        {"│　빤딱★　　　　　환영안ㅎㅐ주면a"}
+        {"두다＿/_ﾐつ/￣￣￣/다다"}
         <br />
-        {"├─〃──…──〃┼ 내 ?l픈 Ol빨로 `з`"}
-        <br />
-        {"│△▶ 친구들아 ：ㄲH물어★ 줄꼬ㅇㅖ요오;^ ^"}
+        {"쾅쾅　＼/＿＿＿/쾅쾅"}
         </div>
 
 
@@ -74,7 +72,10 @@ export default function Textpage() {
           <div className="text_line1"></div>
           <div className="text_line2"></div>
           <div className="text_title ">[ 쪽지 제목을 입력하세요 ]</div>
+          <div className="title_line1">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
           <div className="title_main"> 제목: </div>
+
+          <div className="title_line2">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
 
           {/* input 칸 입력 */}
           <div className="title_input">
@@ -85,9 +86,9 @@ export default function Textpage() {
 
           {/* input 칸 입력 */}
           <div className="text_input">
-            <input type="text" ref={textInput} />
+            <input type="textarea" ref={textInput} />
           </div>
-          <div className="title_line">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+          <div className="title_line4">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
           {/* 뒤로가기 버튼 */}
           <button className="back_btn">
             <Link to="/mypage" className="back">ㅤ
