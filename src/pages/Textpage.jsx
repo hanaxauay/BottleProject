@@ -23,32 +23,25 @@ export default function Textpage() {
     return (
     <>
       <div className="textpage_content">
-        
-        <div className="top">
-         <div className="topbox1"> </div>
-         <div className="topbox2"> </div>
-         <div className="topbox3"> </div>
-         <div className="sicon_box1"> </div>
-         <div className="sicon_box2"> </div>
-         <div className="sicon_box3"> )و</div>
-         <div className="sicon_bar1"> </div>
-         <div className="sicon_bar2"> </div>
-         
-         <div className="home_box1"> </div>
-         <div className="home_box2"> </div>
-         <div className="home_bar1"> </div>
-         <div className="home_bar2"> </div>
-         <button className="home_btn">
-           <Link to="/" className="home">
-             <FontAwesomeIcon icon={faHome} />ㅤ
-           </Link>       
-         </button>
-
-         <div className="ficon_box1"> </div>
-         <div className="ficon_box2"> </div>
-         <div className="ficon_box3">٩( </div>
-         <div className="ficon_bar1"> </div>
-         <div className="ficon_bar2"> </div>
+      <div className="top">
+          <div className="topbox1"></div>
+          <div className="topbox2"></div>
+          <div className="topbox3"></div>
+          <div className="sicon_box1"> </div>
+          <div className="sicon_box2"> </div>
+          <div className="sicon_box3"> </div>
+          <div className="sicon_bar1"> </div>
+          <div className="sicon_bar2"> </div>
+          <div className="home_box1"> </div>
+          <div className="home_box2"> </div>
+          <div className="home_box3"> </div>
+          <div className="home_bar1"> </div>
+          <div className="home_bar2"> </div>
+          <div className="ficon_box1"> </div>
+          <div className="ficon_box2"> </div>
+          <div className="ficon_box3"> </div>
+          <div className="ficon_bar1"> </div>
+          <div className="ficon_bar2"> </div>
 
          <div className="title">쪽지페이지</div>
          <div className="topline1"> </div>
@@ -80,8 +73,7 @@ export default function Textpage() {
           <div className="text_box3"></div>
           <div className="text_line1"></div>
           <div className="text_line2"></div>
-          <div className="text_title ">쪽지 제목을 입력하세요</div>
-          <div className="title_line1">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+          <div className="text_title ">[ 쪽지 제목을 입력하세요 ]</div>
           <div className="title_main"> 제목: </div>
 
           {/* input 칸 입력 */}
@@ -89,15 +81,13 @@ export default function Textpage() {
             <input type="title" ref={titleInput} />
           </div>
 
-          <div className="title_line2">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
-          <div className="category_box2">글을 입력하세요</div>
-          <div className="title_line3">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+          <div className="category_box2">[ 글을 입력하세요 ]</div>
 
           {/* input 칸 입력 */}
           <div className="text_input">
             <input type="text" ref={textInput} />
           </div>
-          <div className="title_line4">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
+          <div className="title_line">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</div>
           {/* 뒤로가기 버튼 */}
           <button className="back_btn">
             <Link to="/mypage" className="back">ㅤ
