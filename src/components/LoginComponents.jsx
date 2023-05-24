@@ -14,16 +14,6 @@ export default function LoginComponents() {
   const loginEmailInput = useRef(); //email input
   const loginPwInput = useRef(); // pwd input
 
-  // Email 암호화 작업 -> setEmail 에 암호화 된 Email 세팅
-  // const onChangeInput = (e) => {
-  //   setEmail(
-  //     crypto.AES.encrypt(
-  //       e.target.value,
-  //       process.env.REACT_APP_AES_SECRET_EMAIL
-  //     ).toString()
-  //   );
-  // };
-
   // Password 암호화 작업 -> setPassword 에 암호화 된 password 세팅
   const onChangePwd = (e) => {
     setPassword(
@@ -64,9 +54,15 @@ export default function LoginComponents() {
         ),
         password: password,
       });
+      const message = resSetLogin.data.message;
       // 백엔드에서 데이터 잘 받아줬으면 -> 성공
-      window.location.href = "/";
-      console.log(resSetLogin.data);
+      if (resSetLogin.data.status === "200") {
+        alert(message);
+      } else {
+        loginEmailInput.current.value = "";
+        loginPwInput.current.value = "";
+        alert(message);
+      }
     } catch (error) {
       console.error(error);
       console.log("로그인 부분 잘못되었음");

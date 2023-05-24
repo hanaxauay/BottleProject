@@ -3,7 +3,7 @@ import "../style/register.scss";
 import { Link } from "react-router-dom";
 import { BiCheck } from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faL } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import axios from "axios";
 import CryptoJS from "crypto-js";
@@ -11,9 +11,9 @@ import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 export default function Register() {
   // 회원가입 useState 지정.
 
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState("확인안됨");
   const [password, setPassword] = useState();
-
+  const [check, setCheck] = useState();
   // querySelector 지정.
 
   const mailInput = useRef();
@@ -77,6 +77,17 @@ export default function Register() {
       const resCheckId = await axios.post("/checkEmail", {
         email: aes128Encode(aes128SecretKey, aes128Iv, mailInput.current.value),
       });
+      if (resCheckId.data.status === "200") {
+        if (!checkEmail()) {
+          mailInput.current.value = "";
+          return;
+        }
+        setCheck("확인");
+        alert("사용 가능한 이메일 입니다!");
+      } else {
+        setCheck("확인안됨");
+        alert("이미 사용중인 이메일입니다.");
+      }
       console.log(resCheckId.data);
     } catch (error) {
       console.error(error);
@@ -93,7 +104,6 @@ export default function Register() {
     ) {
       return alert("필수 항목을 입력해주세요!");
     }
-
     if (!checkEmail()) {
       mailInput.current.value = "";
       return;
@@ -103,16 +113,23 @@ export default function Register() {
       confirmPasswordInput.current.value = "";
       return;
     }
-    var aes128SecretKey = process.env.REACT_APP_AES_SECRET_EMAIL; // key 값 16 바이트
-    var aes128Iv = process.env.REACT_APP_AES_SECRET_EMAIL; //iv 16 바이트
-    try {
-      const resRegister = await axios.post("/join", {
-        email: aes128Encode(aes128SecretKey, aes128Iv, mailInput.current.value),
-        password: password,
-      });
-      console.log(resRegister.data);
-    } catch (error) {
-      console.log("회원가입 잘못되었다.");
+    if (check === "확인") {
+      var aes128SecretKey = process.env.REACT_APP_AES_SECRET_EMAIL; // key 값 16 바이트
+      var aes128Iv = process.env.REACT_APP_AES_SECRET_EMAIL; //iv 16 바이트
+      try {
+        const resRegister = await axios.post("/join", {
+          email: aes128Encode(
+            aes128SecretKey,
+            aes128Iv,
+            mailInput.current.value
+          ),
+          password: password,
+        });
+      } catch (error) {
+        console.log("회원가입 잘못되었다.");
+      }
+    } else {
+      alert("이메일 중복 체크를 확인해주세요.");
     }
   };
 
