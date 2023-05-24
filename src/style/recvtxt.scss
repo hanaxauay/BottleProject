@@ -1,0 +1,327 @@
+.recvtxt_content {
+    height: 5vh;
+    width: 100%;
+    position: relative; // 부모선언
+    .top {
+      position: relative;
+      width: 100%;
+      height: 390%;
+      .topbox1 {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        height: 35%;
+        background-color: #bebfd5;
+        z-index: 2;
+      }
+      .topbox2 {
+        position: absolute;
+        left: 0.2%;
+        top: 2%;
+        right: 0.1%;
+        height: 31%;
+        background-color: #545296;
+        z-index: 2;
+      }
+      .topbox3 {
+        position: absolute;
+        left: 0.4%;
+        top: 4.5%;
+        right: 0.4%;
+        height: 26%;
+        background-color: #00017f;
+        z-index: 3;
+      }
+      .sicon_box1 {
+        position: absolute;
+        left: 96.4%;
+        top: 6%;
+        right: 1%;
+        height: 23%;
+        width: 2.2%;
+        background-color: #ffffff;
+        z-index: 4;
+      }
+      .sicon_box2 {
+        position: absolute;
+        left: 96.5%;
+        top: 7.3%;
+        right: 1%;
+        height: 21.7%;
+        width: 2%;
+        background-color: #c2c2c2;
+        z-index: 5;
+      }
+      .sicon_box3 {
+        position: absolute;
+        left: 96.6%;
+        top: 8.4%;
+        right: 1%;
+        height: 20%;
+        width: 1.8%;
+        background-color: #ffffff;
+        z-index: 6;
+      }
+      .sicon_bar1 {
+        position: absolute;
+        left: 98.4%;
+        top: 5.6%;
+        right: 0.9%;
+        height: 24.7%;
+        width: 0.26%;
+        background-color: #000000;
+        z-index: 7;
+      }
+      .sicon_bar2 {
+        position: absolute;
+        left: 98.4%;
+        top: 5.6%;
+        right: 0.9%;
+        height: 0.3%;
+        width: 24.7%;
+        background-color: #000000;
+        z-index: 8;
+      }
+      .home_box1 {
+        position: absolute;
+        left: 93%;
+        top: 6%;
+        right: 10%;
+        height: 23%;
+        width: 2.2%;
+        background-color: #ffffff;
+        z-index: 9;
+      }
+      .home_box2 {
+        position: absolute;
+        left: 93.1%;
+        top: 7.3%;
+        right: 1%;
+        height: 21.7%;
+        width: 2%;
+        background-color: #c2c2c2;
+        z-index: 10;
+      }
+      .home_box3 {
+        position: absolute;
+        left: 93.2%;
+        top: 8.4%;
+        right: 1%;
+        height: 20%;
+        width: 1.8%;
+        background-color: #ffffff;
+        z-index:11;
+      }
+      .home_bar1 {
+        position: absolute;
+        left: 95%;
+        top: 5.6%;
+        right: 0.9%;
+        height: 24.7%;
+        width: 0.26%;
+        background-color: #000000;
+        z-index: 12;
+      }
+      .home_bar2 {
+        position: absolute;
+        left: 95%;
+        top: 5.6%;
+        right: 0.9%;
+        height: 0.3%;
+        width: 24.7%;
+        background-color: #000000;
+        z-index: 13;
+      }
+      .home_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        font-size: 20px;
+        font-family: "DungGeunMo";
+        font-weight: bold;
+        left: 93.79%;
+        top: 14.7%;
+        right: 5px;
+        height: 32%;
+        width: 2.1%;
+        z-index: 5;
+        background-color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        .home {
+          text-decoration: none;
+          color: #000000;
+        }
+        .home:hover {
+          color: #666;
+        }
+        .icon-wrapper {
+          top: 10%;
+          color: #ffffff; /* 바탕색: 하얀색 */
+          background-color: #000000; /* 테두리 색: 검은색 */
+          border-radius: 50%;
+          padding: 4px;
+          border: 2px solid #666;
+        }
+      }
+      .ficon_box1 {
+        position: absolute;
+        left: 89.6%;
+        top: 6%;
+        right: 10%;
+        height: 23%;
+        width: 2.2%;
+        background-color: #ffffff;
+        z-index: 14;
+      }
+      .ficon_box2 {
+        position: absolute;
+        left: 89.7%;
+        top: 7.3%;
+        right: 1%;
+        height: 21.7%;
+        width: 2%;
+        background-color: #c2c2c2;
+        z-index: 15;
+      }
+      .ficon_box3 {
+        position: absolute;
+        left: 89.8%;
+        top: 8.4%;
+        right: 1%;
+        height: 20%;
+        width: 1.8%;
+        background-color: #ffffff;
+        z-index:16;
+      }
+      .ficon_bar1 {
+        position: absolute;
+        left: 91.6%;
+        top: 5.6%;
+        right: 0.9%;
+        height: 24.7%;
+        width: 0.26%;
+        background-color: #000000;
+        z-index: 17;
+      }
+      .ficon_bar2 {
+        position: absolute;
+        left: 91.6%;
+        top: 5.6%;
+        right: 0.9%;
+        height: 0.3%;
+        width: 24.7%;
+        background-color: #000000;
+        z-index: 18;
+      }
+      .title {
+        color: #020202;
+        font-size: 230%;
+        font-family: "DungGeunMo", sans-serif;
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        z-index: 19;
+      }
+      .topline1 {
+        position: absolute;
+        left: 0px;
+        top: 93%;
+        right: 0px;
+        height: 3.8%;
+        background-color: #ffff;
+        z-index: 1;
+      }
+      .topline2 {
+        position: absolute;
+        left: 0%;
+        top: 91%;
+        right: 0%;
+        height: 3.8%;
+        background-color: #000;
+        z-index: 2;
+      }
+    }
+      .left_container {
+        position: absolute;
+        top: calc(390%); /* topline1의 아래에 위치하도록 수정합니다 */
+        bottom: 0;
+        width: 45%;
+        height: 1600%;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        .logo {
+          color: #000;
+          font-size: 22px;
+          font-family: "DungGeunMo", sans-serif;
+          font-weight: bold;
+          position: absolute;
+          top: 30%;
+        }
+      }
+    
+      .right_container { 
+        position: absolute;
+        top: calc(390%); /* topline1의 아래에 위치하도록 수정합니다 */
+        bottom: 0;
+        left: 45%;
+        width: 55%;
+        height: 1600%;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        .text_box1 {
+          position: absolute;
+          left: 0;
+          top: 1%;
+          right: 1%;
+          height: 98%;
+          background-color: #C2C2C2;
+          z-index: 1;
+      }
+      .text_box2 {
+        position: absolute;
+        left: 2%;
+        top: 2%;
+        right: 3%;
+        height: 96%;
+        background-color: #D0D0D0;
+        z-index: 2;
+     }
+     .text_box3 {
+      position: absolute;
+      left: 3%;
+      top: 4%;
+      right: 4%;
+      height: 93%;
+      background-color: #00017F;
+      z-index: 3;
+    }
+    .text_line1 {
+      position: absolute;
+      left: 2%;
+      top: 2%;
+      right: 1%;
+      height: 1.3%;
+      width: 95%;
+      background-color: #000;
+      z-index: 4;
+    }
+     .text_line2 {
+      position: absolute;
+      top: 2%;
+      left: 1.3%;
+      height: 96%;
+      width: 1.1%;
+      background-color: #000;
+      z-index: 5;
+    }
+}
+}

@@ -73,19 +73,28 @@ export default function Mypage() {
             1. 쪽지보내기
             </Link>
           </button>
+
           <button className="communi_btn2">
+            <Link to="/sendtxt" className="send">ㅤ
             2. 내가보낸쪽지보기
+            </Link>
           </button>
+
           <button className="communi_btn3">
+            <Link to="/recvtxt" className="recv">ㅤ
             3. 내가받은쪽지보기
+            </Link>
           </button>
+
           <div className="category_box2">계정</div>
           <button className="account_btn1">
             1. 로그아웃하기
           </button>
+
           <button className="account_btn2">
             2. 비밀번호변경하기
           </button>
+
           <button className="account_btn3">
             3. 회원탈퇴하기
           </button>

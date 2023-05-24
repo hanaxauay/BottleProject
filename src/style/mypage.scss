@@ -363,11 +363,17 @@
           height: 8%;
           width: 70%;
          z-index: 4;
-         cursor: pointer;
          background-color: transparent;
-         border: none;
-         outline: none;
-         color: #ffffff; /* 버튼의 글자 색상 지정 */
+          border: none;
+          outline: none;
+          cursor: pointer;
+          .send {
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .send:hover {
+            color: #666;
+          }
       }
         .communi_btn3 {
           position: absolute;
@@ -380,11 +386,17 @@
           height: 8%;
           width: 70%;
           z-index: 4;
-          cursor: pointer;
           background-color: transparent;
           border: none;
           outline: none;
-          color: #ffffff; /* 버튼의 글자 색상 지정 */
+          cursor: pointer;
+          .recv {
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .recv:hover {
+            color: #666;
+          }
         }
        .category_box2 {
         position: absolute;

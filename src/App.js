@@ -9,6 +9,8 @@ import Textpage from "./pages/Textpage";
 import Emailauth from "./pages/Emailauth";
 import Authfail from "./pages/Authfail";
 import Authsuc from "./pages/Authsuc";
+import Sendtxt from "./pages/Sendtxt";
+import Recvtxt from "./pages/Recvtxt";
 import "./index.css";
 // 실행부분
 // 전체 를 불러오는 부분인데.
@@ -25,6 +27,8 @@ function App() {
         <Route path="/emailauth" element={<Emailauth />} />
         <Route path="/authfail" element={<Authfail />} /> 
         <Route path="/authsuc" element={<Authsuc />} /> 
+        <Route path="/sendtxt" element={<Sendtxt />} /> 
+        <Route path="/recvtxt" element={<Recvtxt />} /> 
       </Routes>
     </>
   );
