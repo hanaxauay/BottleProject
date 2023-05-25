@@ -262,7 +262,123 @@
           font-family: "DungGeunMo", sans-serif;
           font-weight: bold;
           position: absolute;
-          top: 30%;
+          top: 3%;
+        }
+        .list_box1 {
+          position: absolute;
+          left: 17.5%;
+          top: 16%;
+          right: 1%;
+          height: 77.7%;
+          width: 65%;
+          background-color: #ffffff;
+          z-index: 1;
+        }
+        .list_box2 {
+          position: absolute;
+          left: 18%;
+          top: 16.5%;
+          right: 1%;
+          height: 76.5%;
+          width: 63.5%;
+          background-color: #B4B4B4;
+          z-index: 2;
+        }
+        .list_line1{
+          position: absolute;
+          top: 16%;
+          left: 17%;
+          height: 77%;
+          width: 0.5%;
+          background-color: #797979;
+          z-index: 3;
+        }
+        .list_line2{
+          position: absolute;
+          top: 16.2%;
+          left: 81.5%;
+          height: 76.8%;
+          width: 0.6%;
+          background-color: #797979;
+          z-index: 4;
+        }
+        .list_line3{
+          position: absolute;
+          top: 15.8%;
+          left: 17%;
+          height: 0.4%;
+          width: 65.1%;
+          background-color: #797979;
+          z-index: 5;
+        }
+        .list_line4{
+          position: absolute;
+          top: 93.05%;
+          left: 17%;
+          height: 0.4%;
+          width: 65.1%;
+          background-color: #797979;
+          z-index: 5;
+        }
+        .list_title {
+          color: #000;
+          background-color: #B4B4B4;
+          font-size: 160%;
+          font-family: "DungGeunMo", sans-serif;
+          position: absolute;
+          top: 14%;
+          left: 23%;
+          z-index: 6;
+        }
+        .list_cat1 {
+          display: inline-block; /* 옆으로 나열 */
+          color: #000;
+          font-size: 220%;
+          font-family: "DungGeunMo", sans-serif;
+          position: absolute;
+          top: 25.5%;
+          left: 21%;
+          z-index: 7;
+        }
+        .list_catbox1{
+          display: inline-block; /* 옆으로 나열 */
+          position: absolute;
+          left: 26%;
+          top: 25%;
+          right: 1%;
+          height: 7%;
+          width: 47.5%;
+          background-color: #ffffff;
+          z-index: 8;
+        }
+        .list_catbox2{
+          display: inline-block; /* 옆으로 나열 */
+          position: absolute;
+          left: 26.3%;
+          top: 25.2%;
+          right: 1%;
+          height: 6.6%;
+          width: 46.9%;
+          background-color: #B4B4B4;
+          z-index: 8;
+        }
+        .list_catline1{
+          position: absolute;
+          top: 31.8%;
+          left: 26%;
+          height: 0.3%;
+          width: 47.5%;
+          background-color: #000000;
+          z-index: 9;
+        }
+        .list_catline2 {
+          position: absolute;
+          top: 25%;
+          left: 73.2%;
+          height: 7%;
+          width: 0.36%;
+          background-color: #000000;
+          z-index: 10;
         }
       }
     

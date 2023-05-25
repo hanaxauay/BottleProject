@@ -50,20 +50,20 @@ export default function Textpage() {
 
         <div className="left_container">
         <div className="logo">
-        {"┼─…──〃──…─＊─…──〃──…─┼"}
-        <br />
-        {"│ (/)＿/"}
-        <br />
-        {"： (∧_∧)ノ∽♥ 저 왔어요오 \" -\"＊"}
-        <br />
-        {"│s(　　 )　　　　　환영ㅎH죠요오／♥"}
-        <br />
-        {"│　빤딱★　　　　　환영안ㅎㅐ주면a"}
-        <br />
-        {"├─〃──…──〃┼ 내 ?l픈 Ol빨로 `з`"}
-        <br />
-        {"│△▶ 친구들아 ：ㄲH물어★ 줄꼬ㅇㅖ요오;^ ^"}
+        {"┼──────눌러서 확인하세요──────┼"}
         </div>
+        <div className="list_box1"></div>
+        <div className="list_box2"></div>
+        <div className="list_line1"></div>
+        <div className="list_line2"></div>
+        <div className="list_line3"></div>
+        <div className="list_line4"></div>
+        <div className="list_title">note received</div>
+        <div className="list_cat1">1</div>
+        <div className="list_catbox1"></div>
+        <div className="list_catbox2"></div>
+        <div className="list_catline1"></div>
+        <div className="list_catline2"></div>
 
 
         </div>
