@@ -123,6 +123,8 @@ export default function Register() {
     }).catch (function(error) {
       alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
     });
+
+
   };
 
   return (
