@@ -8,9 +8,9 @@ import { useState } from "react";
 import axios from "axios";
 import CryptoJS from "crypto-js";
 import crypto, { HmacSHA256, SHA256 } from "crypto-js";
+import LeftContainer from "../components/LeftContainer";
 export default function Register() {
   // 회원가입 useState 지정.
-
   const [email, setEmail] = useState("확인안됨");
   const [password, setPassword] = useState();
   const [check, setCheck] = useState();
@@ -140,13 +140,11 @@ export default function Register() {
           <div className="topbox1"> </div>
           <div className="topbox2"> </div>
           <div className="topbox3"> </div>
-
           <div className="sicon_box1"> </div>
           <div className="sicon_box2"> </div>
           <div className="sicon_box3"> )୨</div>
           <div className="sicon_bar1"> </div>
           <div className="sicon_bar2"></div>
-
           <div className="home_box1"> </div>
           <div className="home_box2"> </div>
           <div className="home_bar1"> </div>
@@ -168,23 +166,9 @@ export default function Register() {
           <div className="topline2"> </div>
         </div>
 
-        <div className="left_container">
-          <div className="logo">
-            {"　　　　♪∧,,∧〇 　"}
-            <br />
-            {"　♪∧,,∧・ ω・)ｏ "}
-            <br />
-            {"∧,,∧・ ω・)　 )っ° 　"}
-            <br />
-            {"(・ ω ・)　　)っ＿_フ★"}
-            <br />
-            {"(っ　)っ　＿_フ(_/彡와"}
-            <br />
-            {"　( ＿_フ(_/彡 서"}
-            <br />
-            {"　 (_/彡♪ 어"}
-          </div>
-        </div>
+        {/* 왼쪽 컴포넌트 분리 */}
+        <LeftContainer />
+
         <div className="right_container">
           <div className="input_container">
             <div className="email">이메일</div>

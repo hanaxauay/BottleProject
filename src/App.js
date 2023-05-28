@@ -9,27 +9,15 @@ import Textpage from "./pages/Textpage";
 import Emailauth from "./pages/Emailauth";
 import Authfail from "./pages/Authfail";
 import Authsuc from "./pages/Authsuc";
-import Sendtxt from "./pages/Sendtxt";
-import Recvtxt from "./pages/Recvtxt";
+import Sendtxt from "./pages/SendText";
+import Recvtxt from "./pages/RecvTxt";
 import "./index.css";
-// 실행부분
+import Integrated from "./pages/Integrated";
 // 전체 를 불러오는 부분인데.
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Main />} />
-        {/* 로그인 성공시 mypage 으로 넘길예정. */}
-        <Route path="/mypage" element={<Mypage />} />
-        <Route path="/textpage" element={<Textpage />} />
-        <Route path="/emailauth" element={<Emailauth />} />
-        <Route path="/authfail" element={<Authfail />} /> 
-        <Route path="/authsuc" element={<Authsuc />} /> 
-        <Route path="/sendtxt" element={<Sendtxt />} /> 
-        <Route path="/recvtxt" element={<Recvtxt />} /> 
-      </Routes>
+      <Integrated />
     </>
   );
 }

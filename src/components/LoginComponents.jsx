@@ -8,6 +8,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import CryptoJS from "crypto-js";
+import LeftContainer from "./LeftContainer";
 export default function LoginComponents() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -41,9 +42,9 @@ export default function LoginComponents() {
     if (!loginEmailInput.current.value || !loginPwInput.current.value) {
       return alert("값을 입력하세요");
     }
-    var aes128SecretKey = "0123456789abcdef"; // key 값 16 바이트
-    var aes128Iv = "0123456789abcdef"; //iv 16 바이트
-
+    var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY; // key 값 16 바이트
+    var aes128Iv = process.env.REACT_APP_AES_SECRET_KEY; //iv 16 바이트
+    console.log(aes128SecretKey);
     try {
       // http://localhost:8080/login 으로 보내줌.
       const resSetLogin = await axios.post(`/login`, {
@@ -56,8 +57,14 @@ export default function LoginComponents() {
       });
       const message = resSetLogin.data.message;
       // 백엔드에서 데이터 잘 받아줬으면 -> 성공
+      console.log(resSetLogin.data);
       if (resSetLogin.data.status === "200") {
         alert(message);
+        //로컬 스토리지 저장해보기.
+        sessionStorage.clear();
+        sessionStorage.setItem("id", resSetLogin.data.email);
+
+        window.location.replace("http://localhost:3000/mypage");
       } else {
         loginEmailInput.current.value = "";
         loginPwInput.current.value = "";
@@ -104,18 +111,9 @@ export default function LoginComponents() {
           <div className="topline2"> </div>
         </div>
 
-        <div className="left_container">
-          <div className="logo">
-            ∧__∧
-            <br />
-            ( ｀Д´ )<br />
-            (っ▄︻▇〓┳═☆ 손들어
-            <br />
-            / )<br />
-            ( /￣∪
-            <br />
-          </div>
-        </div>
+        {/* LeftContainer */}
+        <LeftContainer />
+
         <div className="right_container">
           <div className="email">이메일</div>
           <div className="emailbox1"></div>
