@@ -10,7 +10,7 @@ import Emailauth from "./pages/Emailauth";
 import Authfail from "./pages/Authfail";
 import Authsuc from "./pages/Authsuc";
 import Sendtxt from "./pages/SendText";
-import Recvtxt from "./pages/RecvTxt";
+import Recvtxt from "./pages/Recvtxt";
 import "./index.css";
 import Integrated from "./pages/Integrated";
 // 전체 를 불러오는 부분인데.

@@ -6,7 +6,7 @@ import Emailauth from "./Emailauth";
 import Mypage from "./Mypage";
 import Textpage from "./Textpage";
 import SendText from "./SendText";
-import RecvTxt from "./RecvTxt";
+import RecvTxt from "./Recvtxt";
 import Login from "./Login";
 import Main from "./Main";
 import Register from "./Register";

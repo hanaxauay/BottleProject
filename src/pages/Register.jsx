@@ -70,38 +70,30 @@ export default function Register() {
   };
 
   // email 중복체크 axios 통신.
-  const checkDuplicationEmail = async () => {
-    var aes128SecretKey = process.env.REACT_APP_AES_SECRET_EMAIL; // key 값 16 바이트
-    var aes128Iv = process.env.REACT_APP_AES_SECRET_EMAIL; //iv 16 바이트
-    try {
-      const resCheckId = await axios.post("/checkEmail", {
-        email: aes128Encode(aes128SecretKey, aes128Iv, mailInput.current.value),
-      });
-      if (resCheckId.data.status === "200") {
-        if (!checkEmail()) {
+  const checkDuplicationEmail =  () => {
+      if (!checkEmail()) {
           mailInput.current.value = "";
           return;
-        }
-        setCheck("확인");
-        alert("사용 가능한 이메일 입니다!");
-      } else {
-        setCheck("확인안됨");
-        alert("이미 사용중인 이메일입니다.");
       }
-      console.log(resCheckId.data);
-    } catch (error) {
-      console.error(error);
-      console.log("email 중복체크 잘못되었다.");
-    }
+      axios.post("/checkEmail", {
+        email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
+      }).then(function(response) {
+        if (response.data.status === "success") {
+          setCheck("확인");
+          alert(response.data.message);
+        } else {
+          setCheck("확인안됨");
+          alert(response.data.message);
+          mailInput.current.value = "";
+        }
+      }).catch (function(error) {
+        alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+      });
   };
 
   // 회원가입 버튼 눌렸을때 axios 통신.
-  const register = async () => {
-    if (
-      !mailInput.current.value ||
-      !passwordInput.current.value ||
-      !confirmPasswordInput.current.value
-    ) {
+  const register = () => {
+    if (!mailInput.current.value || !passwordInput.current.value || !confirmPasswordInput.current.value) {
       return alert("필수 항목을 입력해주세요!");
     }
     if (!checkEmail()) {
@@ -113,24 +105,24 @@ export default function Register() {
       confirmPasswordInput.current.value = "";
       return;
     }
-    if (check === "확인") {
-      var aes128SecretKey = process.env.REACT_APP_AES_SECRET_EMAIL; // key 값 16 바이트
-      var aes128Iv = process.env.REACT_APP_AES_SECRET_EMAIL; //iv 16 바이트
-      try {
-        const resRegister = await axios.post("/join", {
-          email: aes128Encode(
-            aes128SecretKey,
-            aes128Iv,
-            mailInput.current.value
-          ),
-          password: password,
-        });
-      } catch (error) {
-        console.log("회원가입 잘못되었다.");
-      }
-    } else {
+    if (check !== "확인") {
       alert("이메일 중복 체크를 확인해주세요.");
+      return;
     }
+    axios.post("/join", {
+      email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
+      password: password,
+    }).then(function(response) {
+      if (response.data.status === "success") {
+        alert(response.data.message);
+            //로그인 컴포포넌트로 리다이렉트
+      }
+      else if (response.data.status === "fail") {
+        alert(response.data.message);
+      }
+    }).catch (function(error) {
+      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+    });
   };
 
   return (

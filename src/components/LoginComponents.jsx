@@ -38,42 +38,35 @@ export default function LoginComponents() {
   };
 
   // Login button 눌렸을떄 setLogin 함수 호출.
-  const setLogin = async () => {
+  const setLogin = () => {
     if (!loginEmailInput.current.value || !loginPwInput.current.value) {
       return alert("값을 입력하세요");
     }
     var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY; // key 값 16 바이트
-    var aes128Iv = process.env.REACT_APP_AES_SECRET_KEY; //iv 16 바이트
-    console.log(aes128SecretKey);
-    try {
+    var aes128Iv = process.env.REACT_APP_AES_SECRET_IV; //iv 16 바이트
       // http://localhost:8080/login 으로 보내줌.
-      const resSetLogin = await axios.post(`/login`, {
-        email: aes128Encode(
-          aes128SecretKey,
-          aes128Iv,
-          loginEmailInput.current.value
-        ),
-        password: password,
-      });
-      const message = resSetLogin.data.message;
-      // 백엔드에서 데이터 잘 받아줬으면 -> 성공
-      console.log(resSetLogin.data);
-      if (resSetLogin.data.status === "200") {
-        alert(message);
+    axios.post(`/login`, {
+      email: aes128Encode(
+        aes128SecretKey,
+        aes128Iv,
+        loginEmailInput.current.value
+      ),
+      password: password,
+    }).then(function(response) {
+      if (response.data.status === "success") {
         //로컬 스토리지 저장해보기.
         sessionStorage.clear();
-        sessionStorage.setItem("id", resSetLogin.data.email);
+        sessionStorage.setItem("id", response.data.email);
 
         window.location.replace("http://localhost:3000/mypage");
       } else {
         loginEmailInput.current.value = "";
         loginPwInput.current.value = "";
-        alert(message);
+        alert(response.data.message);
       }
-    } catch (error) {
-      console.error(error);
-      console.log("로그인 부분 잘못되었음");
-    }
+    }).catch(function(error) {
+      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+    });
   };
 
   return (
