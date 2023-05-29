@@ -1,5 +1,5 @@
 .main_content {
-  height: 600px; // 상위 컨테이너의 높이 설정
+  height: 800px; // 상위 컨테이너의 높이 설정
   width: 100%;
   position: relative;
   display: flex;
@@ -192,7 +192,7 @@
     bottom: 0; /* Stretch to the bottom of the parent container */
     left: 0;
     width: 40%;
-    height: 100%; /* Occupies 75% of the parent's height */
+    height: 80%; /* Occupies 75% of the parent's height */
     display: flex;
     flex: 1;
     justify-content: center; /* Center the content horizontally */
@@ -273,9 +273,8 @@
 
     .category_box1 {
       position: absolute;
-      left: 36%;
-      top: 20%;
-      right: 480px;
+      left: 35%;
+      top: 10%;
       height: 8%;
       width: 30%;
       background-color: #ffffff;
@@ -291,8 +290,9 @@
 
     .text_main {
       position: absolute;
-      left: 26%;
-      top: 34%;
+      left: 25%;
+      width: 50%;
+      top: 30%;
       color: #ffffff;
       font-size: 25px;
       font-family: "DungGeunMo";
@@ -306,9 +306,8 @@
 
     .category_box2 {
       position: absolute;
-      left: 36%;
+      left: 35%;
       top: 70%;
-      right: 130px;
       height: 8%;
       width: 30%;
       background-color: #ffffff;
@@ -328,11 +327,10 @@
       font-size: 20px;
       font-family: "DungGeunMo";
       font-weight: bold;
-      left: 15%;
-      top: 82%;
-      right: 130px;
-      height: 7%;
-      width: 70%;
+      left: 0%;
+      top: 80%;
+      height: 8%;
+      width: 100%;
       z-index: 4;
       background: none;
       border: none;
@@ -359,12 +357,11 @@
       font-size: 20px;
       font-family: "DungGeunMo";
       font-weight: bold;
-      left: 16%;
-      top: 86%;
-      right: 9%;
+      left: 0%;
+      top: 88%;
       height: 8%;
-      width: 70%;
-      z-index: 5;
+      width: 100%;
+      z-index: 4;
       background: none;
       border: none;
       outline: none;
