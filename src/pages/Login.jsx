@@ -1,13 +1,14 @@
 import React from "react";
 import "../style/login.scss";
-import { useRef } from "react";
+import {useRef} from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import crypto, { HmacSHA256, SHA256 } from "crypto-js";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
+import crypto, {HmacSHA256, SHA256} from "crypto-js";
+import {useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHome} from "@fortawesome/free-solid-svg-icons";
 import CryptoJS from "crypto-js";
+
 export default function Login() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -51,7 +52,7 @@ export default function Login() {
                 loginEmailInput.current.value
             ),
             password: password,
-        }).then(function(response) {
+        }).then(function (response) {
             if (response.data.status === "success") {
                 //로컬 스토리지 저장해보기.
                 sessionStorage.clear();
@@ -63,20 +64,20 @@ export default function Login() {
                 loginPwInput.current.value = "";
                 alert(response.data.message);
             }
-        }).catch(function(error) {
+        }).catch(function (error) {
             alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
         });
     };
 
     return (
         <div>
-            <div className="right_container">
+            <div className="login_content">
                 <div className="email">이메일</div>
                 <div className="emailbox1"></div>
                 <div className="emailbox2"></div>
                 <div className="emailbar1"></div>
                 <div className="emailbar2"></div>
-                <div className="email_input ">
+                <div className="email_input">
                     <input
                         type="email"
                         ref={loginEmailInput}
@@ -89,22 +90,24 @@ export default function Login() {
                 <div className="passbar1"></div>
                 <div className="passbar2"></div>
                 <div className="password_input">
-                    <input type="password" ref={loginPwInput} onChange={onChangePwd} />
+                    <input type="password" ref={loginPwInput} onChange={onChangePwd}/>
                 </div>
-                <div className="loginbox1"></div>
-                <div className="loginbox2"></div>
-                <div className="loginbar1"></div>
-                <div className="loginbar2"></div>
-                <button className="login_btn" onClick={setLogin}>
-                    로그인하기
-                </button>
-                <p className="search_email">이메일찾기 |</p>
-                <p className="search_password">비밀번호찾기 |</p>
-                <button className="register_btn">
-                    <Link to="/register" className="Account">
-                        가입하기
-                    </Link>
-                </button>
+                <div className="btn_group">
+                    <button className="registerLink_btn">
+                        <Link to="/register" className="Account">| 가입하기 |</Link>
+                    </button>
+                    <button className="loginAction_btn" onClick={setLogin}>
+                        <div className="Account">| 로그인하기 |</div>
+                    </button>
+                </div>
+                <div className="btn_group2">
+                    <button className="findEmail_btn">
+                        <Link to="/" className="Account">| 이메일 찾기 |</Link>
+                    </button>
+                    <button className="findPassword_btn">
+                        <Link to="/" className="Account">| 비밀번호 찾기 |</Link>
+                    </button>
+                </div>
             </div>
         </div>
     );

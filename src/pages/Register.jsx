@@ -130,60 +130,29 @@ export default function Register() {
   return (
     <>
       <div className="register_content">
-        <div className="top">
-          <div className="topbox1"> </div>
-          <div className="topbox2"> </div>
-          <div className="topbox3"> </div>
-          <div className="sicon_box1"> </div>
-          <div className="sicon_box2"> </div>
-          <div className="sicon_box3"> )୨</div>
-          <div className="sicon_bar1"> </div>
-          <div className="sicon_bar2"></div>
-          <div className="home_box1"> </div>
-          <div className="home_box2"> </div>
-          <div className="home_bar1"> </div>
-          <div className="home_bar2"> </div>
-          <button className="home_btn">
-            <Link to="/" className="home">
-              <FontAwesomeIcon icon={faHome} />ㅤ
-            </Link>
-          </button>
-
-          <div className="ficon_box1"> </div>
-          <div className="ficon_box2"> </div>
-          <div className="ficon_box3"> ୧(</div>
-          <div className="ficon_bar1"> </div>
-          <div className="ficon_bar2"> </div>
-
-          <div className="title">회원가입페이지</div>
-          <div className="topline1"> </div>
-          <div className="topline2"> </div>
-        </div>
-
-        {/* 왼쪽 컴포넌트 분리 */}
-        <LeftContainer />
-
-        <div className="right_container">
-          <div className="input_container">
-            <div className="email">이메일</div>
-            <div className="email_box1"></div>
-            <div className="email_box2"></div>
-            <div className="email_bar1"></div>
-            <div className="email_bar2"></div>
-            <div className="email_input">
-              <input type="email" ref={mailInput} />
+        <div className="input_container">
+          <div className="email">이메일</div>
+          <div className="email_box1">
+            <div className="email_box2">
+              <div className="email_bar1">
+                <div className="email_bar2">
+                  <div className="email_input">
+                    <input type="email" ref={mailInput} />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="eclick_box1"></div>
-            <div className="eclick_box2"></div>
-            <div className="eclick_bar1"></div>
-            <div className="eclick_bar2"></div>
-            <button className="clickemail_btn" onClick={checkDuplicationEmail}>
+          </div>
+
+          <div className="eclick_box1"></div>
+          <div className="eclick_box2"></div>
+          <div className="eclick_bar1"></div>
+          <div className="eclick_bar2"></div>
+          <button className="clickemail_btn" onClick={checkDuplicationEmail}>
               <span className="icon-wrapper">
                 <BiCheck size={30} />
               </span>
-            </button>
-          </div>
-
+          </button>
           <div className="password">비밀번호</div>
           <div className="password_box1"></div>
           <div className="password_box2"></div>
