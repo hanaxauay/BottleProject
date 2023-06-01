@@ -11,6 +11,7 @@ import RecvTxt from "../pages/RecvTxt";
 import Login from "../pages/Login";
 import Main from "../pages/Main";
 import Register from "../pages/Register";
+import "../style/right.scss";
 
 export default function RightContainer() {
     const [component, setComponent] = useState();
