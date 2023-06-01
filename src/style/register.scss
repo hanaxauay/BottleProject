@@ -315,55 +315,57 @@
   .sign_box1 {
     display: inline-block; /* 옆으로 나열 */
     position: relative;
-    width: 126px;
+    width: 150px;
     height: 45px;
+    left: 0;
     background-color: #ffffff;
     z-index: 1;
 
     .sign_box2 {
       display: inline-block; /* 옆으로 나열 */
-      position: relative;
+      position: absolute;
       width: 125px;
       height: 42px;
+      left: 0;
       background-color: #d0d0d0;
       overflow: visible;
       z-index: 2;
     }
     .sign_bar1 {
       display: inline-block; /* 옆으로 나열 */
-      position: relative;
-      left: 50%;
-      top: 50%;
-      width: 2.6px;
-      height: 43px;
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 0.5px;
+      height: 35px;
       background-color: #030303;
       z-index: 4;
     }
     .sign_bar2 {
       display: inline-block; /* 옆으로 나열 */
-      position: relative;
-      left: 50%;
-      top: 50%;
+      position: absolute;
+      left: 3px;
+      top: 3px;
       width: 129px;
-      height: 3px;
+      height: 0.5px;
       background-color: #030303;
       z-index: 5;
     }
     .signup_btn {
       border-style: none;
-      position: relative;
+      position: absolute;
       font-size: 20px;
       font-weight: bold;
       font-family: "DungGeunMo", sans-serif;
       background-color: #c2c2c2;
       width: 120px;
       height: 36px;
+      left: 0;
+      top :0;
       z-index: 6;
       cursor: pointer;
     }
   }
-
-
 
   .login_btn {
     display: inline-block;

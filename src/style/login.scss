@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  top: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -14,12 +13,14 @@
     font-size: 22px;
     font-family: "DungGeunMo", sans-serif;
     font-weight: bold;
-    position: relative;
-    top: 268px;
-    width: 88px;
-    height: 38px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: 40%;
+    left: 25%;
     flex-direction: column;
-    margin-top: -10px;
+    margin-top: 10px;
+
   }
 
   .emailbox1 {
@@ -27,25 +28,31 @@
     position: absolute;
     width: 280px;
     height: 40px;
+    top: 40%;
+    left: 45%;
     background-color: #c2c2c2;
-    margin-top: 10px;
     z-index: 1;
 
     .emailbox2 {
       display: inline-block; /* 옆으로 나열 */
-      position: relative;
-      width: 274px;
-      height: 34px;
+      position: absolute;
+      width: 280px;
+      height: 36px;
+      left: 0px;
+      top: 0px;
       background-color: #d0d0d0;
       overflow: visible;
+      margin-top: 5px;
       z-index: 2;
 
       .emailbar1 {
         display: inline-block; /* 옆으로 나열 */
         position: absolute;
         width: 0.8px;
-        height: 34px;
-        background-color: #FFFFFF;
+        height: 36px;
+        left: 2.5px;
+        top: -2.5px;
+        background-color: #000000;
         z-index: 4;
       }
       .emailbar2 {
@@ -53,8 +60,10 @@
         position: absolute;
         width: 275px;
         height: 0.8px;
-        background-color: #FFFFFF;
-        z-index: 5;
+        left: 2.5px;
+        top: -3px;
+        background-color: #000000;
+        z-index: 4;
       }
       .email_input {
         input {
@@ -68,17 +77,11 @@
           outline: none; /* 파란색 테두리 제거 */
           font-family: "DungGeunMo", sans-serif;
           font-size: 19px;
-          z-index: 6;
+          z-index: 3;
         }
       }
     }
   }
-
-
-
-
-
-
 
 
 
@@ -88,83 +91,81 @@
     font-size: 22px;
     font-family: "DungGeunMo", sans-serif;
     font-weight: bold;
-    position: relative;
-    left: 20%;
-    top: 335px;
-    width: 88px;
-    height: 38px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: 50%;
+    left: 25%;
     flex-direction: column;
-    margin-top: -10px;
+    margin-top: 10px;
+
   }
+
 
   .passbox1 {
     display: inline-block; /* 옆으로 나열 */
-    position: relative;
-    left: 38%;
-    top: 308px;
+    position: absolute;
     width: 280px;
     height: 40px;
+    top: 50%;
+    left: 45%;
     background-color: #c2c2c2;
-    margin-top: 10px;
     z-index: 1;
-  }
 
-  .passbox2 {
-    display: inline-block; /* 옆으로 나열 */
-    position: relative;
-    left: 38.4%;
-    top: 308px;
-    width: 274px;
-    height: 34px;
-    background-color: #d0d0d0;
-    margin-top: 13px;
-    overflow: visible;
-    z-index: 2;
-  }
-
-  .passbar1 {
-    display: inline-block; /* 옆으로 나열 */
-    position: relative;
-    left: 38.3%;
-    top: 321px;
-    width: 0.8px;
-    height: 34px;
-    background-color: #FFFFFF;
-    z-index: 4;
-  }
-
-  .passbar2 {
-    display: inline-block; /* 옆으로 나열 */
-    position: relative;
-    left: 38.4%;
-    top: 320px;
-    width: 275px;
-    height: 0.8px;
-    background-color: #FFFFFF;
-    z-index: 5;
-  }
-
-  .password_input {
-    input {
+    .passbox2 {
       display: inline-block; /* 옆으로 나열 */
-      color: #222222;
-      position: relative;
-      left: 38.8%;
-      top: 323px;
-      width: 260px;
-      height: 24px;
-      flex-direction: column;
-      border-color: transparent; /*테두리 투명*/
-      outline: none; /* 파란색 테두리 제거 */
-      font-family: "DungGeunMo", sans-serif;
-      font-size: 19px;
-      z-index: 3;
+      position: absolute;
+      width: 280px;
+      height: 36px;
+      left: 0px;
+      top: 0px;
+      background-color: #d0d0d0;
+      overflow: visible;
+      margin-top: 5px;
+      z-index: 2;
+
+      .passbar1 {
+        display: inline-block; /* 옆으로 나열 */
+        position: absolute;
+        width: 0.8px;
+        height: 36px;
+        left: 2.5px;
+        top: -2.5px;
+        background-color: #000000;
+        z-index: 4;
+      }
+      .passbar2 {
+        display: inline-block; /* 옆으로 나열 */
+        position: absolute;
+        width: 275px;
+        height: 0.8px;
+        left: 2.5px;
+        top: -3px;
+        background-color: #000000;
+        z-index: 4;
+      }
+      .password_input {
+        input {
+          display: inline-block; /* 옆으로 나열 */
+          color: #222222;
+          position: relative;
+          width: 260px;
+          height: 24px;
+          flex-direction: column;
+          border-color: transparent; /*테두리 투명*/
+          outline: none; /* 파란색 테두리 제거 */
+          font-family: "DungGeunMo", sans-serif;
+          font-size: 19px;
+          z-index: 3;
+        }
+      }
     }
   }
 
+
   .loginbox1 {
     display: inline-block; /* 옆으로 나열 */
-    position: relative;
+    position: absolute;
     left: 47%;
     top: 400.8px;
     width: 126px;
@@ -176,7 +177,7 @@
 
   .loginbox2 {
     display: inline-block; /* 옆으로 나열 */
-    position: relative;
+    position: absolute;
     left: 47.1%;
     top: 399px;
     width: 125px;
@@ -187,62 +188,13 @@
     z-index: 2;
   }
 
-  .loginbar1 {
-    display: inline-block; /* 옆으로 나열 */
-    position: relative;
-    left: 62.5%;
-    top: 411px;
-    width: 2.6px;
-    height: 45px;
-    background-color: #FFFFFF;
-    z-index: 4;
-  }
-
-  .loginbar2 {
-    display: inline-block; /* 옆으로 나열 */
-    position: relative;
-    left: 46.95%;
-    top: 453px;
-    width: 130px;
-    height: 3px;
-    background-color: #030303;
-    z-index: 5;
-  }
-
-  .search_email {
-    display: inline-block;
-    color: #FFFFFF;
-    font-size: 17px;
-    font-weight: bold;
-    font-family: "DungGeunMo", sans-serif;
-    position: relative;
-    left: 36%;
-    width: 120px;
-    height: 36px;
-    margin-top: 499px;
-  }
-
-  .search_password {
-    display: inline-block;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "DungGeunMo", sans-serif;
-    position: relative;
-    left: 50%;
-    width: 120px;
-    height: 36px;
-    margin-top: 500px;
-  }
-
   .btn_group {
-    position: relative;
-    top: 70%;
+    position: absolute;
     width: 100%;
     height: 10%;
+    top: 70%;
 
     .registerLink_btn {
-      right: 35%;
       position: relative;
       display: inline-block;
       color: #FFFFFF;
@@ -264,7 +216,6 @@
     }
 
     .loginAction_btn {
-      left: 35%;
       position: relative;
       display: inline-block;
       color: #FFFFFF;
@@ -287,15 +238,14 @@
   }
 
   .btn_group2 {
-    position: relative;
-    top: 80%;
+    position: absolute;
     width: 100%;
-    height: 10%;
+    height: 100%;
+    top: 80%;
 
     .findEmail_btn {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      left: 35%;
       color: #FFFFFF;
       font-size: 16px;
       font-weight: bold;
@@ -314,8 +264,7 @@
     }
 
     .findPassword_btn {
-      right: 35%;
-      position: absolute;
+      position: relative;
       display: inline-block;
       color: #FFFFFF;
       font-size: 16px;

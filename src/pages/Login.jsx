@@ -72,25 +72,31 @@ export default function Login() {
     return (
         <div className="login_content">
             <div className="email">이메일</div>
-            <div className="emailbox1"></div>
-            <div className="emailbox2"></div>
-            <div className="emailbar1"></div>
-            <div className="emailbar2"></div>
-            <div className="email_input">
-                <input
-                    type="email"
-                    ref={loginEmailInput}
-                    // onChange={onChangeInput}
-                />
+            <div className="emailbox1">
+                <div className="emailbox2">
+                    <div className="emailbar1"></div>
+                    <div className="emailbar2"></div>
+                    <div className="email_input">
+                        <input
+                            type="email"
+                            ref={loginEmailInput}
+                            // onChange={onChangeInput}
+                        />
+                    </div>
+                </div>
             </div>
+
             <div className="password">비밀번호</div>
-            <div className="passbox1"></div>
-            <div className="passbox2"></div>
-            <div className="passbar1"></div>
-            <div className="passbar2"></div>
-            <div className="password_input">
-                <input type="password" ref={loginPwInput} onChange={onChangePwd}/>
+            <div className="passbox1">
+                <div className="passbox2">
+                    <div className="passbar1"></div>
+                    <div className="passbar2"></div>
+                    <div className="password_input">
+                        <input type="password" ref={loginPwInput} onChange={onChangePwd}/>
+                    </div>
+                </div>
             </div>
+
             <div className="btn_group">
                 <button className="registerLink_btn">
                     <Link to="/register" className="Account">| 가입하기 |</Link>
