@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../style/recvtxt.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +15,43 @@ export default function RecvTxt() {
 
   const titleInput = useRef();
   const textInput = useRef();
+
+  const aes128Encode = (secretKey, Iv, data) => {
+    const cipher = CryptoJS.AES.encrypt(
+        data,
+        CryptoJS.enc.Utf8.parse(secretKey),
+        {
+          iv: CryptoJS.enc.Utf8.parse(Iv), // [Enter IV (Optional) 지정 방식]
+          padding: CryptoJS.pad.Pkcs7,
+          mode: CryptoJS.mode.CBC, // [cbc 모드 선택]
+        }
+    );
+    return cipher.toString();
+  };
+
+  const getReceivedBottle = function () {
+    axios.post(`/bottle/getReceivedBottles/`, {
+      email : aes128Encode(
+          process.env.REACT_APP_AES_SECRET_KEY,
+          process.env.REACT_APP_AES_SECRET_IV,
+          sessionStorage.getItem("email")
+      ),
+      auth : sessionStorage.getItem("auth")
+    }).then(function (response) {
+      if (response.data.status === "success") {
+        console.log(response.data.message);
+      }
+      else {
+        console.error("getReceivedBottles error");
+      }
+    }).catch(function (error) {
+      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+    });
+  }
+
+  useEffect(function () {
+    getReceivedBottle();
+  }, [getReceivedBottle]);
 
   return (
     <>

@@ -56,7 +56,8 @@ export default function Login() {
             if (response.data.status === "success") {
                 //로컬 스토리지 저장해보기.
                 sessionStorage.clear();
-                sessionStorage.setItem("id", response.data.email);
+                sessionStorage.setItem("email", loginEmailInput.current.value);
+                sessionStorage.setItem("auth", response.data.auth);
 
                 window.location.replace("http://localhost:3000/mypage");
             } else {
