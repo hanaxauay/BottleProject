@@ -169,7 +169,7 @@ export default function Register() {
             </div>
 
 
-            <button className="login_btn">
+            <button className="login_link">
                 <Link to="/login" className="login">
                     ㅤ | 로그인하기 |
                 </Link>
