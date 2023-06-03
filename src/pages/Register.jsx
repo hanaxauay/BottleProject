@@ -12,6 +12,7 @@ import LeftContainer from "../components/LeftContainer";
 
 export default function Register() {
     // 회원가입 useState 지정.
+
     const [email, setEmail] = useState("확인안됨");
     const [password, setPassword] = useState();
     const [check, setCheck] = useState();
