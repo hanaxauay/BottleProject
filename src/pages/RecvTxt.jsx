@@ -26,6 +26,7 @@ export default function RecvTxt() {
       })
       .then(function (response) {
         if (response.data.status === "success") {
+          sessionStorage.setItem("auth", response.data.auth)
           console.log(response.data.message);
         } else {
           console.error("getReceivedBottles error");
