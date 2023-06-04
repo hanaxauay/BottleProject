@@ -30,13 +30,15 @@ export default function RecvTxt() {
   };
 
   const getReceivedBottle = function () {
-    axios.post(`/bottle/getReceivedBottles/`, {
-      email : aes128Encode(
-          process.env.REACT_APP_AES_SECRET_KEY,
-          process.env.REACT_APP_AES_SECRET_IV,
-          sessionStorage.getItem("email")
-      ),
-      auth : sessionStorage.getItem("auth")
+    axios.post(`/bottle/getReceivedBottles/`, null, {
+      params: {
+        email : aes128Encode(
+            process.env.REACT_APP_AES_SECRET_KEY,
+            process.env.REACT_APP_AES_SECRET_IV,
+            sessionStorage.getItem("email")
+        ),
+        auth : sessionStorage.getItem("auth")
+      }
     }).then(function (response) {
       if (response.data.status === "success") {
         console.log(response.data.message);
@@ -51,7 +53,7 @@ export default function RecvTxt() {
 
   useEffect(function () {
     getReceivedBottle();
-  }, [getReceivedBottle]);
+  }, []);
 
   return (
     <>
