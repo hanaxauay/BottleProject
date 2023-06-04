@@ -19,7 +19,7 @@ export default function RecvTxt() {
   // 내가 받은 메세지들
   const getReceivedBottle = function () {
     axios
-      .post(`/bottle/getReceivedBottles/`, null, {
+      .get(`/bottle/getReceivedBottles/`, {
         params: {
           auth: sessionStorage.getItem("auth"),
         },
