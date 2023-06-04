@@ -9,10 +9,29 @@ import CryptoJS from "crypto-js";
 import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 import { useRef } from "react";
 import LeftContainer from "../components/LeftContainer";
+import { useEffect } from "react";
 
 export default function Textpage() {
   const [title, setTitle] = useState();
   const [text, settext] = useState();
+
+  // 현재 title / content / 이름 보내기.
+  const sendingText = async () => {
+    try {
+      const resSendingText = await axios.post("/bottle/sendBottleLetter", {
+        title: "여기는 제목입니다",
+        sender_id: sessionStorage.getItem("id"),
+        content: "여기는 내용 입니다",
+      });
+    } catch (error) {
+      console.log("메세지 보내는곳 잘못되었다.");
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    sendingText();
+  }, []);
 
   const titleInput = useRef();
   const textInput = useRef();
@@ -44,8 +63,6 @@ export default function Textpage() {
           <div className="topline1"> </div>
           <div className="topline2"> </div>
         </div>
-
-        <LeftContainer />
 
         <div className="right_container">
           <div className="text_box1"></div>

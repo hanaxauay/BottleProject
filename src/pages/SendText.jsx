@@ -8,10 +8,25 @@ import axios from "axios";
 import CryptoJS from "crypto-js";
 import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 import { useRef } from "react";
+import { useEffect } from "react";
 
 export default function SendText() {
   const [title, setTitle] = useState();
   const [text, settext] = useState();
+
+  // 내가 보낸 메세지 요청 방식 (get)
+  const sendTxt = async () => {
+    try {
+      const resSendTxt = await axios.get();
+    } catch (error) {
+      console.log("보낸 메세지 잘못되었따.");
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    sendTxt();
+  }, []);
 
   const titleInput = useRef();
   const textInput = useRef();
