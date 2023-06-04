@@ -20,8 +20,8 @@ getToken(messaging, {
 })
   .then((currentToken) => {
     if (currentToken) {
-      console.log("성공");
-      console.log(currentToken);
+      // console.log("성공");
+      // console.log(currentToken);
     } else {
       // Show permission request UI
       console.log(
@@ -40,5 +40,3 @@ onMessage(messaging, (payload) => {
   console.log("Message received. 왔냐 이씨벌럼아  ", payload);
   // ...
 });
-
-console.log("gd");
