@@ -15,14 +15,20 @@ export default function Textpage() {
   const [title, setTitle] = useState();
   const [text, settext] = useState();
 
-  // 현재 title / content / 이름 보내기.
+  // 현재 title / content / session 에 담겨있는 auth 보내기.
   const sendingText = async () => {
     try {
-      const resSendingText = await axios.post("/bottle/sendBottleLetter", {
-        title: "여기는 제목입니다",
-        sender_id: sessionStorage.getItem("id"),
-        content: "여기는 내용 입니다",
-      });
+      const resSendingText = await axios.post(
+        "/bottle/sendBottleLetter",
+        null,
+        {
+          params: {
+            title: "제목 임시로 보냄",
+            content: "내용 임시로 보냄",
+            auth: sessionStorage.getItem("auth"),
+          },
+        }
+      );
     } catch (error) {
       console.log("메세지 보내는곳 잘못되었다.");
       console.error(error);

@@ -17,9 +17,13 @@ export default function SendText() {
   // 내가 보낸 메세지 요청 방식 (get)
   const sendTxt = async () => {
     try {
-      const resSendTxt = await axios.get();
+      const resSendTxt = await axios.get("/bottle/getSentBottles", {
+        params: {
+          auth: sessionStorage.getItem("auth"),
+        },
+      });
     } catch (error) {
-      console.log("보낸 메세지 잘못되었따.");
+      console.log("보낸 메세지 목록 잘못되었다.");
       console.error(error);
     }
   };
