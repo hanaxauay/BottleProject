@@ -65,8 +65,10 @@ export default function Register() {
             mailInput.current.value = "";
             return;
         }
-        axios.post("/checkEmail", {
-            email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
+        axios.post("/checkEmail", null, {
+            params: {
+                email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value)
+            }
         }).then(function (response) {
             if (response.data.status === "success") {
                 setCheck("확인");
@@ -99,9 +101,11 @@ export default function Register() {
             alert("이메일 중복 체크를 확인해주세요.");
             return;
         }
-        axios.post("/join", {
-            email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
-            password: password,
+        axios.post("/join", null, {
+            params : {
+                email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
+                password: password
+            }
         }).then(function (response) {
             if (response.data.status === "success") {
                 alert(response.data.message);

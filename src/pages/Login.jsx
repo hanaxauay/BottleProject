@@ -45,13 +45,15 @@ export default function Login() {
         var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY; // key 값 16 바이트
         var aes128Iv = process.env.REACT_APP_AES_SECRET_IV; //iv 16 바이트
         // http://localhost:8080/login 으로 보내줌.
-        axios.post(`/login`, {
-            email: aes128Encode(
-                aes128SecretKey,
-                aes128Iv,
-                loginEmailInput.current.value
-            ),
-            password: password,
+        axios.post(`/login`, null, {
+            params :{
+                email: aes128Encode(
+                    aes128SecretKey,
+                    aes128Iv,
+                    loginEmailInput.current.value
+                ),
+                    password: password
+            }
         }).then(function (response) {
             if (response.data.status === "success") {
                 //로컬 스토리지 저장해보기.
