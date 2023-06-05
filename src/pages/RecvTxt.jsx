@@ -44,53 +44,35 @@ export default function RecvTxt() {
   return (
     <>
       <div className="recvtxt_content">
-        <div className="top">
-          <div className="topbox1"></div>
-          <div className="topbox2"></div>
-          <div className="topbox3"></div>
-          <div className="sicon_box1"> </div>
-          <div className="sicon_box2"> </div>
-          <div className="sicon_box3"> </div>
-          <div className="sicon_bar1"> </div>
-          <div className="sicon_bar2"> </div>
-          <div className="home_box1"> </div>
-          <div className="home_box2"> </div>
-          <div className="home_box3"> </div>
-          <div className="home_bar1"> </div>
-          <div className="home_bar2"> </div>
-          <div className="ficon_box1"> </div>
-          <div className="ficon_box2"> </div>
-          <div className="ficon_box3"> </div>
-          <div className="ficon_bar1"> </div>
-          <div className="ficon_bar2"> </div>
-
-          <div className="title">내가 받은 쪽지페이지</div>
-          <div className="topline1"> </div>
-          <div className="topline2"> </div>
+        <div className="recv_text">[ 내가 받은 쪽지함 ]</div>
+        <div className="title_line1">
+            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
 
-        <div className="left_container">
-          <div className="logo">{"┼──────눌러서 확인하세요──────┼"}</div>
-          <div className="list_box1"></div>
-          <div className="list_box2"></div>
-          <div className="list_line1"></div>
-          <div className="list_line2"></div>
-          <div className="list_line3"></div>
-          <div className="list_line4"></div>
-          <div className="list_title">note received</div>
-          <div className="list_cat1">1</div>
-          <div className="list_catbox1"></div>
-          <div className="list_catbox2"></div>
-          <div className="list_catline1"></div>
-          <div className="list_catline2"></div>
+        <div className="recv_num">번호</div>
+        <div className="recv_title">제목</div>
+        <div className="title_line2">
+            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
-        <div className="right_container">
-          <div className="text_box1"></div>
-          <div className="text_box2"></div>
-          <div className="text_box3"></div>
-          <div className="text_line1"></div>
-          <div className="text_line2"></div>
-        </div>
+
+        <div className="recv_list1">1 &nbsp; &nbsp; 가나다라마바4 </div>
+
+        <div className="title_line3">
+            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+          </div>
+          {/* 뒤로가기 버튼 */}
+          <button className="back_btn">
+            <Link to="/mypage" className="back">
+              ㅤ &lt; 뒤로가기
+            </Link>
+          </button>
+
+          <button className="send_btn">
+            {/* 내가 보낸 쪽지함으로 이동 */}
+            <Link to="/sending" className="sending">
+              ㅤ 내쪽지함가기 &gt;
+            </Link>
+          </button>
       </div>
     </>
   );
