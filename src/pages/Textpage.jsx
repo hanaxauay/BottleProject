@@ -63,7 +63,7 @@ export default function Textpage() {
 
           {/* input 칸 입력 */}
           <div className="text_input">
-            <input type="textarea" ref={textInput} />
+            <textarea ref={textInput} />
           </div>
           <div className="title_line3">
             ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
