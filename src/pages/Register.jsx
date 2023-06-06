@@ -60,16 +60,17 @@ export default function Register() {
     };
 
     // email 중복체크 axios 통신.
-    const checkDuplicationEmail = () => {
+    const checkDuplicationEmail = async () => {
         if (!checkEmail()) {
             mailInput.current.value = "";
             return;
         }
-        axios.post("/checkEmail", null, {
-            params: {
-                email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value)
-            }
-        }).then(function (response) {
+        try {
+            var response = await axios.post("/checkEmail", null, {
+                params: {
+                    email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value)
+                }
+            });
             if (response.data.status === "success") {
                 setCheck("확인");
                 alert(response.data.message);
@@ -78,13 +79,13 @@ export default function Register() {
                 alert(response.data.message);
                 mailInput.current.value = "";
             }
-        }).catch(function (error) {
+        } catch(error) {
             alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
-        });
+        }
     };
 
     // 회원가입 버튼 눌렸을때 axios 통신.
-    const register = () => {
+    const register = async () => {
         if (!mailInput.current.value || !passwordInput.current.value || !confirmPasswordInput.current.value) {
             return alert("필수 항목을 입력해주세요!");
         }
@@ -101,23 +102,22 @@ export default function Register() {
             alert("이메일 중복 체크를 확인해주세요.");
             return;
         }
-        axios.post("/join", null, {
-            params : {
-                email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
-                password: password
-            }
-        }).then(function (response) {
+        try {
+            var response = await axios.post("/join", null, {
+                params : {
+                    email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
+                    password: password
+                }
+            });
             if (response.data.status === "success") {
                 alert(response.data.message);
                 //로그인 컴포포넌트로 리다이렉트
             } else if (response.data.status === "fail") {
                 alert(response.data.message);
             }
-        }).catch(function (error) {
+        } catch(error) {
             alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
-        });
-
-
+        }
     };
 
     return (

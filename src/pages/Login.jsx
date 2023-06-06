@@ -38,25 +38,25 @@ export default function Login() {
   };
 
   // Login button 눌렸을떄 setLogin 함수 호출.
-  const setLogin = () => {
+  const setLogin = async() => {
     if (!loginEmailInput.current.value || !loginPwInput.current.value) {
       return alert("값을 입력하세요");
     }
     var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY; // key 값 16 바이트
     var aes128Iv = process.env.REACT_APP_AES_SECRET_IV; //iv 16 바이트
     // http://localhost:8080/login 으로 보내줌.
-    axios
-      .post(`/login`, null, {
+    try {
+      var response = await axios.post(`/login`, null, {
         params: {
           email: aes128Encode(
-            aes128SecretKey,
-            aes128Iv,
-            loginEmailInput.current.value
+              aes128SecretKey,
+              aes128Iv,
+              loginEmailInput.current.value
           ),
-          password: password,
-        },
-      })
-      .then(function (response) {
+            password: password,
+          },
+        });
+
         if (response.data.status === "success") {
           //로컬 스토리지 저장해보기.
           sessionStorage.clear();
@@ -76,10 +76,10 @@ export default function Login() {
           loginPwInput.current.value = "";
           alert(response.data.message);
         }
-      })
-      .catch(function (error) {
+      } catch(error) {
         alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
-      });
+        console.error(error);
+      }
   };
 
   return (
