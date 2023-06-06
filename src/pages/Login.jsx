@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../style/login.scss";
 import { useRef } from "react";
 import axios from "axios";
@@ -60,14 +60,6 @@ export default function Login() {
         if (response.data.status === "success") {
           //로컬 스토리지 저장해보기.
           sessionStorage.clear();
-          sessionStorage.setItem(
-            "email",
-            aes128Encode(
-              aes128SecretKey,
-              aes128Iv,
-              loginEmailInput.current.value
-            )
-          );
           sessionStorage.setItem("auth", response.data.auth);
 
           window.location.replace("http://localhost:3000/mypage");
@@ -81,6 +73,9 @@ export default function Login() {
         console.error(error);
       }
   };
+  useEffect(function () {
+    sessionStorage.clear();
+  }, []);
 
   return (
     <div className="login_content">

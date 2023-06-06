@@ -1,11 +1,33 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../style/mypage.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import LeftContainer from "../components/LeftContainer";
+import axios from "axios";
 
 export default function Mypage() {
+
+    const authCheck = async function() {
+        try {
+            var response = await axios.get(`/bottle/authCheck/`, {
+                params: {
+                    auth: sessionStorage.getItem("auth"),
+                },
+            });
+            if (response.data.status === "success") {
+                sessionStorage.setItem("auth", response.data.auth);
+            } else {
+                console.error("authCheck error");
+            }
+        } catch(error) {
+            alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+        }
+    }
+    useEffect( function () {
+        authCheck()
+    }, []);
+
   return (
       <div className="mypage_content">
           {/*<div className="text_box1"></div>*/}
