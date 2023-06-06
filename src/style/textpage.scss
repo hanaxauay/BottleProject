@@ -21,192 +21,201 @@
     justify-content: center; /* 가로 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
     z-index: 3;
-    }
-        .title_line1 {
-          position: absolute;
-          left:3%;
-          top: 6.6%;
-          height: 10%;
-          width: 93%;
-          color: #ffffff;
-          font-size: 160%;
-          font-family: "DungGeunMo";
-          font-weight: bold;
-          display: flex;
-          justify-content: center; /* 가로 중앙 정렬 */
-          align-items: center; /* 세로 중앙 정렬 */
-          z-index: 4;
-         }
-       
-        .title_main {
-            display: inline-block; /* 옆으로 나열 */
-            position: absolute;
-            left: 8%;
-            top: 15.6%;
-            color: #ffffff;
-            font-size: 160%;
-            font-family: "DungGeunMo";
-            font-weight: bold;
-            display: flex;
-            justify-content: center; /* 가로 중앙 정렬 */
-            align-items: center; /* 세로 중앙 정렬 */
-            z-index: 5;
+  }
 
-        }
-        .title_input {
-            input{
-                display: inline-block; /* 옆으로 나열 */
-                background-color: #ffffff00;
-                color: #ffffff;
-                position: absolute;
-                left: 16.7%;
-                top: 13%;
-                height: 8%;
-                width: 95%;
-                flex-direction: column;
-                border-color: transparent; /*테두리 투명*/
-                outline: none; /* 파란색 테두리 제거 */
-                font-family: "DungGeunMo", sans-serif;
-                font-size: 157%;;
-                z-index: 6;
-            }
-        }
-        .title_line2 {
-          position: absolute;
-          left:3%;
-          top: 15%;
-          height: 10%;
-          width: 93%;
-          color: #ffffff;
-          font-size: 160%;
-          font-family: "DungGeunMo";
-          font-weight: bold;
-          display: flex;
-          justify-content: center; /* 가로 중앙 정렬 */
-          align-items: center; /* 세로 중앙 정렬 */
-          z-index: 7;
-         }
-        .text_write {
-          position: absolute;
-          left: 36%;
-          top: 23%;
-          height: 8%;
-          width: 30%;
-          color: #ffffff;
-          background-color: transparent;
-          font-size: 25px;
-          font-family: "DungGeunMo";
-          font-weight: bold;
-          display: flex;
-          justify-content: center; /* 가로 중앙 정렬 */
-          align-items: center; /* 세로 중앙 정렬 */
-          z-index: 8;
-        }
-    
-       .text_input {
-        textarea{
-            display: inline-block; /* 옆으로 나열 */
-            background-color: #ffffff00;
-            color: #ffffff;
-            position: absolute;
-            left: 8%;
-            top: 30%;
-            height: 56%;
-            width: 83%;
-            flex-direction: column;
-            border-color: transparent; /*테두리 투명*/
-            outline: none; /* 파란색 테두리 제거 */
-            font-family: "DungGeunMo", sans-serif;
-            font-size: 157%;;
-            z-index: 6;
-        }
-    }
-    .title_line3 {
-      position: absolute;
-      left:3%;
-      top: 83%;
-      height: 10%;
-      width: 93%;
+  .title_line1 {
+    position: absolute;
+    left: 3%;
+    top: 6.6%;
+    height: 10%;
+    width: 93%;
+    color: #ffffff;
+    font-size: 160%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    z-index: 4;
+  }
+
+  .title_main {
+    display: inline-block; /* 옆으로 나열 */
+    position: absolute;
+    left: 8%;
+    top: 15.6%;
+    color: #ffffff;
+    font-size: 160%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    z-index: 5;
+
+  }
+
+  .title_input {
+    input {
+      display: inline-block; /* 옆으로 나열 */
+      background-color: #ffffff00;
       color: #ffffff;
-      font-size: 160%;
-      font-family: "DungGeunMo";
-      font-weight: bold;
-      display: flex;
-      justify-content: center; /* 가로 중앙 정렬 */
-      align-items: center; /* 세로 중앙 정렬 */
-      z-index: 4;
-     }
-      .back_btn {
-        display: inline-block;
-        position: absolute;
-        font-size: 140%;
-        font-family: "DungGeunMo";
-        font-weight: bold;
-        left: 4%;
-        top: 89%;
-        right: 9%;
-        height: 8%;
-        width: 20%;
-        z-index: 4;
-        background: none;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        .back {
-            text-decoration: none;
-            color: #ffffff;
-          }
-          .back:hover {
-            color: #666;
-          }
+      position: absolute;
+      left: 16.7%;
+      top: 13%;
+      height: 8%;
+      width: 95%;
+      flex-direction: column;
+      border-color: transparent; /*테두리 투명*/
+      outline: none; /* 파란색 테두리 제거 */
+      font-family: "DungGeunMo", sans-serif;
+      font-size: 157%;;
+      z-index: 999;
     }
-      .theme_btn {
-        display: inline-block;
-        position: absolute;
-        font-size: 140%;
-        font-family: "DungGeunMo";
-        font-weight: bold;
-        left: 38%;
-        top: 89%;
-        right: 9%;
-        height: 8%;
-        width: 21%;
-        z-index: 5;
-        background: none;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        .theme {
-            text-decoration: none;
-            color: #ffffff;
-          }
-          .theme:hover {
-            color: #666;
-          }
-      }
-      .send_btn {
-        display: inline-block;
-        position: absolute;
-        font-size: 140%;
-        font-family: "DungGeunMo";
-        font-weight: bold;
-        left: 72%;
-        top: 89%;
-        height: 8%;
-        width: 20%;
-        background: none;
-        border: none;
-        outline: none;
-        z-index: 6;
-        cursor: pointer;
-        .sending {
-            text-decoration: none;
-            color: #ffffff;
-          }
-          .sending:hover {
-            color: #666;
-          }
+  }
+
+  .title_line2 {
+    position: absolute;
+    left: 3%;
+    top: 15%;
+    height: 10%;
+    width: 93%;
+    color: #ffffff;
+    font-size: 160%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    z-index: 7;
+  }
+
+  .text_write {
+    position: absolute;
+    left: 36%;
+    top: 23%;
+    height: 8%;
+    width: 30%;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 25px;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    z-index: 8;
+  }
+
+  .text_input {
+    textarea {
+      display: inline-block; /* 옆으로 나열 */
+      background-color: #ffffff00;
+      color: #ffffff;
+      position: absolute;
+      left: 8%;
+      top: 30%;
+      height: 56%;
+      width: 83%;
+      flex-direction: column;
+      border-color: transparent; /*테두리 투명*/
+      outline: none; /* 파란색 테두리 제거 */
+      font-family: "DungGeunMo", sans-serif;
+      font-size: 157%;;
+      z-index: 999;
+    }
+  }
+
+  .title_line3 {
+    position: absolute;
+    left: 3%;
+    top: 83%;
+    height: 10%;
+    width: 93%;
+    color: #ffffff;
+    font-size: 160%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    z-index: 4;
+  }
+
+  .back_btn {
+    display: inline-block;
+    position: absolute;
+    font-size: 140%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    left: 4%;
+    top: 89%;
+    right: 9%;
+    height: 8%;
+    width: 20%;
+    z-index: 4;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    .back {
+      text-decoration: none;
+      color: #ffffff;
     }
 
+    .back:hover {
+      color: #666;
+    }
+  }
 
-     }    
+  .theme_btn {
+    display: inline-block;
+    position: absolute;
+    font-size: 140%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    left: 38%;
+    top: 89%;
+    right: 9%;
+    height: 8%;
+    width: 21%;
+    z-index: 5;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    .theme {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .theme:hover {
+      color: #666;
+    }
+  }
+
+  .send_btn {
+    display: inline-block;
+    position: absolute;
+    font-size: 140%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    left: 72%;
+    top: 89%;
+    height: 8%;
+    width: 20%;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 6;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+
+  }
+  .send_btn:hover {
+    color: #666;
+  }
+}
