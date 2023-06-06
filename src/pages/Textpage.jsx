@@ -14,6 +14,8 @@ import { useEffect } from "react";
 export default function Textpage() {
   const [title, setTitle] = useState();
   const [text, settext] = useState();
+  const titleInput = useRef();
+  const textInput = useRef();
 
   // 현재 title / content / session 에 담겨있는 auth 보내기.
   const sendingText = async () => {
@@ -23,12 +25,17 @@ export default function Textpage() {
         null,
         {
           params: {
-            title: "제목 임시로 보냄",
-            content: "내용 임시로 보냄",
-            auth: sessionStorage.getItem("auth"),
+            title: titleInput.current.value,
+            content: textInput.current.value,
+            auth: sessionStorage.getItem("auth")
           },
         }
       );
+      if(resSendingText.data.status === "success") {
+          sessionStorage.setItem("auth", resSendingText.data.auth);
+      }
+      alert(resSendingText.data.message);
+
     } catch (error) {
       console.log("메세지 보내는곳 잘못되었다.");
       console.error(error);
@@ -36,11 +43,7 @@ export default function Textpage() {
   };
 
   useEffect(() => {
-    sendingText();
   }, []);
-
-  const titleInput = useRef();
-  const textInput = useRef();
 
   return (
     <>
@@ -82,11 +85,9 @@ export default function Textpage() {
             </Link>
           </button>
 
-          <button className="send_btn">
+          <button className="send_btn" onClick={sendingText}>
             {/* 내가 보낸 쪽지함으로 이동 */}
-            <Link to="/sending" className="sending">
               ㅤ 보내기 &gt;
-            </Link>
           </button>
         </div>
     </>
