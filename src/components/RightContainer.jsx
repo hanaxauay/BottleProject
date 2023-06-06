@@ -37,8 +37,8 @@ export default function RightContainer() {
                                     <Route path="/Emailauth" element={<Emailauth />} />
                                     <Route path="/Mypage" element={<Mypage />} />
                                     <Route path="/Textpage" element={<Textpage />} />
-                                    <Route path="/SendText" element={<SendText />} />
-                                    <Route path="/RecvTxt" element={<RecvTxt />} />
+                                    <Route path="/sendtxt" element={<SendText />} />
+                                    <Route path="/recvtxt" element={<RecvTxt />} />
                                     <Route path="/SendText" element={<SendText />} />
                                 </Routes>
                             </div>

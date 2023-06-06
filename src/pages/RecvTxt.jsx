@@ -1,40 +1,29 @@
 import React, { useEffect } from "react";
 import "../style/recvtxt.scss";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import axios from "axios";
-import CryptoJS from "crypto-js";
-import crypto, { HmacSHA256, SHA256 } from "crypto-js";
-import { useRef } from "react";
 
 export default function RecvTxt() {
-  const [title, setTitle] = useState();
-  const [text, settext] = useState();
-
-  const titleInput = useRef();
-  const textInput = useRef();
+  const [bottles, setbottles] = useState([]);
 
   // 내가 받은 메세지들
-  const getReceivedBottle = function () {
-    axios
-      .get(`/bottle/getReceivedBottles/`, {
+  const getReceivedBottle = async function () {
+    try {
+      var response = await axios.get(`/bottle/getReceivedBottles/`, {
         params: {
           auth: sessionStorage.getItem("auth"),
         },
-      })
-      .then(function (response) {
-        if (response.data.status === "success") {
-          sessionStorage.setItem("auth", response.data.auth)
-          console.log(response.data.message);
-        } else {
-          console.error("getReceivedBottles error");
-        }
-      })
-      .catch(function (error) {
-        alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
       });
+      if (response.data.status === "success") {
+        sessionStorage.setItem("auth", response.data.auth);
+        setbottles(JSON.parse(response.data.message));
+      } else {
+        console.error("getReceivedBottles error");
+      }
+    } catch(error) {
+        alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+    }
   };
 
   useEffect(function () {
@@ -55,7 +44,15 @@ export default function RecvTxt() {
             ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
 
-        <div className="recv_list1">1 &nbsp; &nbsp; 가나다라마바4 </div>
+        {bottles.map((item, index) => (
+            <div className="recv_list1" key={item.LETTER_ID}>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {index+1}
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {item.IS_READ === 'N' ? "(New!) " : null}
+              {item.TITLE}
+            </div>
+        ))}
 
         <div className="title_line3">
             ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
