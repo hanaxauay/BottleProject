@@ -17,12 +17,13 @@ export default function RecvTxt() {
       });
       if (response.data.status === "success") {
         sessionStorage.setItem("auth", response.data.auth);
+        console.log(response.data.message);
         setbottles(JSON.parse(response.data.message));
       } else {
         console.error("getReceivedBottles error");
       }
-    } catch(error) {
-        alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+    } catch (error) {
+      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
     }
   };
 
@@ -35,41 +36,45 @@ export default function RecvTxt() {
       <div className="recvtxt_content">
         <div className="recv_text">[ 내가 받은 쪽지함 ]</div>
         <div className="title_line1">
-            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
 
         <div className="recv_num">번호</div>
         <div className="recv_title">제목</div>
         <div className="title_line2">
-            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
 
         {bottles.map((item, index) => (
-            <div className="recv_list1" key={item.LETTER_ID}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              {index+1}
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              {item.IS_READ === 'N' ? "(New!) " : null}
-              {item.TITLE}
-            </div>
+          <Link
+            to={`/EmailContent/${item.LETTER_ID}`}
+            className="recv_list1"
+            key={item.LETTER_ID}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {index + 1}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {item.IS_READ === "N" ? "(New!) " : null}
+            {item.TITLE}
+          </Link>
         ))}
 
         <div className="title_line3">
-            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-          </div>
-          {/* 뒤로가기 버튼 */}
-          <button className="back_btn">
-            <Link to="/mypage" className="back">
-              ㅤ &lt; 뒤로가기
-            </Link>
-          </button>
+          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        </div>
+        {/* 뒤로가기 버튼 */}
+        <button className="back_btn">
+          <Link to="/mypage" className="back">
+            ㅤ &lt; 뒤로가기
+          </Link>
+        </button>
 
-          <button className="send_btn">
-            {/* 내가 보낸 쪽지함으로 이동 */}
-            <Link to="/sending" className="sending">
-              ㅤ 내쪽지함가기 &gt;
-            </Link>
-          </button>
+        <button className="send_btn">
+          {/* 내가 보낸 쪽지함으로 이동 */}
+          <Link to="/sendtxt" className="sending">
+            ㅤ 내가보낸쪽지함가기 &gt;
+          </Link>
+        </button>
       </div>
     </>
   );

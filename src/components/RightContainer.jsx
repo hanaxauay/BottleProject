@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Link, Route, Routes} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Authfail from "../pages/Authfail";
 import Authsuc from "../pages/Authsuc";
@@ -12,40 +12,45 @@ import Login from "../pages/Login";
 import Main from "../pages/Main";
 import Register from "../pages/Register";
 import "../style/right.scss";
+import EmailContent from "../pages/EmailContent";
 
 export default function RightContainer() {
-    const [component, setComponent] = useState();
-    useEffect(function () {
-        changeComponent("Home");
-    }, []);
-    var changeComponent = function (name) {
-        setComponent(name);
-    }
-    return (
-        <>
-            <div className="right_container">
-                <div className="text_box1">
-                    <div className="text_box2">
-                        <div className="text_box3">
-                            <div className="render_Container">
-                                <Routes>
-                                    <Route path="/" element={<Home />} />
-                                    <Route path="/register" element={<Register />} />
-                                    <Route path="/login" element={<Login />} />
-                                    <Route path="/Authfail" element={<Authfail />} />
-                                    <Route path="/Authsuc" element={<Authsuc />} />
-                                    <Route path="/Emailauth" element={<Emailauth />} />
-                                    <Route path="/Mypage" element={<Mypage />} />
-                                    <Route path="/Textpage" element={<Textpage />} />
-                                    <Route path="/sendtxt" element={<SendText />} />
-                                    <Route path="/recvtxt" element={<RecvTxt />} />
-                                    <Route path="/SendText" element={<SendText />} />
-                                </Routes>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  const [component, setComponent] = useState();
+  useEffect(function () {
+    changeComponent("Home");
+  }, []);
+  var changeComponent = function (name) {
+    setComponent(name);
+  };
+  return (
+    <>
+      <div className="right_container">
+        <div className="text_box1">
+          <div className="text_box2">
+            <div className="text_box3">
+              <div className="render_Container">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/Authfail" element={<Authfail />} />
+                  <Route path="/Authsuc" element={<Authsuc />} />
+                  <Route path="/Emailauth" element={<Emailauth />} />
+                  <Route path="/Mypage" element={<Mypage />} />
+                  <Route path="/Textpage" element={<Textpage />} />
+                  <Route path="/sendtxt" element={<SendText />} />
+                  <Route path="/recvtxt" element={<RecvTxt />} />
+                  <Route path="/SendText" element={<SendText />} />
+                  <Route
+                    path="/EmailContent/:itemId"
+                    element={<EmailContent />}
+                  />
+                </Routes>
+              </div>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

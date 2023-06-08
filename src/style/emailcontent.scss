@@ -68,6 +68,20 @@
     align-items: center; /* 세로 중앙 정렬 */
     z-index: 4;
   }
+  .recv_date {
+    display: inline-block; /* 옆으로 나열 */
+    position: absolute;
+    left: 70%;
+    top: 15.6%;
+    color: #ffffff;
+    font-size: 160%;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    z-index: 4;
+  }
 
   .title_line2 {
     position: absolute;

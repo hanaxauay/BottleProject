@@ -27,69 +27,66 @@ export default function Textpage() {
           params: {
             title: titleInput.current.value,
             content: textInput.current.value,
-            auth: sessionStorage.getItem("auth")
+            auth: sessionStorage.getItem("auth"),
           },
         }
       );
-      if(resSendingText.data.status === "success") {
-          sessionStorage.setItem("auth", resSendingText.data.auth);
+      if (resSendingText.data.status === "success") {
+        sessionStorage.setItem("auth", resSendingText.data.auth);
       }
       alert(resSendingText.data.message);
-
     } catch (error) {
       console.log("메세지 보내는곳 잘못되었다.");
       console.error(error);
     }
   };
 
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <>
       <div className="textpage_content">
-          <div className="text_title ">[ 쪽지 제목을 입력하세요 ]</div>
-          <div className="title_line1">
-            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-          </div>
-          <div className="title_main"> 제목: </div>
-
-          {/* input 칸 입력 */}
-          <div className="title_input">
-            <input type="title" ref={titleInput} />
-          </div>
-          <div className="title_line2">
-            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-          </div>
-
-          <div className="text_write">[ 글을 입력하세요 ]</div>
-
-          {/* input 칸 입력 */}
-          <div className="text_input">
-            <textarea ref={textInput} />
-          </div>
-          <div className="title_line3">
-            ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-          </div>
-          {/* 뒤로가기 버튼 */}
-          <button className="back_btn">
-            <Link to="/mypage" className="back">
-              ㅤ &lt; 뒤로가기
-            </Link>
-          </button>
-
-          <button className="theme_btn">
-            {/* 테마 페이지로 이동 */}
-            <Link to="/theme" className="theme">
-              ㅤ ㅁ 테마보기
-            </Link>
-          </button>
-
-          <button className="send_btn" onClick={sendingText}>
-            {/* 내가 보낸 쪽지함으로 이동 */}
-              ㅤ 보내기 &gt;
-          </button>
+        <div className="text_title ">[ 쪽지 제목을 입력하세요 ]</div>
+        <div className="title_line1">
+          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
+        <div className="title_main"> 제목: </div>
+
+        {/* input 칸 입력 */}
+        <div className="title_input">
+          <input type="title" ref={titleInput} />
+        </div>
+        <div className="title_line2">
+          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        </div>
+
+        <div className="text_write">[ 글을 입력하세요 ]</div>
+
+        {/* input 칸 입력 */}
+        <div className="text_input">
+          <textarea ref={textInput} />
+        </div>
+        <div className="title_line3">
+          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        </div>
+        {/* 뒤로가기 버튼 */}
+        <button className="back_btn">
+          <Link to="/mypage" className="back">
+            ㅤ &lt; 뒤로가기
+          </Link>
+        </button>
+
+        <button className="theme_btn">
+          {/* 테마 페이지로 이동 */}
+          <Link to="/theme" className="theme">
+            ㅤ ㅁ 테마보기
+          </Link>
+        </button>
+
+        <button className="send_btn" onClick={sendingText}>
+          {/* 내가 보낸 쪽지함으로 이동 */}ㅤ 보내기 &gt;
+        </button>
+      </div>
     </>
   );
 }
