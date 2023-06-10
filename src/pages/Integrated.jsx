@@ -4,9 +4,9 @@ import Authfail from "./Authfail";
 import Authsuc from "./Authsuc";
 import Emailauth from "./Emailauth";
 import Mypage from "./Mypage";
-import Textpage from "./Textpage";
-import SendText from "./SendText";
-import RecvTxt from "./RecvTxt";
+import SendBottle from "./SendBottle";
+import SentList from "./SentList";
+import RecvList from "./RecvList";
 import Login from "./Login";
 import Main from "./Main";
 import Register from "./Register";
@@ -18,12 +18,12 @@ export default function Integrated() {
       {/*  <Routes>*/}
       {/*    /!* 로그인 성공시 mypage 으로 넘길예정. *!/*/}
       {/*    <Route path="/mypage" element={<Mypage />} />*/}
-      {/*    <Route path="/textpage" element={<Textpage />} />*/}
+      {/*    <Route path="/textpage" element={<SendBottle />} />*/}
       {/*    <Route path="/emailauth" element={<Emailauth />} />*/}
       {/*    <Route path="/authfail" element={<Authfail />} />*/}
       {/*    <Route path="/authsuc" element={<Authsuc />} />*/}
-      {/*    <Route path="/sendtxt" element={<SendText />} />*/}
-      {/*    <Route path="/recvtxt" element={<RecvTxt />} />*/}
+      {/*    <Route path="/sendtxt" element={<SentList />} />*/}
+      {/*    <Route path="/recvtxt" element={<RecvList />} />*/}
       {/*  </Routes>*/}
       {/*) : (*/}
       {/*  <Routes>*/}

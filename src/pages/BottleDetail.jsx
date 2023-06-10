@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../style/emailcontent.scss";
 
-export default function EmailContent() {
+export default function BottleDetail() {
   // URL 로 넘어온 Item ID 값을 뽑는다.
   const id = useParams();
   // 출력해보기 : 성공
@@ -13,11 +13,11 @@ export default function EmailContent() {
 
   const [itemid, setItemId] = useState();
   // email content 가져오기
-  const showEmailContent = async () => {
+  const getBottleDetail = async () => {
     try {
-      const response = await axios.get("/bottle/showEmailContent", {
+      const response = await axios.get("/bottle/getBottleDetail", {
         params: {
-          itemId: itemId,
+          letterId: itemId,
           auth: sessionStorage.getItem("auth"),
         },
       });
@@ -27,7 +27,7 @@ export default function EmailContent() {
     }
   };
   useEffect(() => {
-    showEmailContent();
+    getBottleDetail();
     setItemId(id.itemId);
   }, []);
 

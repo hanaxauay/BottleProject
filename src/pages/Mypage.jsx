@@ -37,17 +37,17 @@ export default function Mypage() {
           {/*<div className="text_line2"></div>*/}
           <div className="category_box1" style={{left: '15%', top: '30%'}}>소통</div>
           <button className="communi_btn1">
-            <Link to="/textpage" className="text">
+            <Link to="/SendBottle" className="text">
               ㅤ 1. 쪽지보내기
             </Link>
           </button>
           <button className="communi_btn2">
-            <Link to="/sendtxt" className="send">
+            <Link to="/SentList" className="send">
               ㅤ 2. 내가보낸쪽지
             </Link>
           </button>
           <button className="communi_btn3">
-            <Link to="/recvtxt" className="recv">
+            <Link to="/RecvList" className="recv">
               ㅤ 3. 내가받은쪽지
             </Link>
           </button>

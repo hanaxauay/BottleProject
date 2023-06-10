@@ -5,14 +5,14 @@ import Authfail from "../pages/Authfail";
 import Authsuc from "../pages/Authsuc";
 import Emailauth from "../pages/Emailauth";
 import Mypage from "../pages/Mypage";
-import Textpage from "../pages/Textpage";
-import SendText from "../pages/SendText";
-import RecvTxt from "../pages/RecvTxt";
+import SendBottle from "../pages/SendBottle";
+import SentList from "../pages/SentList";
+import RecvList from "../pages/RecvList";
 import Login from "../pages/Login";
 import Main from "../pages/Main";
 import Register from "../pages/Register";
 import "../style/right.scss";
-import EmailContent from "../pages/EmailContent";
+import BottleDetail from "../pages/BottleDetail";
 
 export default function RightContainer() {
   const [component, setComponent] = useState();
@@ -37,14 +37,10 @@ export default function RightContainer() {
                   <Route path="/Authsuc" element={<Authsuc />} />
                   <Route path="/Emailauth" element={<Emailauth />} />
                   <Route path="/Mypage" element={<Mypage />} />
-                  <Route path="/Textpage" element={<Textpage />} />
-                  <Route path="/sendtxt" element={<SendText />} />
-                  <Route path="/recvtxt" element={<RecvTxt />} />
-                  <Route path="/SendText" element={<SendText />} />
-                  <Route
-                    path="/EmailContent/:itemId"
-                    element={<EmailContent />}
-                  />
+                  <Route path="/SendBottle" element={<SendBottle />} />
+                  <Route path="/SentList" element={<SentList />} />
+                  <Route path="/RecvList" element={<RecvList />} />
+                  <Route path="/BottleDetail/:itemId" element={<BottleDetail />} />
                 </Routes>
               </div>
             </div>

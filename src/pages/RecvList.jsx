@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
-export default function RecvTxt() {
+export default function RecvList() {
   const [bottles, setbottles] = useState([]);
 
   // 내가 받은 메세지들

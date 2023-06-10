@@ -11,7 +11,7 @@ import { useRef } from "react";
 import LeftContainer from "../components/LeftContainer";
 import { useEffect } from "react";
 
-export default function Textpage() {
+export default function SendBottle() {
   const [title, setTitle] = useState();
   const [text, settext] = useState();
   const titleInput = useRef();

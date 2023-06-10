@@ -10,7 +10,7 @@ import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-export default function SendText() {
+export default function SentList() {
   const [bottles, setbottles] = useState([]);
 
   // 내가 보낸 메세지 요청 방식 (get)
