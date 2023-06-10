@@ -57,7 +57,7 @@
   .recv_title {
     display: inline-block; /* 옆으로 나열 */
     position: absolute;
-    left: 47%;
+    left: 35%;
     top: 15.6%;
     color: #ffffff;
     font-size: 160%;
@@ -163,6 +163,12 @@
     }
   }
 
+  .recv_content {
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    top: 89%;
+  }
   .send_btn {
     display: inline-block;
     position: absolute;

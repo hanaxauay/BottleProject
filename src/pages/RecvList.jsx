@@ -17,10 +17,9 @@ export default function RecvList() {
       });
       if (response.data.status === "success") {
         sessionStorage.setItem("auth", response.data.auth);
-        console.log(response.data.message);
         setbottles(JSON.parse(response.data.message));
       } else {
-        console.error("getReceivedBottles error");
+        alert(response.data.message);
       }
     } catch (error) {
       alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
@@ -47,7 +46,7 @@ export default function RecvList() {
 
         {bottles.map((item, index) => (
           <Link
-            to={`/EmailContent/${item.LETTER_ID}`}
+            to={`/BottleDetail/${item.LETTER_ID}`}
             className="recv_list1"
             key={item.LETTER_ID}
           >
