@@ -25,3 +25,4 @@ yarn-error.log*
 .idea/Busproject.iml
 .idea/modules.xml
 .idea/vcs.xml
+.env
