@@ -5,8 +5,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import CryptoJS from "crypto-js";
 
 export default function Login() {
@@ -15,13 +13,10 @@ export default function Login() {
   const loginEmailInput = useRef(); //email input
   const loginPwInput = useRef(); // pwd input
 
-  // Password 암호화 작업 -> setPassword 에 암호화 된 password 세팅
   const onChangePwd = (e) => {
     setPassword(
       SHA256(
-        e.target.value,
-        process.env.REACT_APP_AES_SECRET_PASSWORD
-      ).toString()
+        e.target.value).toString()
     );
   };
   const aes128Encode = (secretKey, Iv, data) => {
@@ -29,9 +24,9 @@ export default function Login() {
       data,
       CryptoJS.enc.Utf8.parse(secretKey),
       {
-        iv: CryptoJS.enc.Utf8.parse(Iv), // [Enter IV (Optional) 지정 방식]
+        iv: CryptoJS.enc.Utf8.parse(Iv),
         padding: CryptoJS.pad.Pkcs7,
-        mode: CryptoJS.mode.CBC, // [cbc 모드 선택]
+        mode: CryptoJS.mode.CBC,
       }
     );
     return cipher.toString();
@@ -42,9 +37,8 @@ export default function Login() {
     if (!loginEmailInput.current.value || !loginPwInput.current.value) {
       return alert("값을 입력하세요");
     }
-    var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY; // key 값 16 바이트
-    var aes128Iv = process.env.REACT_APP_AES_SECRET_IV; //iv 16 바이트
-    // http://localhost:8080/login 으로 보내줌.
+    var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY;
+    var aes128Iv = process.env.REACT_APP_AES_SECRET_IV;
     try {
       var response = await axios.post(`/login`, null, {
         params: {
@@ -62,7 +56,7 @@ export default function Login() {
           sessionStorage.clear();
           sessionStorage.setItem("auth", response.data.auth);
 
-          window.location.replace("http://localhost:3000/mypage");
+          window.location.replace( process.env.REACT_APP_FRONT_SERVER+"/mypage");
         } else {
           loginEmailInput.current.value = "";
           loginPwInput.current.value = "";

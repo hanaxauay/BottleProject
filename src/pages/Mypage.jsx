@@ -64,7 +64,7 @@ export default function Mypage() {
               </Link>
           </button>
           <button className="account_btn3">
-              <Link to="/chgpwd" className="chgpwd">
+              <Link to="/chgPassword" className="chgpwd">
                   ㅤ 6. 비밀번호 변경
               </Link>
           </button>

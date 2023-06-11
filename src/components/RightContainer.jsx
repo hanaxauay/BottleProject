@@ -13,6 +13,8 @@ import Main from "../pages/Main";
 import Register from "../pages/Register";
 import "../style/right.scss";
 import BottleDetail from "../pages/BottleDetail";
+import chgPassword from "../pages/ChgPassword";
+import ChgPassword from "../pages/ChgPassword";
 
 export default function RightContainer() {
   const [component, setComponent] = useState();
@@ -41,6 +43,7 @@ export default function RightContainer() {
                   <Route path="/SentList" element={<SentList />} />
                   <Route path="/RecvList" element={<RecvList />} />
                   <Route path="/BottleDetail/:itemId" element={<BottleDetail />} />
+                  <Route path="/ChgPassword" element={<ChgPassword />} />
                 </Routes>
               </div>
             </div>
