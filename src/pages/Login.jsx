@@ -47,25 +47,26 @@ export default function Login() {
               aes128Iv,
               loginEmailInput.current.value
           ),
-            password: password,
-          },
-        });
+          password: password,
+          token : sessionStorage.getItem("token")
+        },
+      });
 
-        if (response.data.status === "success") {
-          //로컬 스토리지 저장해보기.
-          sessionStorage.clear();
-          sessionStorage.setItem("auth", response.data.auth);
+      if (response.data.status === "success") {
+        //로컬 스토리지 저장해보기.
+        sessionStorage.clear();
+        sessionStorage.setItem("auth", response.data.auth);
 
-          window.location.replace( process.env.REACT_APP_FRONT_SERVER+"/mypage");
-        } else {
-          loginEmailInput.current.value = "";
-          loginPwInput.current.value = "";
-          alert(response.data.message);
-        }
-      } catch(error) {
-        alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
-        console.error(error);
+        window.location.replace( process.env.REACT_APP_FRONT_SERVER+"/mypage");
+      } else {
+        loginEmailInput.current.value = "";
+        loginPwInput.current.value = "";
+        alert(response.data.message);
       }
+    } catch(error) {
+      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+      console.error(error);
+    }
   };
   useEffect(function () {
     sessionStorage.clear();

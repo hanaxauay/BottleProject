@@ -106,7 +106,8 @@ export default function Register() {
             var response = await axios.post("/join", null, {
                 params : {
                     email: aes128Encode(process.env.REACT_APP_AES_SECRET_KEY, process.env.REACT_APP_AES_SECRET_IV, mailInput.current.value),
-                    password: password
+                    password: password,
+                    token: sessionStorage.getItem("token")
                 }
             });
             if (response.data.status === "success") {

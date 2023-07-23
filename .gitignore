@@ -26,3 +26,9 @@ yarn-error.log*
 .idea/modules.xml
 .idea/vcs.xml
 .env
+.idea/inspectionProfiles/Project_Default.xml
+src/.idea/workspace.xml
+src/.idea/vcs.xml
+src/.idea/src.iml
+src/.idea/misc.xml
+src/.idea/modules.xml
