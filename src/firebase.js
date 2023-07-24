@@ -20,23 +20,28 @@ getToken(messaging, {
 })
   .then((currentToken) => {
     if (currentToken) {
-      sessionStorage.setItem("token", currentToken);
+      console.log(currentToken);
     } else {
       // no permisson
-      if (!('Notification' in window)) {
-        console.error('이 브라우저는 푸시 알림을 지원하지 않습니다.');
+      if (!("Notification" in window)) {
+        console.error("이 브라우저는 푸시 알림을 지원하지 않습니다.");
         return;
       }
-      if (Notification.permission !== 'granted') {
+      if (Notification.permission !== "granted") {
         // 푸시 알림 권한이 거부되었거나 허용되지 않은 상태이면 권한을 요청합니다.
         Notification.requestPermission().then(function (permission) {
-          if (permission === 'granted') {
-            console.log('푸시 알림 권한이 허용되었습니다.');
+          if (permission === "granted") {
+            console.log("푸시 알림 권한이 허용되었습니다.");
           } else {
-            console.warn('푸시 알림 권한이 거부되었습니다.');
+            console.warn("푸시 알림 권한이 거부되었습니다.");
           }
         });
       }
+      // Show permission request UI
+      console.log(
+        "No registration token available. Request permission to generate one."
+      );
+      // ...
     }
   })
   .catch((err) => {
@@ -49,3 +54,5 @@ onMessage(messaging, (payload) => {
   console.log("Message received. 왔냐 이씨벌럼아  ", payload);
   // ...
 });
+
+export default messaging;

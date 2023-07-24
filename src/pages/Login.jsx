@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "../style/login.scss";
 import { useRef } from "react";
 import axios from "axios";
@@ -6,18 +6,36 @@ import { Link } from "react-router-dom";
 import crypto, { HmacSHA256, SHA256 } from "crypto-js";
 import { useState } from "react";
 import CryptoJS from "crypto-js";
-
+import firebase from "../firebase";
+import messaging from "../firebase";
+import { getMessaging, getToken, onMessage } from "firebase/messaging";
 export default function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [currentToken, setCurrentToken] = useState(null);
   const loginEmailInput = useRef(); //email input
   const loginPwInput = useRef(); // pwd input
 
+  // 토큰 뺴오기
+  useEffect(() => {
+    const getTokenAndHandleMessages = async () => {
+      try {
+        const token = await getToken(messaging, {
+          vapidKey:
+            "BPnPG-BOQrhi94alHAm2U-kuiqoaYDFIBiU9VV1XQ6QCuN-Te9p7UcGW691e1cSGmy_tDsRGZycO2G7d1WgSfwI",
+        });
+        if (token) {
+          setCurrentToken(token);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getTokenAndHandleMessages();
+  }, []);
+
   const onChangePwd = (e) => {
-    setPassword(
-      SHA256(
-        e.target.value).toString()
-    );
+    setPassword(SHA256(e.target.value).toString());
   };
   const aes128Encode = (secretKey, Iv, data) => {
     const cipher = CryptoJS.AES.encrypt(
@@ -33,7 +51,7 @@ export default function Login() {
   };
 
   // Login button 눌렸을떄 setLogin 함수 호출.
-  const setLogin = async() => {
+  const setLogin = async () => {
     if (!loginEmailInput.current.value || !loginPwInput.current.value) {
       return alert("값을 입력하세요");
     }
@@ -43,12 +61,12 @@ export default function Login() {
       var response = await axios.post(`/login`, null, {
         params: {
           email: aes128Encode(
-              aes128SecretKey,
-              aes128Iv,
-              loginEmailInput.current.value
+            aes128SecretKey,
+            aes128Iv,
+            loginEmailInput.current.value
           ),
           password: password,
-          token : sessionStorage.getItem("token")
+          token: currentToken,
         },
       });
 
@@ -57,13 +75,13 @@ export default function Login() {
         sessionStorage.clear();
         sessionStorage.setItem("auth", response.data.auth);
 
-        window.location.replace( process.env.REACT_APP_FRONT_SERVER+"/mypage");
+        window.location.replace(process.env.REACT_APP_FRONT_SERVER + "/mypage");
       } else {
         loginEmailInput.current.value = "";
         loginPwInput.current.value = "";
         alert(response.data.message);
       }
-    } catch(error) {
+    } catch (error) {
       alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
       console.error(error);
     }
