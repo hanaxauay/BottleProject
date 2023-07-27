@@ -1,0 +1,103 @@
+
+<style>
+  .main_content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    background-color: #00017F;
+  }
+
+  .sendLetter {
+    background-color: white;
+    color: #00017F;
+    width: 50%;
+    height: 10%;
+    top: 25%;
+    left: 25%;
+    position: relative;
+  }
+  
+  .sign_box1 {
+    display: inline-block; /* 옆으로 나열 */
+    position: absolute;
+    width: 40%;
+    height: 5%;
+    left: 30%;
+    top: 50%;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+  .sign_box1 .sign_box2 {
+      display: inline-block; /* 옆으로 나열 */
+      position: absolute;
+      width: 99%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #d0d0d0;
+      overflow: visible;
+      margin-top: 1px;
+      margin-left: 1px;
+
+
+      z-index: 2;
+    }
+  .sign_box1 .sign_bar1 {
+      display: inline-block; /* 옆으로 나열 */
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 1px;
+      height: 100%;
+      background-color: #000000;
+      z-index: 6;
+    }
+    .sign_box1 .sign_bar2 {
+      display: inline-block; /* 옆으로 나열 */
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 100%;
+      height: 1px;
+      background-color: #000000;
+      z-index: 6;
+    }
+    .sign_box1 .signup_btn {
+      border-style: none;
+      position: absolute;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "DungGeunMo", sans-serif;
+      /* background-color: #c2c2c2; */
+      /* width: 116px;
+      height: 41px;
+      left: 0;
+      top :0; */
+      z-index: 5;
+      /* margin-top: 1px;
+      margin-left: 1px; */
+      cursor: pointer;
+
+    }
+ 
+  
+ 
+</style>
+<body>
+<div class="main_content">
+   
+    <div class="sign_box1">
+        <div class="sign_box2"></div>
+        <div class="sign_bar1"></div>
+        <div class="sign_bar2"></div>
+        <button class="signup_btn" onClick={register}>
+          가입하기
+        </button>
+      </div>
+</div>
+</body>
+
+
+
+
