@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ 
+  <title>Document</title>
+ <meta charset="UTF-8">
+ <style type="text/css">
+    @font-face {
+    font-family: 'DungGeunMo';
+    src: url('../fonts/DungGeunMo.ttf') format('truetype');
+}
+
+    html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    }
+    body{
+        height:100%;
+        padding:0;
+        font-size: 12pt;
+        font-family: "verdana";
+        font-weight: bolder;
+        text-align: center;
+        background-color: #00017F;
+
+        margin:30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        border : 10px;
+        border-style: ridge;
+
+    }
+    #wrap{
+        width: 100%;
+        height:100%;
+        margin:0px auto;
+        
+        
+        /*width값을 줘야 랩의 전체 중앙 정렬이 가능*/
+    }
+    .top{
+        width:100%;
+        height:15%;
+        position: relative;
+		
+        
+    }
+    .mid{
+        width:100%;
+        height:40%;
+        position: relative;
+       
+        float:left;
+    }
+    .bottom{
+        width:100%;
+        height:45%;
+        position: relative;
+       
+        clear:both;
+    }
+    .top .btn_setting{
+        width:170px;
+        height:170px;
+        position:absolute;
+/* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
+        
+        right:50px;
+        bottom:50px;
+        background-color:transparent;
+        /* background: url( "../images/icon_setting.png" ) no-repeat;
+        */
+        margin:0px;padding:0px;
+    }
+
+
+    .mid .textarea{
+        width:80%;    
+        height:70%; 
+        position:absolute;
+        margin: auto;
+        top:20%;
+        left:10%; 
+             
+ 
+    }
+    .mid .textarea .decoMsg{
+        width:100%;
+        height: 80%;
+        position:absolute;
+        margin: auto;
+        
+        display: flex;
+        justify-content : center;
+        align-items : center;
+
+        font-size: 50px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white;
+
+    }
+    .mid .textarea .welcomeMsg{
+        width:100%;
+        height: 20%;
+        position:absolute;
+        margin: auto;
+        top:80%;
+
+        display: flex;
+        justify-content : center;
+        align-items : center;
+
+        font-size: 80px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:#c2c2c2;
+
+    }
+    .bottom .btn_area{
+        display:grid;
+        width:80%;    
+        height:80%; 
+        position:absolute;
+        margin: auto;
+        bottom:20%;
+        left:10%;      
+ 
+        display: flex;
+        justify-content : center;
+        align-items : center;
+    }
+
+
+    .btn_grey {
+    position: absolute;
+    width: 600px;
+    height: 150px;
+
+    outline : solid 5px #c2c2c2;
+    border-left: solid 5px #000000;
+    border-top: solid 5px #000000;
+
+    background-color: #d0d0d0;
+    cursor: pointer;
+
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+
+  }
+
+  .btn_top{
+    top: 30px;
+  }
+  .btn_bottom{
+    bottom:30px;
+  }
+
+  
+
+ </style>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div class="top">
+            <button type="button" class="btn_setting" onclick="alert('세팅버튼클릭!')" ><span><img  src="../images/icon_setting.png"></span></button>
+        </div>
+        <div class="mid">
+            <div class =" textarea">
+                <div class ="decoMsg">
+┌〓〓〓〓〓♡〓〓〓〓〓┐<br>
+　。˚。‥‥…·─━☆。。<br>
+　 ˚。˚ 우리쪽zzi는~!<br>
+ 어쩌 고 저 쩌 고<br> 
+DB에서 내용 불러오기☆。<br>
+    20*10 비워두기<br>
+　 。˚。‥‥…·─━☆。˚┌┐<br>
+└〓〓〓〓〓♡〓〓〓〓〓┘<br>
+                </div>
+                <div class="welcomeMsg">
+                    WELCOME! 영심님!
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="btn_area"> 
+                 <input type="button" class="btn_grey btn_top" onclick="alert('쪽지보내기클릭!')" value="쪽지 보내기">
+                 <input type="button" class="btn_grey" onclick="alert('받음쪽지함!')"value="받은 쪽지함">
+                 <input type="button" class="btn_grey btn_bottom" onclick="alert('보낸쪽지함!')"value="보낸 쪽지함">
+                 </div>
+
+
+            </div>
+        </div>
+ 
+    </div>
+</body>
+</html>
