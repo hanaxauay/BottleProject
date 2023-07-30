@@ -28,6 +28,13 @@ export default function Mypage() {
         authCheck()
     }, []);
 
+    var logout = function () {
+        if(confirm("로그아웃 할까요?")){
+            sessionStorage.setItem("auth", "");
+            window.location.replace(process.env.REACT_APP_FRONT_SERVER+"/login");
+        }
+    }
+
   return (
       <div className="mypage_content">
           {/*<div className="text_box1"></div>*/}
@@ -53,10 +60,10 @@ export default function Mypage() {
           </button>
 
           <div className="category_box2" style={{left: '55%', top: '30%'}}>계정</div>
-          <button className="account_btn1">
-              <Link to="/logout" className="logout">
+          <button className="account_btn1" onClick={logout}>
+              <div to="/logout" className="logout">
                   ㅤ 4. 로그아웃
-              </Link>
+              </div>
           </button>
           <button className="account_btn2">
               <Link to="/myAccount" className="myAccount">
