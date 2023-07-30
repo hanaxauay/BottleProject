@@ -21,14 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.idea/misc.xml
-.idea/Busproject.iml
-.idea/modules.xml
-.idea/vcs.xml
 .env
-.idea/inspectionProfiles/Project_Default.xml
-src/.idea/workspace.xml
-src/.idea/vcs.xml
-src/.idea/src.iml
-src/.idea/misc.xml
-src/.idea/modules.xml
+.idea/*
+src/.idea/*

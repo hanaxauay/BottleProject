@@ -70,7 +70,7 @@ export default function RecvList() {
 
         <button className="send_btn">
           {/* 내가 보낸 쪽지함으로 이동 */}
-          <Link to="/sendtxt" className="sending">
+          <Link to="/SentList" className="sending">
             ㅤ 내가보낸쪽지함가기 &gt;
           </Link>
         </button>
