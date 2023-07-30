@@ -1,103 +1,166 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ 
+  <title>메인화면입니다~!</title>
+ <meta charset="UTF-8">
+ <style type="text/css">
+    @font-face {
+    font-family: 'DungGeunMo';
+    src: url('../fonts/DungGeunMo.ttf') format('truetype');
+}
 
-<style>
-  .main_content {
+    html, body {
+    margin: 0;
     height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    background-color: #00017F;
-  }
-
-  .sendLetter {
-    background-color: white;
-    color: #00017F;
-    width: 50%;
-    height: 10%;
-    top: 25%;
-    left: 25%;
-    position: relative;
-  }
-  
-  .sign_box1 {
-    display: inline-block; /* 옆으로 나열 */
-    position: absolute;
-    width: 40%;
-    height: 5%;
-    left: 30%;
-    top: 50%;
-    background-color: #ffffff;
-    z-index: 1;
-  }
-  .sign_box1 .sign_box2 {
-      display: inline-block; /* 옆으로 나열 */
-      position: absolute;
-      width: 99%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background-color: #d0d0d0;
-      overflow: visible;
-      margin-top: 1px;
-      margin-left: 1px;
-
-
-      z-index: 2;
+    overflow: hidden;
     }
-  .sign_box1 .sign_bar1 {
-      display: inline-block; /* 옆으로 나열 */
-      position: absolute;
-      left: 2px;
-      top: 2px;
-      width: 1px;
-      height: 100%;
-      background-color: #000000;
-      z-index: 6;
-    }
-    .sign_box1 .sign_bar2 {
-      display: inline-block; /* 옆으로 나열 */
-      position: absolute;
-      left: 2px;
-      top: 2px;
-      width: 100%;
-      height: 1px;
-      background-color: #000000;
-      z-index: 6;
-    }
-    .sign_box1 .signup_btn {
-      border-style: none;
-      position: absolute;
-      font-size: 20px;
-      font-weight: bold;
-      font-family: "DungGeunMo", sans-serif;
-      /* background-color: #c2c2c2; */
-      /* width: 116px;
-      height: 41px;
-      left: 0;
-      top :0; */
-      z-index: 5;
-      /* margin-top: 1px;
-      margin-left: 1px; */
-      cursor: pointer;
+    body{
+        height:100%;
+        padding:0;
+        font-size: 12pt;
+        font-family: "verdana";
+        font-weight: bolder;
+        text-align: center;
+        background-color: #00017F;
+
+        margin:30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        border : 10px;
+        border-style: ridge;
 
     }
+    #wrap{
+        width: 100%;
+        height:100%;
+        margin:0px auto;
+        
+        
+        /*width값을 줘야 랩의 전체 중앙 정렬이 가능*/
+    }
+    .top{
+        width:100%;
+        height:15%;
+        position: relative;
+		
+        
+    }
+    .mid{
+        width:100%;
+        height:40%;
+        position: relative;
+       
+        float:left;
+    }
+    .bottom{
+        width:100%;
+        height:45%;
+        position: relative;
+       
+        clear:both;
+    }
+    .mid .textarea{
+        width:80%;    
+        height:70%; 
+        position:absolute;
+        margin: auto;
+        top:20%;
+        left:10%; 
+             
  
-  
+    }
+    .mid .textarea .decoMsg{
+        width:100%;
+        height: 80%;
+        position:absolute;
+        margin: auto;
+        
+        display: flex;
+        justify-content : center;
+        align-items : center;
+
+        font-size: 50px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white;
+
+    }
+    .bottom .btn_area{
+        display:grid;
+        width:80%;    
+        height:80%; 
+        position:absolute;
+        margin: auto;
+        bottom:20%;
+        left:10%;      
  
-</style>
+        display: flex;
+        justify-content : center;
+        align-items : center;
+    }
+
+
+    .btn_grey {
+    position: absolute;
+    width: 600px;
+    height: 150px;
+
+    outline : solid 5px #c2c2c2;
+    border-left: solid 5px #000000;
+    border-top: solid 5px #000000;
+
+    background-color: #d0d0d0;
+    cursor: pointer;
+
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+
+  }
+
+  .btn_top{
+    top: 30px;
+  }
+
+
+
+
+ </style>
+</head>
+
 <body>
-<div class="main_content">
-   
-    <div class="sign_box1">
-        <div class="sign_box2"></div>
-        <div class="sign_bar1"></div>
-        <div class="sign_bar2"></div>
-        <button class="signup_btn" onClick={register}>
-          가입하기
-        </button>
-      </div>
-</div>
+    <div id="wrap">
+
+        <div class="top">
+            
+        </div>
+        <div class="mid">
+            <div class =" textarea">
+                <div class ="decoMsg">
+┌〓〓〓〓〓♡〓〓〓〓〓┐<br>
+　。˚。‥‥…·─━☆。。<br>
+　˚。우리쪽zzi는~!。˚ <br>
+ ㅊrㄴ호 취직 추카뽕<br> 
+ ˚。☆。ㅇ오옝오‥…·─━☆<br>
+ ˚。ㅇ오옝오‥…·─━☆<br>
+　 。˚。‥‥…·─━☆。˚┌┐<br>
+└〓〓〓〓〓♡〓〓〓〓〓┘<br>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="btn_area"> 
+                 <input type="button" class="btn_grey btn_top" onclick="alert('로그인!')" value="로그인ㅎr기">
+                 <input type="button" class="btn_grey" onclick="alert('회원가입!')"value="회원가입ㅎr긔">
+                 </div>
+
+
+            </div>
+        </div>
+ 
+    </div>
 </body>
-
-
-
-
+</html>
