@@ -1,9 +1,6 @@
 import React, {useEffect} from "react";
 import "../style/mypage.scss";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import LeftContainer from "../components/LeftContainer";
 import axios from "axios";
 
 export default function Mypage() {

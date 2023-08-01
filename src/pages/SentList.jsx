@@ -1,13 +1,8 @@
 import React from "react";
 import "../style/sendtxt.scss";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import axios from "axios";
-import CryptoJS from "crypto-js";
-import crypto, { HmacSHA256, SHA256 } from "crypto-js";
-import { useRef } from "react";
 import { useEffect } from "react";
 
 export default function SentList() {

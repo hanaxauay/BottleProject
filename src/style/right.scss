@@ -7,3 +7,30 @@
   flex-direction: column;
   align-items: center;
 }
+
+.alert_box {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 35%;
+  background-color: #AAAAAA;
+  z-index: 9999;
+
+  .alert_text_area {
+    position: relative;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    top: 20%;
+    font-size: 200%;
+  }
+
+  .confirm_btn {
+    position: relative;
+    font-family: "DungGeunMo";
+    font-weight: bold;
+    font-size: 150%;
+    top: 55%;
+    width: 20%;
+    height: 20%;
+  }
+}
