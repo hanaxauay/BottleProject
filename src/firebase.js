@@ -50,9 +50,12 @@ getToken(messaging, {
   });
 
 onMessage(messaging, (payload) => {
-  console.log(alert(payload));
-  console.log("Message received. 왔냐 이씨벌럼아  ", payload);
-  // ...
+  var title = payload.notification.title;
+  var options = {
+      body: payload.notification.body,
+      icon: payload.notification.icon
+  };
+  var notification = new Notification(title,options);
 });
 
 export default messaging;
