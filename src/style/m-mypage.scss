@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('../fonts/DungGeunMo.ttf') format('truetype');
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #mhtml {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #mbody {
+    height: 100%;
+    padding: 0;
+    font-size: 12pt;
+    font-family: "verdana";
+    font-weight: bolder;
+    text-align: center;
+    background-color: #00017F;
+  
+    margin: 2%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+  
+    border: 10px;
+    border-style: ridge;
+
+
+  }
+  
+  #wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+  }
+  
+  .top {
+    width: 100%;
+    height: 15%;
+    position: relative;
+  }
+  
+  .mid {
+    width: 100%;
+    height: 45%;
+    position: relative;
+    float: left;
+  }
+  
+  .bottom {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    clear: both;
+  }
+  
+  .top .btn_setting {
+
+    height: 70%;
+    width: 20%;
+
+    position: absolute;
+    right: 4%;
+    top :4%;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .mid .textarea {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    top: 10%;
+    left: 10%;
+  }
+  
+  .mid .textarea .decoMsg {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: auto;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+    color: white;
+  }
+  
+  .mid .textarea .welcomeMsg {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    margin: auto;
+    top: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: auto;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+    color: #c2c2c2;
+  }
+  
+  .bottom .btn_area {
+    display: grid;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    bottom: 20%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bottom .btn_area .btn_grey {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    outline: solid 3px #c2c2c2;
+    border-left: solid 4px #000000;
+    border-top: solid 4px #000000;
+    background-color: #d0d0d0;
+    cursor: pointer;
+    font-size: auto;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+  }
+  
+  .bottom .btn_area .btn_top {
+    top: 10%;
+  }
+  
+  .bottom .btn_area .btn_bottom {
+    bottom: 10%;
+  }
+  
