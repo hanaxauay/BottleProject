@@ -1,50 +1,42 @@
-import React, { useState } from "react";
-import "../style/main.scss";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import LeftContainer from "../components/LeftContainer";
-import RightContainer from "../components/RightContainer";
-export default function Main() {
+import React from 'react';
+import '../style/m-main.scss';
+
+function MMain() {
   return (
-    <>
-      <div className="main_content">
-        <div className="top">
-          <div className="topbox1">
-            <div className="topbox2">
-              <div className="topbox3">
-                {/*<div className="sicon_box1">*/}
-                {/*  <div className="sicon_box2">*/}
-                {/*    <div className="sicon_box3"> )و</div>*/}
-                {/*  </div>*/}
-                {/*</div>*/}
-                {/*<div className="sicon_bar1">*/}
-                {/*  <div className="sicon_bar2"> </div>*/}
-                {/*</div>*/}
-                {/*<div className="home_box1">*/}
-                {/*  <div className="home_box2">*/}
-                {/*    <button className="home_btn">*/}
-                {/*      <Link to="/" className="home">*/}
-                {/*        <FontAwesomeIcon icon={faHome} />ㅤ*/}
-                {/*      </Link>*/}
-                {/*    </button>*/}
-                {/*  </div>*/}
-                {/*</div>*/}
-                {/*<div className="ficon_box1">*/}
-                {/*  <div className="ficon_box2">*/}
-                {/*    <div className="ficon_box3">٩( </div>*/}
-                {/*  </div>*/}
-                {/*</div>*/}
-              </div>
-            </div>
+    <div id="wrap">
+      <div className="top"></div>
+      <div className="mid">
+        <div className="textarea">
+          <div className="decoMsg">
+            ┌〓〓〓〓〓♡〓〓〓〓〓┐<br />
+            .˚。‥‥…·─━☆。。<br />
+            .˚。우리쪽zzi는~!。˚ <br />
+            ㅊrㄴ호 취직 추카뽕<br />
+            .☆。ㅇ오옝오‥…·─━☆<br />
+            .ㅇ오옝오‥…·─━☆<br />
+            .˚。‥‥…·─━☆。˚┌┐<br />
+            └〓〓〓〓〓♡〓〓〓〓〓┘<br />
           </div>
-          <div className="title">홈페이지</div>
-        </div>
-        <div className="center_content">
-          <LeftContainer />
-          <RightContainer />
         </div>
       </div>
-    </>
+      <div className="bottom">
+        <div className="btn_area">
+          <input
+            type="button"
+            className="btn_grey btn_top"
+            onClick={() => alert('로그인!')}
+            value="로그인ㅎr기"
+          />
+          <input
+            type="button"
+            className="btn_grey"
+            onClick={() => alert('회원가입!')}
+            value="회원가입ㅎr긔"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
+
+export default MMain;
