@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ 
+  <title>회원가입화면입니다~!</title>
+ <meta charset="UTF-8">
+ <style type="text/css">
+    @font-face {
+    font-family: 'DungGeunMo';
+    src: url('../fonts/DungGeunMo.ttf') format('truetype');
+}
+
+    html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    }
+    body{
+        height:100%;
+        padding:0;
+        font-size: 12pt;
+        font-family: "verdana";
+        font-weight: bolder;
+        text-align: center;
+        background-color: #00017F;
+
+        margin:30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        border : 10px;
+        border-style: ridge;
+
+    }
+    #wrap{
+        width: 100%;
+        height:100%;
+        margin:0px auto;
+        
+        
+        /*width값을 줘야 랩의 전체 중앙 정렬이 가능*/
+    }
+    .top{
+        width:100%;
+        height:30%;
+        position: relative;
+		
+        
+    }
+    
+    .mid{
+        width:100%;
+        height:35%;
+        position: relative;
+       
+        float:left;
+    }
+    .bottom{
+        width:100%;
+        height:35%;
+        position: relative;
+       
+        clear:both;
+    }
+
+    .top .textarea{
+        width:100%;
+        height:50%;
+        position:absolute;
+        margin: auto;
+        top:30%;
+
+        font-size: 80px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white
+ 
+    }
+    
+    .mid .inputarea{
+        width:80%;    
+        height:90%; 
+        position:absolute;
+        margin: auto;
+        top:10%;
+        left:10%;  
+ 
+    }
+
+    .mid .inputarea .email {
+        width:25%;
+        height:20%;
+        position:absolute;
+/* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
+        
+        right:75%;
+        bottom:85%;
+        background-color:transparent;
+
+        font-size: 57px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white
+
+    }
+
+    .mid .inputarea .email-input {
+        width:62%;
+        height:20%;
+        position:absolute;
+/* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
+        
+        right:8%;
+        bottom:90%;
+        background-color:transparent;
+
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white
+
+    }
+
+    .mid .inputarea .pw {
+        width:25%;
+        height:20%;
+        position:absolute;
+/* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
+        
+        right:75%;
+        bottom:60%;
+        background-color:transparent;
+
+        font-size: 57px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white
+    }
+
+    .mid .inputarea .pw-input {
+        width:62%;
+        height:20%;
+        position:absolute;
+/* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
+        
+        right:8%;
+        bottom:65%;
+        background-color:transparent;
+
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white
+
+    }
+
+    .mid .inputarea .repw {
+        width:30%;
+        height:20%;
+        position:absolute;
+/* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
+        
+        right:75%;
+        bottom: 35%;
+        background-color:transparent;
+
+        font-size: 57px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white
+
+    }
+
+    .mid .inputarea .repw-input {
+        width:62%;
+        height:20%;
+        position:absolute;
+/* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
+        
+        right:8%;
+        bottom:40%;
+        background-color:transparent;
+
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color:white
+
+    }
+
+    
+  
+    .bottom .click_area{
+        display:grid;
+        width:80%;    
+        height:80%; 
+        position:absolute;
+        margin: auto;
+        bottom:20%;
+        left:10%;      
+ 
+        display: flex;
+        justify-content : center;
+        align-items : center;
+    }
+
+    .bottom .click_area .btn_reg {
+    position: absolute;
+    width: 600px;
+    height: 150px;
+    bottom: 80%;
+
+    outline : solid 5px #c2c2c2;
+    border-left: solid 5px #000000;
+    border-top: solid 5px #000000;
+
+    background-color: #d0d0d0;
+    cursor: pointer;
+
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+
+  }
+  
+  
+
+ </style>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div class="top">
+            <div class ="textarea">
+                ☆ a ☆<br />
+                。˚。a 。˚。<br />
+                *   a  *<br />
+                ☆ a☆<br />
+            </div>
+        </div>
+        <div class="mid">
+            <div class = "inputarea">
+                <div class = "email">
+                  e메일
+                </div>
+                <input class = "email-input" type="email" placeholder="Enter your email">
+                <div class = "pw">
+                    b번
+                </div>
+                <input class = "pw-input" type="password" placeholder="Enter your password">
+                <div class = "repw">
+                    b번확인
+                </div>
+                <input class = "repw-input" type="password" placeholder="Enter your password again">
+            </div>    
+        </div>
+        <div class="bottom">
+            <div class="click_area"> 
+                 <input type="button" class="btn_reg" onclick="alert('가입완@ㅁ@')"value="가입하긔">
+                 </div>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+</body>
+</html>
