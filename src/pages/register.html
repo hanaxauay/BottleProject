@@ -76,14 +76,33 @@
         color:white
  
     }
+    .mid .email-check {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 79%;
+    right: 4%;
+    
+
+    outline : solid 5px #c2c2c2;
+    border-left: solid 5px #000000;
+    border-top: solid 5px #000000;
+
+    background-color: #d0d0d0;
+    cursor: pointer;
+
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+
+    }
     
     .mid .inputarea{
         width:80%;    
-        height:90%; 
+        height:100%; 
         position:absolute;
         margin: auto;
-        top:10%;
-        left:10%;  
+        left: 10%; 
  
     }
 
@@ -94,7 +113,7 @@
 /* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
         
         right:75%;
-        bottom:85%;
+        bottom:67%;
         background-color:transparent;
 
         font-size: 57px;
@@ -111,7 +130,7 @@
 /* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
         
         right:8%;
-        bottom:90%;
+        bottom:74%;
         background-color:transparent;
 
         font-size: 40px;
@@ -121,6 +140,8 @@
 
     }
 
+    
+
     .mid .inputarea .pw {
         width:25%;
         height:20%;
@@ -128,7 +149,7 @@
 /* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
         
         right:75%;
-        bottom:60%;
+        bottom:40%;
         background-color:transparent;
 
         font-size: 57px;
@@ -144,7 +165,7 @@
 /* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
         
         right:8%;
-        bottom:65%;
+        bottom:48%;
         background-color:transparent;
 
         font-size: 40px;
@@ -161,7 +182,7 @@
 /* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
         
         right:75%;
-        bottom: 35%;
+        bottom: 15%;
         background-color:transparent;
 
         font-size: 57px;
@@ -178,7 +199,7 @@
 /* 부모가 relative고 자식이 absolute면 부모의 위치와 크기에 따라 자식의 위치가 상대적으로 변경 */
         
         right:8%;
-        bottom:40%;
+        bottom:22%;
         background-color:transparent;
 
         font-size: 40px;
@@ -208,7 +229,7 @@
     position: absolute;
     width: 600px;
     height: 150px;
-    bottom: 80%;
+    bottom: 70%;
 
     outline : solid 5px #c2c2c2;
     border-left: solid 5px #000000;
@@ -221,6 +242,20 @@
     font-weight: bold;
     font-family: "DungGeunMo", sans-serif;
 
+  }
+
+  .bottom .click_area .click_back {
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    margin: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   
   
@@ -240,6 +275,7 @@
             </div>
         </div>
         <div class="mid">
+            <input type="button" class="email-check" onclick="alert('중복@ㅁ@')"value="쳌">
             <div class = "inputarea">
                 <div class = "email">
                   e메일
@@ -258,6 +294,9 @@
         <div class="bottom">
             <div class="click_area"> 
                  <input type="button" class="btn_reg" onclick="alert('가입완@ㅁ@')"value="가입하긔">
+                 <div class="click_back" onclick="alert('빼애애액@ㅁ@')">
+                    &#8592; 빽
+                 </div>
                  </div>
                 </div>
             </div>
