@@ -1,17 +1,17 @@
-import React from "react";
-import "../style/textpage.scss";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import axios from "axios";
-import CryptoJS from "crypto-js";
-import crypto, { HmacSHA256, SHA256 } from "crypto-js";
-import { useRef } from "react";
-import LeftContainer from "../components/LeftContainer";
-import { useEffect } from "react";
+import React from 'react';
+import '../style/textpage.scss';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import axios from 'axios';
+import CryptoJS from 'crypto-js';
+import crypto, { HmacSHA256, SHA256 } from 'crypto-js';
+import { useRef } from 'react';
+import LeftContainer from '../components/LeftContainer';
+import { useEffect } from 'react';
 
-export default function SendBottle() {
+export default function SendBottle(rightContainerProps) {
   const [title, setTitle] = useState();
   const [text, settext] = useState();
   const titleInput = useRef();
@@ -21,22 +21,24 @@ export default function SendBottle() {
   const sendingText = async () => {
     try {
       const resSendingText = await axios.post(
-        "/bottle/sendBottleLetter",
+        '/bottle/sendBottleLetter',
         null,
         {
           params: {
             title: titleInput.current.value,
             content: textInput.current.value,
-            auth: sessionStorage.getItem("auth"),
+            auth: sessionStorage.getItem('auth'),
           },
         }
       );
-      if (resSendingText.data.status === "success") {
-        sessionStorage.setItem("auth", resSendingText.data.auth);
+      if (resSendingText.data.status === 'success') {
+        sessionStorage.setItem('auth', resSendingText.data.auth);
       }
-      alert(resSendingText.data.message);
+      rightContainerProps.alertTextArea.current.innerHTML =
+        resSendingText.data.message;
+      rightContainerProps.alertBox.current.style.display = 'block';
     } catch (error) {
-      console.log("메세지 보내는곳 잘못되었다.");
+      console.log('메세지 보내는곳 잘못되었다.');
       console.error(error);
     }
   };

@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import "../style/recvtxt.scss";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import axios from "axios";
+import React, { useEffect } from 'react';
+import '../style/recvtxt.scss';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
-export default function RecvList() {
+export default function RecvList(rightContainerProps) {
   const [bottles, setbottles] = useState([]);
 
   // 내가 받은 메세지들
@@ -12,17 +12,21 @@ export default function RecvList() {
     try {
       var response = await axios.get(`/bottle/getReceivedBottles/`, {
         params: {
-          auth: sessionStorage.getItem("auth"),
+          auth: sessionStorage.getItem('auth'),
         },
       });
-      if (response.data.status === "success") {
-        sessionStorage.setItem("auth", response.data.auth);
+      if (response.data.status === 'success') {
+        sessionStorage.setItem('auth', response.data.auth);
         setbottles(JSON.parse(response.data.message));
       } else {
-        alert(response.data.message);
+        rightContainerProps.alertTextArea.current.innerHTML =
+          response.data.message;
+        rightContainerProps.alertBox.current.style.display = 'block';
       }
     } catch (error) {
-      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '서버 내부 오류입니다.\n 관리자에게 문의하세요.';
+      rightContainerProps.alertBox.current.style.display = 'block';
     }
   };
 
@@ -53,7 +57,7 @@ export default function RecvList() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {index + 1}
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {item.IS_READ === "N" ? "(New!) " : null}
+            {item.IS_READ === 'N' ? '(New!) ' : null}
             {item.TITLE}
           </Link>
         ))}

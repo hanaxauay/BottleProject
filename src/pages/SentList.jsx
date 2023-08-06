@@ -1,29 +1,31 @@
-import React from "react";
-import "../style/sendtxt.scss";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import axios from "axios";
-import { useEffect } from "react";
+import React from 'react';
+import '../style/sendtxt.scss';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
+import { useEffect } from 'react';
 
-export default function SentList() {
+export default function SentList(rightContainerProps) {
   const [bottles, setbottles] = useState([]);
 
   // 내가 보낸 메세지 요청 방식 (get)
   const getSentBottles = async () => {
     try {
-      const resSendTxt = await axios.get("/bottle/getSentBottles", {
+      const resSendTxt = await axios.get('/bottle/getSentBottles', {
         params: {
-          auth: sessionStorage.getItem("auth"),
+          auth: sessionStorage.getItem('auth'),
         },
       });
-      if (resSendTxt.data.status === "success") {
-        sessionStorage.setItem("auth", resSendTxt.data.auth);
+      if (resSendTxt.data.status === 'success') {
+        sessionStorage.setItem('auth', resSendTxt.data.auth);
         setbottles(JSON.parse(resSendTxt.data.message));
       } else {
-        console.error("getReceivedBottles error");
+        console.error('getReceivedBottles error');
       }
     } catch (error) {
-      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '서버 내부 오류입니다.\n 관리자에게 문의하세요.';
+      rightContainerProps.alertBox.current.style.display = 'block';
     }
   };
 
@@ -50,7 +52,7 @@ export default function SentList() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {item.TITLE}
             &nbsp;
-            {item.IS_READ === "Y" ? "(Read!)" : ""}
+            {item.IS_READ === 'Y' ? '(Read!)' : ''}
           </div>
         ))}
         <div className="title_line3">

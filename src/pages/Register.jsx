@@ -1,17 +1,17 @@
-import React, { useRef } from "react";
-import "../style/register.scss";
-import { Link } from "react-router-dom";
-import { BiCheck } from "react-icons/bi";
-import { useState } from "react";
-import axios from "axios";
-import CryptoJS from "crypto-js";
-import crypto, { HmacSHA256, SHA256 } from "crypto-js";
-import { useEffect } from "react";
-import messaging from "../firebase";
-import { getMessaging, getToken, onMessage } from "firebase/messaging";
-export default function Register() {
+import React, { useRef } from 'react';
+import '../style/register.scss';
+import { Link } from 'react-router-dom';
+import { BiCheck } from 'react-icons/bi';
+import { useState } from 'react';
+import axios from 'axios';
+import CryptoJS from 'crypto-js';
+import crypto, { HmacSHA256, SHA256 } from 'crypto-js';
+import { useEffect } from 'react';
+import messaging from '../firebase';
+import { getMessaging, getToken, onMessage } from 'firebase/messaging';
+export default function Register(rightContainerProps) {
   // 회원가입 useState 지정.
-  const [email, setEmail] = useState("확인안됨");
+  const [email, setEmail] = useState('확인안됨');
   const [password, setPassword] = useState();
   const [check, setCheck] = useState();
   const [currentToken, setCurrentToken] = useState(null);
@@ -27,7 +27,7 @@ export default function Register() {
       try {
         const token = await getToken(messaging, {
           vapidKey:
-            "BPnPG-BOQrhi94alHAm2U-kuiqoaYDFIBiU9VV1XQ6QCuN-Te9p7UcGW691e1cSGmy_tDsRGZycO2G7d1WgSfwI",
+            'BPnPG-BOQrhi94alHAm2U-kuiqoaYDFIBiU9VV1XQ6QCuN-Te9p7UcGW691e1cSGmy_tDsRGZycO2G7d1WgSfwI',
         });
         if (token) {
           console.log(token);
@@ -70,7 +70,9 @@ export default function Register() {
     if (
       !/^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(emailValue)
     ) {
-      alert("이메일 형식이 올바르지 않습니다.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '이메일 형식이 옳바르지 않습니다.';
+      rightContainerProps.alertBox.current.style.display = 'block';
       return false;
     }
     return true;
@@ -79,11 +81,15 @@ export default function Register() {
   // 비밀번호 8자리 이상 , 비밀번호 재입력칸과 동일 하지 않으면 return
   const checkPassword = () => {
     if (passwordInput.current.value.length < 8) {
-      alert("비밀번호는 8글자 이상이어야 합니다.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '비밀번호는 8글자 이상이어야 합니다.';
+      rightContainerProps.alertBox.current.style.display = 'block';
       return false;
     }
     if (passwordInput.current.value !== confirmPasswordInput.current.value) {
-      alert("비밀번호가 일치하지 않습니다.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '비밀번호가 일치하지 않습니다.';
+      rightContainerProps.alertBox.current.style.display = 'block';
       return false;
     }
     return true;
@@ -92,11 +98,11 @@ export default function Register() {
   // email 중복체크 axios 통신.
   const checkDuplicationEmail = async () => {
     if (!checkEmail()) {
-      mailInput.current.value = "";
+      mailInput.current.value = '';
       return;
     }
     try {
-      var response = await axios.post("/checkEmail", null, {
+      var response = await axios.post('/checkEmail', null, {
         params: {
           email: aes128Encode(
             process.env.REACT_APP_AES_SECRET_KEY,
@@ -105,16 +111,22 @@ export default function Register() {
           ),
         },
       });
-      if (response.data.status === "success") {
-        setCheck("확인");
-        alert(response.data.message);
+      if (response.data.status === 'success') {
+        setCheck('확인');
+        rightContainerProps.alertTextArea.current.innerHTML =
+          response.data.message;
+        rightContainerProps.alertBox.current.style.display = 'block';
       } else {
-        setCheck("확인안됨");
-        alert(response.data.message);
-        mailInput.current.value = "";
+        setCheck('확인안됨');
+        rightContainerProps.alertTextArea.current.innerHTML =
+          response.data.message;
+        rightContainerProps.alertBox.current.style.display = 'block';
+        mailInput.current.value = '';
       }
     } catch (error) {
-      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '서버 내부 오류입니다.\n 관리자에게 문의하세요.';
+      rightContainerProps.alertBox.current.style.display = 'block';
     }
   };
 
@@ -125,23 +137,28 @@ export default function Register() {
       !passwordInput.current.value ||
       !confirmPasswordInput.current.value
     ) {
-      return alert("필수 항목을 입력해주세요!");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '필수 항목을 입력해주세요!';
+      rightContainerProps.alertBox.current.style.display = 'block';
+      return;
     }
     if (!checkEmail()) {
-      mailInput.current.value = "";
+      mailInput.current.value = '';
       return;
     }
     if (!checkPassword()) {
-      passwordInput.current.value = "";
-      confirmPasswordInput.current.value = "";
+      passwordInput.current.value = '';
+      confirmPasswordInput.current.value = '';
       return;
     }
-    if (check !== "확인") {
-      alert("이메일 중복 체크를 확인해주세요.");
+    if (check !== '확인') {
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '이메일 중복 체크를 확인해주세요.';
+      rightContainerProps.alertBox.current.style.display = 'block';
       return;
     }
     try {
-      var response = await axios.post("/join", null, {
+      var response = await axios.post('/join', null, {
         params: {
           email: aes128Encode(
             process.env.REACT_APP_AES_SECRET_KEY,
@@ -152,14 +169,20 @@ export default function Register() {
           token: currentToken,
         },
       });
-      if (response.data.status === "success") {
-        alert(response.data.message);
+      if (response.data.status === 'success') {
+        rightContainerProps.alertTextArea.current.innerHTML =
+          response.data.message;
+        rightContainerProps.alertBox.current.style.display = 'block';
         //로그인 컴포포넌트로 리다이렉트
-      } else if (response.data.status === "fail") {
-        alert(response.data.message);
+      } else if (response.data.status === 'fail') {
+        rightContainerProps.alertTextArea.current.innerHTML =
+          response.data.message;
+        rightContainerProps.alertBox.current.style.display = 'block';
       }
     } catch (error) {
-      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '서버 내부 오류입니다.\n 관리자에게 문의하세요.';
+      rightContainerProps.alertBox.current.style.display = 'block';
     }
   };
 

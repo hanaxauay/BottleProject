@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
-import "../style/login.scss";
-import { useRef } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import crypto, { HmacSHA256, SHA256 } from "crypto-js";
-import { useState } from "react";
-import CryptoJS from "crypto-js";
-import firebase from "../firebase";
-import messaging from "../firebase";
-import { getMessaging, getToken, onMessage } from "firebase/messaging";
-export default function Login() {
+import React, { useEffect } from 'react';
+import '../style/login.scss';
+import { useRef } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import crypto, { HmacSHA256, SHA256 } from 'crypto-js';
+import { useState } from 'react';
+import CryptoJS from 'crypto-js';
+import firebase from '../firebase';
+import messaging from '../firebase';
+import { getMessaging, getToken, onMessage } from 'firebase/messaging';
+export default function Login(rightContainerProps) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [currentToken, setCurrentToken] = useState(null);
@@ -22,7 +22,7 @@ export default function Login() {
       try {
         const token = await getToken(messaging, {
           vapidKey:
-            "BPnPG-BOQrhi94alHAm2U-kuiqoaYDFIBiU9VV1XQ6QCuN-Te9p7UcGW691e1cSGmy_tDsRGZycO2G7d1WgSfwI",
+            'BPnPG-BOQrhi94alHAm2U-kuiqoaYDFIBiU9VV1XQ6QCuN-Te9p7UcGW691e1cSGmy_tDsRGZycO2G7d1WgSfwI',
         });
         if (token) {
           setCurrentToken(token);
@@ -53,7 +53,8 @@ export default function Login() {
   // Login button 눌렸을떄 setLogin 함수 호출.
   const setLogin = async () => {
     if (!loginEmailInput.current.value || !loginPwInput.current.value) {
-      return alert("값을 입력하세요");
+      rightContainerProps.alertTextArea.current.innerHTML = '값을 입력해주세요';
+      rightContainerProps.alertBox.current.style.display = 'block';
     }
     var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY;
     var aes128Iv = process.env.REACT_APP_AES_SECRET_IV;
@@ -70,19 +71,23 @@ export default function Login() {
         },
       });
 
-      if (response.data.status === "success") {
+      if (response.data.status === 'success') {
         //로컬 스토리지 저장해보기.
         sessionStorage.clear();
-        sessionStorage.setItem("auth", response.data.auth);
+        sessionStorage.setItem('auth', response.data.auth);
 
-        window.location.replace(process.env.REACT_APP_FRONT_SERVER + "/mypage");
+        window.location.replace(process.env.REACT_APP_FRONT_SERVER + '/mypage');
       } else {
-        loginEmailInput.current.value = "";
-        loginPwInput.current.value = "";
-        alert(response.data.message);
+        loginEmailInput.current.value = '';
+        loginPwInput.current.value = '';
+        rightContainerProps.alertTextArea.current.innerHTML =
+          '이메일 혹은 비밀번호를 확인해주세요.';
+        rightContainerProps.alertBox.current.style.display = 'block';
       }
     } catch (error) {
-      alert("서버 내부 오류입니다.\n 관리자에게 문의하세요.");
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '서버 내부 오류입니다.\n 관리자에게 문의하세요.';
+      rightContainerProps.alertBox.current.style.display = 'block';
       console.error(error);
     }
   };
