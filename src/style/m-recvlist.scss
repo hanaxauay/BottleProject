@@ -13,10 +13,11 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-color: #00017F;
   }
   
   #mbody {
-    height: 100%;
+    height: 90%;
     padding: 0;
     font-size: 12pt;
     font-family: "verdana";
@@ -24,9 +25,9 @@
     text-align: center;
     background-color: #00017F;
   
-    margin: 2%;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    margin: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   
     border: 10px;
     border-style: ridge;
@@ -80,7 +81,83 @@
     background-color: red;
     border-top : 4px dashed #d0d0d0;
     border-bottom : 4px dashed #d0d0d0;
+
+
+    @media screen and (min-width: 700px) {
+        border-top : 7px dashed #d0d0d0;
+        border-bottom : 7px dashed #d0d0d0;
+    }
+
+
     
+    
+    font-size: 20px; // 기본 글씨 크기  
+    font-family: "DungGeunMo", sans-serif;
+
+    table {
+
+        width: 100%; // 테이블의 너비를 100%로 설정
+        table-layout: fixed; // 테이블 레이아웃을 고정으로 설정 (셀 너비를 고정하기 위해)
+        color: white;
+        
+      }
+      th{
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom : 3px dashed #d0d0d0;
+        margin:2%;
+
+        @media screen and (min-width: 300px) {
+            /* 화면 너비가 300px 이상인 경우 -> 대부분 이범위임 */
+            font-size: 19px; // 더 큰 화면에 대한 글씨 크기
+        }
+    
+        @media screen and (min-width: 700px) {
+            /* 화면 너비가 700px 이상인 경우 */
+            font-size: 35px; // 큰 화면에 대한 글씨 크기
+            border-bottom : 5px dashed #d0d0d0;
+        }
+    
+      }
+      td{
+            font-size: 14px;
+            font-weight: light;
+      
+    
+            @media screen and (min-width: 300px) {
+                /* 화면 너비가 300px 이상인 경우 -> 대부분 이범위임 */
+                font-size: 17px; // 더 큰 화면에 대한 글씨 크기
+            }
+        
+            @media screen and (min-width: 700px) {
+                /* 화면 너비가 700px 이상인 경우 */
+                font-size: 33px; // 큰 화면에 대한 글씨 크기
+            }
+        
+         
+    
+      }
+
+      th, td {
+      //  border: 1px solid black;
+        text-align: center;
+        padding-top:2%;
+        padding-bottom: 2%;
+      }     
+      
+
+
+      th:nth-child(1),
+      td:nth-child(1) {
+        padding-left: 2%;;
+        width: 25%;
+      }
+      
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 75%;
+      }
+
   }
   
   .bottom {
@@ -90,20 +167,11 @@
     clear: both;
     background-color: yellowgreen;
 
-    display: flex;
-    justify-content: space-between; // left와 right 사이에 공간을 균등하게 배치
-    align-items: center; // 수직 가운데 정렬
-
-
     font-weight: bold;
     font-family: "DungGeunMo", sans-serif;
     color: white;
-
-
-
     font-size: 12px; // 기본 글씨 크기  
-    font-weight: bold;
-    font-family: "DungGeunMo", sans-serif;
+
     
     //300이하인경우 -> 갤럭시폴드만(기본값), 젤작은값임
     //300~700 -> 대부분 폰
@@ -118,12 +186,12 @@
         /* 화면 너비가 700px 이상인 경우 */
         font-size: 30px; // 큰 화면에 대한 글씨 크기
     }
+
+    display: flex; /* 자식 요소를 좌우로 배치하기 위해 Flexbox 적용 */
+  justify-content: space-between; /* 좌우로 배치 */
+
   }
 
-  
-
-  
-  
 
 
   .bottom .left {
@@ -132,15 +200,28 @@
     height: 100%;
     background-color: navajowhite;
 
-    text-align: left;
+    display: flex; /* Flexbox 레이아웃 적용 */
+    align-items: center; /* 수직으로 가운데 정렬 */
+    //text-align: left; //글씨 왼쪽으로 붙이기
+    justify-content: flex-start; /* 글씨를 오른쪽으로 정렬 */
+
   }
+
+
   
   .bottom .right {
     position: absolute;
-    left:40%;
+    right: 0; /* 오른쪽에 붙도록 설정 */
     width: 60%; // 부모 요소의 40%만큼 너비를 가짐
     height: 100%;
 
-    text-align: right;
+    background-color: magenta;
+
+
+    display: flex; /* Flexbox 레이아웃 적용 */
+    align-items:center; /* 수직으로 가운데 정렬 */
+    justify-content: flex-end; /* 글씨를 오른쪽으로 정렬 */
+
+
   }
   
