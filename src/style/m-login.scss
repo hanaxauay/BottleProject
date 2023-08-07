@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('../fonts/DungGeunMo.ttf') format('truetype');
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#mhtml {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #00017F;
+}
+
+#mbody {
+  height: 90%;
+  padding: 0;
+  font-size: 12pt;
+  font-family: "verdana";
+  font-weight: bolder;
+  text-align: center;
+  background-color: #00017F;
+
+  margin: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  border: 10px;
+  border-style: ridge;
+
+
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+.top {
+  width: 100%;
+  height: 30%;
+  position: relative;
+
+
+  display: flex;
+  justify-content: center; // 수평 가운데 정렬
+  align-items: center; // 수직 가운데 정렬
+
+  font-size: 10px; // 기본 글씨 크기  
+  font-weight: bold;
+  font-family: "DungGeunMo", sans-serif;
+  
+  //300이하인경우 -> 갤럭시폴드만(기본값), 젤작은값임
+  //300~700 -> 대부분 폰
+  //700이상인경우 -> 패드
+
+  @media screen and (min-width: 300px) {
+      /* 화면 너비가 300px 이상인 경우 -> 대부분 이범위임 */
+      font-size: 24px; // 더 큰 화면에 대한 글씨 크기
+  }
+
+  @media screen and (min-width: 700px) {
+      /* 화면 너비가 700px 이상인 경우 */
+      font-size: 50px; // 큰 화면에 대한 글씨 크기
+  }
+
+
+
+  .textarea {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    margin: auto;
+    top: 20%;
+
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "DungGeunMo", sans-serif;
+    color: white;
+  }
+}
+
+.mid {
+  width: 100%;
+  height: 40%;
+  position: relative;
+  float: left;
+  border-top : 4px dashed #d0d0d0;
+  border-bottom : 4px dashed #d0d0d0;
+
+
+  @media screen and (min-width: 700px) {
+      border-top : 7px dashed #d0d0d0;
+      border-bottom : 7px dashed #d0d0d0;
+  }
+
+
+  
+  
+  font-size: 20px; // 기본 글씨 크기  
+  font-family: "DungGeunMo", sans-serif;
+
+    .inputarea {
+      width: 80%;
+      height: 90%;
+      position: absolute;
+      margin: auto;
+      top: 10%;
+      left: 10%;
+  
+      .email {
+        width: 35%;
+        height: 20%;
+        position: absolute;
+        right: 75%;
+        bottom: 70%;
+        background-color: transparent;
+        font-size: 32px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color: white;
+      }
+  
+      .email-input {
+        width: 72%;
+        height: 20%;
+        position: absolute;
+        left: 30%;
+        bottom: 75%;
+        background-color: transparent;
+        font-size: 21px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color: white;
+      }
+  
+      .pw {
+        width: 30%;
+        height: 20%;
+        position: absolute;
+        right: 75%;
+        bottom: 39%;
+        background-color: transparent;
+        font-size: 32px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color: white;
+      }
+  
+      .pw-input {
+        width: 72%;
+        height: 20%;
+        position: absolute;
+        left: 30%;
+        bottom: 43%;
+        background-color: transparent;
+        font-size: 21px;
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        color: white;
+      }
+    }
+  }
+  
+
+    .btn_login {
+      position: absolute;
+      width: 240px;
+      height: 65px;
+      bottom: 6%;
+      right: 5%;
+    
+
+      outline: solid 5px #c2c2c2;
+      border-left: solid 5px #000000;
+      border-top: solid 5px #000000;
+
+      background-color: #d0d0d0;
+      cursor: pointer;
+
+      font-size: 30px;
+      font-weight: bold;
+      font-family: "DungGeunMo", sans-serif;
+    }
+
+
+
+.bottom {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  clear: both;
+  
+
+  font-weight: bold;
+  font-family: "DungGeunMo", sans-serif;
+  color: white;
+  font-size: 12px;
+
+  @media screen and (min-width: 300px) {
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: 700px) {
+    font-size: 30px;
+  }
+
+  display: flex;
+  justify-content: space-between;
+
+  .click_area {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    bottom: 20%;
+    left: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn_reg {
+      position: absolute;
+      width: 240px;
+      height: 65px;
+      bottom: 58%;
+      right: 5%;
+
+      outline: solid 5px #c2c2c2;
+      border-left: solid 5px #000000;
+      border-top: solid 5px #000000;
+
+      background-color: #d0d0d0;
+      cursor: pointer;
+
+      font-size: 30px;
+      font-weight: bold;
+      font-family: "DungGeunMo", sans-serif;
+    }
+
+    .find-email,
+    .find-pw {
+      width: 47%;
+      height: 10%;
+      bottom: 55%;
+     
+
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "DungGeunMo", sans-serif;
+      color: white;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .find-email {
+      right: 50%;
+    }
+
+    .find-pw {
+      left: 50%;
+    }
+  }
+}
