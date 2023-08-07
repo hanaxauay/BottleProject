@@ -120,7 +120,7 @@
         right: 75%;
         bottom: 70%;
         background-color: transparent;
-        font-size: 32px;
+        font-size: 29px;
         font-weight: bold;
         font-family: "DungGeunMo", sans-serif;
         color: white;
@@ -146,7 +146,7 @@
         right: 75%;
         bottom: 39%;
         background-color: transparent;
-        font-size: 32px;
+        font-size: 29px;
         font-weight: bold;
         font-family: "DungGeunMo", sans-serif;
         color: white;
@@ -170,10 +170,10 @@
 
     .btn_login {
       position: absolute;
-      width: 240px;
-      height: 65px;
+      width: 200px;
+      height: 55px;
       bottom: 6%;
-      right: 5%;
+      left: 12%;
     
 
       outline: solid 5px #c2c2c2;
@@ -183,7 +183,7 @@
       background-color: #d0d0d0;
       cursor: pointer;
 
-      font-size: 30px;
+      font-size: 22px;
       font-weight: bold;
       font-family: "DungGeunMo", sans-serif;
     }
@@ -227,10 +227,10 @@
 
     .btn_reg {
       position: absolute;
-      width: 240px;
-      height: 65px;
-      bottom: 58%;
-      right: 5%;
+      width: 200px;
+      height: 55px;
+      bottom: 60%;
+      left: 12%;
 
       outline: solid 5px #c2c2c2;
       border-left: solid 5px #000000;
@@ -239,38 +239,38 @@
       background-color: #d0d0d0;
       cursor: pointer;
 
-      font-size: 30px;
+      font-size: 22px;
       font-weight: bold;
       font-family: "DungGeunMo", sans-serif;
     }
 
     .find-email,
-    .find-pw {
-      width: 47%;
-      height: 10%;
-      bottom: 55%;
-     
+.find-pw {
+  width: 47%;
+  height: 10%;
+  bottom: 70%;  // 변경된 부분
 
-      font-size: 20px;
-      font-weight: bold;
-      font-family: "DungGeunMo", sans-serif;
-      color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "DungGeunMo", sans-serif;
+  color: white;
 
-      background: none;
-      border: none;
-      cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
-    .find-email {
-      right: 50%;
-    }
+.find-email {
+  right: 50%;
+}
 
-    .find-pw {
-      left: 50%;
-    }
+.find-pw {
+  left: 50%;
+}
+
   }
 }
