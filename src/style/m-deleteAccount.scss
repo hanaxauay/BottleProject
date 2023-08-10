@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('../fonts/DungGeunMo.ttf') format('truetype');
+  }
+  
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #mhtml {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #00017F;
+  }
+  
+  #mbody {
+    height: 90%;
+    padding: 0;
+    font-size: 12pt;
+    font-family: "verdana";
+    font-weight: bolder;
+    text-align: center;
+    background-color: #00017F;
+  
+    margin: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  
+    border: 10px;
+    border-style: ridge;
+  
+  
+  }
+  
+  #wrap {
+    top:10%;
+    left:5%;
+    width: 90%;
+    height: 85%;
+    position: relative;
+    float: left;
+    background-color: #D9D9D9;
+    border: 2%;
+    
+  }
+
+
+    .top{
+        width: 100%;
+        height: 5%;
+        //background-color: red;
+        top:0%;
+
+        position:relative;
+
+        .close-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    
+        .close-button:hover {
+            background-color: #d0d0d0;
+        }
+    }
+    .mid{
+        width: 100%;
+        height: 90%;
+        //background-color: yellowgreen;
+        overflow: auto; // 내용이 넘칠 경우 스크롤을 생성합니다.
+        position:relative;
+    } 
+    .bottom{
+        width: 100%;
+        height: 5%;
+       //background-color: blueviolet;
+        bottom:0%;
+
+        position:relative;
+    }
+    .mid .email{
+        font-weight: bold;
+        font-family: "DungGeunMo", sans-serif;
+        font-size: large;
+        color: #0C0D45;
+        margin-bottom:5%;
+        
+    }
+    .mid .info{
+        width: 100%;
+        
+        position: relative;
+        //float: left;
+        //background-color: rebeccapurple;
+        border-top: 2px dashed #8E8A8A;
+        border-bottom: 2px dashed #8E8A8A;
+      
+      
+        @media screen and (min-width: 700px) {
+          border-top: 7px dashed #d0d0d0;
+          border-bottom: 7px dashed #d0d0d0;
+        }
+
+        
+        //font-family: "DungGeunMo", sans-serif;
+        color: black;
+      
+    }
+    .mid .changepwd{
+            font-weight: bold;
+                font-family: "DungGeunMo", sans-serif;
+                color: black;
+        .inputarea {
+            font-weight: bold;
+                font-family: "DungGeunMo", sans-serif;
+                color: black;
+            .pwd {
+                margin-top: 15%;
+                margin-bottom: 10%;
+            
+            }
+        
+            .pwd-input {
+                font-weight: bold;
+                font-family: "DungGeunMo", sans-serif;
+                color: white;
+            }
+        
+          
+        }
+        .btn_changepwd {
+             
+           
+            outline: solid 3px #c2c2c2;
+            border-left: solid 3px #000000;
+            border-top: solid 3px #000000;
+            //background-color: #d0d0d0;
+            cursor: pointer;
+            
+            font-weight: bold;
+            font-family: "DungGeunMo", sans-serif;
+
+            margin: 5%;
+          }
+        
+    }
+
+    .bottom .click_area {
+        display: flex;
+        justify-content: space-between; // 나란히 정렬하고 간격을 띄웁니다.
+    
+        .logout,
+        .find-pw {
+            cursor: pointer;
+          
+            width: calc(50% - 5px); // 나란히 정렬되도록 너비를 조절합니다.
+            text-align: center;
+    
+            &:hover {
+                //background-color: #e0e0e0;
+            }
+            font-weight: bold;
+                font-family: "DungGeunMo", sans-serif;
+                color:#8E8A8A;
+        }
+    }
