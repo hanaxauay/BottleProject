@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import '../style/m-setting.scss';
 
 function btn_goback() {
@@ -12,37 +13,56 @@ function btn_goback() {
   
 
 const MSetting = () => {
+
+    const [email, setEmail] = useState('test@hansung.com'); 
+    const [dateText, setDateText] = useState('2023년 4월 6일');
+    const [daysText, setDaysText] = useState('3 4 5');
+    const [sentMessages, setSentMessages] = useState('66');
+    const [receivedMessages, setReceivedMessages] = useState('55');
+  
+    const handleInputChange = (setterFunc, value) => {
+      setterFunc(value);
+    };
+  
+    // 이메일 변경 함수
+    const handleEmailChange = (newEmail) => {
+      setEmail(newEmail);
+    };
+
+
+
+
   return (
         <div id="mhtml">
             <div id = "mbody">
                 <div id="wrap">                   
                         <div className="top">
-                            x버튼추가--
-                              <div className="xbtn">
-                        
-                                </div>
+                            
+                            <div className="close-button" onClick={() => {/* close functionality */}}>
+                                 &#10006;
+                            </div>
                         </div>
                         <div className="mid">
                             <div className="email">
                                 <br></br>
-                            이메일@넣을.자릴
+                                {email}
                             </div>
                             <div className="info">
                                 <br></br>
-                                ┌〓〓〓〓〓♡〓〓〓〓〓┐<br></br>
+                                ┌〓〓〓〓〓<span style={{ color: '#850000' }}>♡</span>〓〓〓〓〓┐<br></br>
                                 ҉ ٩(๑{'>'}ω{'<'}๑)۶҉ <br></br>
                                 방フГ방フГ しΗ친구~!<br></br>
-                                2023년 4월 6일ના フГ입ṑΗᨈㅓ<br></br>
+                                <span style={{ color: '#850000' }}>{dateText}</span>ના フГ입ṑΗᨈㅓ<br></br>
                                 벌써 ㅎ占께ㅎŁスı <br></br>
-                                ♡ D + 3 4 5 일 ♡ 째긔<br></br>
+                                ♡ D + <span style={{ color: '#850000' }}>{daysText}</span> 일 ♡ 째긔<br></br>
                                 ユ 동ㅇビ Ꮣㅓ는 <br></br>
-                                ♥ 66통 ♥의 편スı를 보냈ヱ<br></br>
-                                ♥ 54통 ♥의 편スı를 받았Ꙕ <br></br>
+                                ♥ <span style={{ color: '#850000' }}>{sentMessages}</span>통 ♥의 편スı를 보냈ヱ<br></br>
+                                ♥ <span style={{ color: '#850000' }}>{receivedMessages}</span>통 ♥의 편スı를 받았Ꙕ <br></br>
                                 ｡｡ ᕕ༼✿•̀︿•́༽ᕗ<br></br>
                                 앞으로도 우ય 추억 <br></br>
                                 많๐ㅣ 쌓ㅈr ε=٩(●❛ö❛)۶<br></br>
                                 <br></br>
-                                └〓〓〓〓〓♡〓〓〓〓〓┘<br></br>
+                                └〓〓〓〓〓<span style={{ color: '#850000' }}>♡</span>〓〓〓〓〓┘<br></br>
                                 <br></br>  
                             </div>
                             <div className="changepwd">
