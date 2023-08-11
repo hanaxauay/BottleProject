@@ -1,0 +1,120 @@
+.bg {
+    background-color: #D3D3D3; /* 배경 색상을 원하는 색상으로 설정 */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+
+
+    .Right {
+        position: absolute;
+      background-color: #A9A9A9; /* 배경 색상을 원하는 색상으로 설정 */
+      width: 50%;
+      height: 60%;
+      bottom:10%;
+      right: 5%;
+
+      .Container {
+        //position: absolute;
+        width: 100%;
+        height: 100%;
+        outline: solid 10px #808080;
+        border : solid 10px #000000;
+        border-right: solid 15px #505050;
+        border-bottom: solid 15px #000000;
+        background-color: #00017F;
+
+
+
+
+
+        .mid{
+            width: 100%;
+            height: 100%;
+            top:10%;
+            //background-color: yellowgreen;
+            overflow: auto; // 내용이 넘칠 경우 스크롤을 생성합니다.
+            position:relative;
+
+            
+        } 
+
+        .mid .email{
+            font-weight: bold;
+            font-family: "DungGeunMo", sans-serif;
+            font-size: 80px;
+            color: white;
+            margin-bottom:3%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+
+            
+        }
+        .mid .info{
+            width: 100%;
+
+          //  display: flex;
+            justify-content: center;
+            align-items: center;
+           flex-direction: column;
+            text-align: center;
+
+            
+            position: relative;
+            //float: left;
+            //background-color: rebeccapurple;
+            border-top: 2px dashed #8E8A8A;
+            border-bottom: 2px dashed #8E8A8A;
+          
+          
+            @media screen and (min-width: 700px) {
+              border-top: 7px dashed #d0d0d0;
+              border-bottom: 7px dashed #d0d0d0;
+            }
+    
+            
+            font-family: "DungGeunMo", sans-serif;
+            color: white;
+            font-size: 50px;
+          
+        }
+
+
+
+        .click_area {
+            width:100%;
+            height: 10%;
+            margin-top: 5%;
+            bottom:0px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
+        .logout,
+        .find-pw,
+        .back-button {
+            cursor: pointer;
+            width: calc(33.33% - 5px); /* 3개 버튼이므로 1/3로 나눈 너비 */
+            text-align: center;
+            font-weight: bold;
+            font-family: "DungGeunMo", sans-serif;
+            font-size: 50px;
+            color: #8E8A8A;
+            &:hover {
+                background-color: #e0e0e0;
+            }
+        }
+
+
+
+
+      }
+    }
+  }
