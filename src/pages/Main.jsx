@@ -33,7 +33,7 @@ export default function Main() {
                 {/*<div className="ficon_box1">*/}
                 {/*  <div className="ficon_box2">*/}
                 {/*    <div className="ficon_box3">٩( </div>*/}
-                {/*  </div>*/}
+                {/*    </div>*/}
                 {/*</div>*/}
               </div>
             </div>

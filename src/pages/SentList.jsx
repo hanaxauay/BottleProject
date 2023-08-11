@@ -7,6 +7,10 @@ import { useEffect } from 'react';
 
 export default function SentList(rightContainerProps) {
   const [bottles, setbottles] = useState([]);
+//setbottles함수로 받아온 데이터를 bottles객체 안에 배열형식으로 저장
+//50번부터 파싱
+ 
+
 
   // 내가 보낸 메세지 요청 방식 (get)
   const getSentBottles = async () => {
@@ -16,11 +20,15 @@ export default function SentList(rightContainerProps) {
           auth: sessionStorage.getItem('auth'),
         },
       });
+        //resSendTxt.data 얘가 정보 갖고잇ㄴ는애
+     //여기서 콘솔로 찍어보면됨 console.log.resSendText.data
+
       if (resSendTxt.data.status === 'success') {
         sessionStorage.setItem('auth', resSendTxt.data.auth);
         setbottles(JSON.parse(resSendTxt.data.message));
       } else {
-        console.error('getReceivedBottles error');
+        console.error('getReceivedBottles error');//얘는지워도됌
+
       }
     } catch (error) {
       rightContainerProps.alertTextArea.current.innerHTML =
@@ -38,6 +46,7 @@ export default function SentList(rightContainerProps) {
       <div className="sendtxt_content">
         <div className="send_text">[ 내가 보낸 쪽지함 ]</div>
         <div className="title_line1">
+               {/* 50-60까지 찍어내기 반복 (가변) */}
           ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
         <div className="send_num">번호</div>
