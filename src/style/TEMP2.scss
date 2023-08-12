@@ -1,0 +1,156 @@
+.bg {
+    background-color: #D3D3D3; /* 배경 색상을 원하는 색상으로 설정 */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    .bold-text {
+        font-weight: bold;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+
+    .Right {
+        position: absolute;
+      background-color: #A9A9A9; /* 배경 색상을 원하는 색상으로 설정 */
+      width: 50%;
+      height: 60%;
+      bottom:10%;
+      right: 5%;
+
+      .Container {
+        //position: absolute;
+        width: 100%;
+        height: 100%;
+        outline: solid 10px #808080;
+        border : solid 10px #000000;
+        border-right: solid 15px #505050;
+        border-bottom: solid 15px #000000;
+        background-color: #00017F;
+
+       // overflow: auto; // 내용이 넘칠 경우 스크롤을 생성합니다.
+        position:relative;
+
+
+
+
+
+
+
+        .top{
+
+            width: 100%;
+            height: 10%;
+
+            font-weight: bold;
+            font-family: "DungGeunMo", sans-serif;
+            font-size: 70px;
+            color: #8E8A8A;
+            margin-bottom:3%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+
+            
+        }
+        .info{
+
+            overflow: auto; // 내용이 넘칠 경우 스크롤을 생성합니다.
+            width: 100%;
+            height:70%;
+
+           // display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            
+            position: relative;
+            //float: left;
+            //background-color: #2E2E5E;
+            border-top: 2px dashed #8E8A8A;
+            border-bottom: 2px dashed #8E8A8A;
+          
+          
+            @media screen and (min-width: 700px) {
+              border-top: 7px dashed #d0d0d0;
+              border-bottom: 7px dashed #d0d0d0;
+            }
+    
+            
+            font-family: "DungGeunMo", sans-serif;
+            color: white;
+            font-size: 50px;
+          
+        }
+        
+        .changepwd{
+            font-weight: bold;
+                font-family: "DungGeunMo", sans-serif;
+                color: black;
+        .inputarea {
+            font-weight: bold;
+                font-family: "DungGeunMo", sans-serif;
+                color: #8E8A8A;
+            .pwd {
+              //  margin-top: 15%;
+              //  margin-bottom: 10%;
+            
+            }
+        
+            .pwd-input {
+                font-weight: bold;
+                font-family: "DungGeunMo", sans-serif;
+                color: #c2c2c2;
+                font-size: 60px; 
+            }
+        
+          
+        }
+        .btn_bye {
+    
+            margin : 150px;
+            margin-bottom: 200px;
+            outline: solid 3px #c2c2c2;
+            border-left: solid 3px #000000;
+            border-top: solid 3px #000000;
+            //background-color: #d0d0d0;
+            cursor: pointer;
+            
+            font-size: 60px;
+            font-family: "DungGeunMo", sans-serif;
+
+           // margin: 5%;
+        }
+        
+    }
+
+    .bottom{
+        width:100%;
+            height: 10%;
+            margin-top: 2%;
+            bottom:0px;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            font-weight: bold;
+            font-family: "DungGeunMo", sans-serif;
+            font-size: 70px;
+            color: #8E8A8A;
+            margin-bottom:3%;
+
+    }
+
+
+      }
+    }
+  }
