@@ -1,4 +1,7 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../style/m-recvlist.scss';
 
 function btn_goback() {
@@ -11,7 +14,41 @@ function btn_goback() {
 
   
 
-const MRecvList = () => {
+  const MRecvList = (rightContainerProps) => {
+
+    const [bottles, setBottles] = useState([]);
+
+    useEffect(() => {
+      getReceivedBottles();
+    }, []);
+  
+    const getReceivedBottles = async () => {
+      try {
+        const response = await axios.get('/bottle/getReceivedBottles', {
+          params: {
+            auth: sessionStorage.getItem('auth'),
+          },
+        });
+        if (response.data.status === 'success') {
+          sessionStorage.setItem('auth', response.data.auth);
+          setBottles(JSON.parse(response.data.message));
+        } else {
+          console.error('getReceivedBottles error');
+        }
+      } catch (error) {
+        console.error('Server internal error');
+      }
+    };
+  
+
+
+
+
+
+
+
+
+
   return (
         <div id="mhtml">
             <div id = "mbody">
@@ -20,8 +57,23 @@ const MRecvList = () => {
                         [내가 받은 쪽지함]
                     </div>  {/*end of  top*/}
                     <div className="mid"> 
-                        
+
                     <table>
+    <tr>
+      <th>[번호]</th>
+      <th>제목</th>
+    </tr>
+    {bottles.map((item, index) => (
+      <tr key={item.LETTER_ID}>
+        <td>[{index + 1}]</td>
+        <td>{item.TITLE}</td>
+      </tr>
+    ))}
+  </table>
+
+
+                        
+{/*                     <table>
                         <tr>
                         <th>[번호]</th>
                         <th>제목</th>
@@ -43,7 +95,9 @@ const MRecvList = () => {
                         <td>데이터 셀 2</td>
                         </tr>
                     
-  </table>
+                    </table> */}
+
+
                     </div>  {/*end of mid */}
                     <div className="bottom">
                         <div className="left" onClick={btn_goback}>

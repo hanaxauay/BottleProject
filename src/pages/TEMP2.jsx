@@ -60,6 +60,14 @@ function TEMP2() {
                                 <br></br>
                                 <br></br>
                                 <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
                                 ┳┻|__∧<br></br>
                                 ┻┳|•﹃ •)  
                                 ┳┻|⊂ﾉ <br></br>
@@ -70,6 +78,14 @@ function TEMP2() {
                                 ┻┳|Ｊ<br></br>
                                 우己l ○l제 못봐?<br></br>
                                 (´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)<br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
                                 <br></br>
                                 <br></br>
                                 <br></br>
@@ -99,9 +115,25 @@ function TEMP2() {
                                 <br></br>
                                 <br></br>
                                 <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
                                 ⠀ ^∧＿∧^              ㅁビㄴr서  즐ᥐㅓ웠Ꙕ<br></br>
                                 ( ´ •̥̥̥ ω •̥̥̥ )&nbsp;&nbsp;  ❀   행복ṑΗ࿁ㅇㅑ ṑΗ<br></br>
                                 ,, ( ヽ∩∩ ) ,, ヽ|〃 ,,,  또 ㅁビㄴrㅈr  ♡<br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
                                 <br></br>
                                 <br></br>
                                 <br></br>
@@ -116,7 +148,7 @@ function TEMP2() {
                     <div className="inputarea">
                         <div className="pwd">
                             비밀번호를 입력하세요 &nbsp;&nbsp;
-                            <input className="pwd-input" type="password" placeholder="현재 비밀번호" />
+                            <input className="pwd-input" type="password" placeholder=" 현재 비밀번호" />
                         </div>                 
                     </div>{/*end of inputarea*/}
                     <input type="button" className="btn_bye" onClick={() => alert('잘가라')} value="&nbsp;탈퇴하기&nbsp;" />

@@ -1,0 +1,53 @@
+/* //모바일 버전 MRecvList 컴포넌트에서 axios를 이용하여 데이터를 받아오는 함수를 작성합니다:
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import '../style/m-recvlist.scss';
+
+const MRecvList = () => {
+  const [bottles, setBottles] = useState([]);
+
+  useEffect(() => {
+    getReceivedBottles();
+  }, []);
+
+  const getReceivedBottles = async () => {
+    try {
+      const response = await axios.get('/bottle/getReceivedBottles', {
+        params: {
+          auth: sessionStorage.getItem('auth'),
+        },
+      });
+      if (response.data.status === 'success') {
+        sessionStorage.setItem('auth', response.data.auth);
+        setBottles(JSON.parse(response.data.message));
+      } else {
+        console.error('getReceivedBottles error');
+      }
+    } catch (error) {
+      console.error('Server internal error');
+    }
+  };
+
+  // ... (나머지 JSX 코드)
+};
+
+export default MRecvList;
+
+
+//데이터를 화면에 출력하는 부분도 모바일 버전에 맞게 수정합니다. 예를 들어, bottles 배열을 map 함수를 사용하여 화면에 출력하는 부분을 수정합니다:
+<div className="mid">
+  <table>
+    <tr>
+      <th>[번호]</th>
+      <th>제목</th>
+    </tr>
+    {bottles.map((item, index) => (
+      <tr key={item.LETTER_ID}>
+        <td>[{index + 1}]</td>
+        <td>{item.TITLE}</td>
+      </tr>
+    ))}
+  </table>
+</div>
+ */
