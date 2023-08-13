@@ -68,7 +68,7 @@ export default function Mypage(rightContainerProps) {
         </div>
       </button>
       <button className="account_btn2">
-        <Link to="/myAccount" className="myAccount">
+        <Link to="/TEMP" className="myAccount">
           ㅤ 5. 내정보
         </Link>
       </button>

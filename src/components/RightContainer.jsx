@@ -13,7 +13,7 @@ import Register from '../pages/Register';
 import '../style/right.scss';
 import BottleDetail from '../pages/BottleDetail';
 import ChgPassword from '../pages/ChgPassword';
-
+import Temp from '../pages/Temp';
 export default function RightContainer() {
   const [component, setComponent] = useState();
   const alertBox = useRef(null);
@@ -108,6 +108,7 @@ export default function RightContainer() {
                     path="/ChgPassword"
                     element={<ChgPassword {...rightContainerProps} />}
                   />
+                  <Route path="/Temp" element={<Temp />} />
                 </Routes>
               </div>
             </div>
