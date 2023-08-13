@@ -26,9 +26,9 @@ export default function BottleDetail(rightContainerProps) {
       });
       if (response.data.status === 'success') {
         sessionStorage.setItem('auth', response.data.auth);
-        setTitle(JSON.parse(response.data.message).TITLE);
-        setSentDt(JSON.parse(response.data.message).SEND_DT);
-        setContent(JSON.parse(response.data.message).CONTENT);
+        setTitle(JSON.parse(response.data.message).title);
+        setSentDt(JSON.parse(response.data.message).sendDt);
+        setContent(JSON.parse(response.data.message).content);
         console.log(title);
         console.log(sendDt);
         console.log(content);

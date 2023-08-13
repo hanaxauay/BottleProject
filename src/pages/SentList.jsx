@@ -9,7 +9,7 @@ export default function SentList(rightContainerProps) {
   const [bottles, setbottles] = useState([]);
 //setbottles함수로 받아온 데이터를 bottles객체 안에 배열형식으로 저장
 //50번부터 파싱
- 
+
 
 
   // 내가 보낸 메세지 요청 방식 (get)
@@ -55,13 +55,13 @@ export default function SentList(rightContainerProps) {
           ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         </div>
         {bottles.map((item, index) => (
-          <div className="send_list1" key={item.LETTER_ID}>
+          <div className="send_list1" key={item.letterId}>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {index + 1}
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {item.TITLE}
+            {item.title}
             &nbsp;
-            {item.IS_READ === 'Y' ? '(Read!)' : ''}
+            {item.isRead === 'Y' ? '(Read!)' : ''}
           </div>
         ))}
         <div className="title_line3">

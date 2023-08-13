@@ -50,15 +50,15 @@ export default function RecvList(rightContainerProps) {
 
         {bottles.map((item, index) => (
           <Link
-            to={`/BottleDetail/${item.LETTER_ID}`}
+            to={`/BottleDetail/${item.letterId}`}
             className="recv_list1"
-            key={item.LETTER_ID}
+            key={item.letterId}
           >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {index + 1}
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {item.IS_READ === 'N' ? '(New!) ' : null}
-            {item.TITLE}
+            {item.isRead === 'N' ? '(New!) ' : null}
+            {item.title}
           </Link>
         ))}
 
