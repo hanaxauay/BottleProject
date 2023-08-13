@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import '../style/TEMP.scss';
+import '../style/setting.scss';
 import RightContainer from '../components/RightContainer';
 import { useEffect } from 'react';
 import { async } from '@firebase/util';
 import axios from 'axios';
 
-export default function Temp() {
+export default function Setting() {
   const [email, setEmail] = useState();
   const [dateText, setDateText] = useState('2023년 4월 6일');
   const [daysText, setDaysText] = useState('3 4 5');
@@ -60,8 +60,6 @@ export default function Temp() {
           </div>
           <div className="info">
             <br></br>
-            <br></br>
-            <br></br>
             ┌〓〓〓〓〓<span style={{ color: '#FF0000' }}>♡</span>〓〓〓〓〓┐
             <br></br>҉ ٩(๑{'>'}ω{'<'}๑)۶҉ <br></br>
             방フГ방フГ しΗ친구~!<br></br>
@@ -79,7 +77,7 @@ export default function Temp() {
             많๐ㅣ 쌓ㅈr ε=٩(●❛ö❛)۶<br></br>
             └〓〓〓〓〓<span style={{ color: '#850000' }}>♡</span>〓〓〓〓〓┘
             <br></br>
-            <br></br>
+
           </div>
           <div className="click_area">
             <div className="find-pw" onClick={() => alert('비번찾긔@ㅁ@')}>

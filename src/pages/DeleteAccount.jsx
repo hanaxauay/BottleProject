@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import '../style/TEMP2.scss';
+import '../style/deleteAccount.scss';
 import RightContainer from '../components/RightContainer';
 
-function TEMP2() {
+function DeleteAccount() {
 
     const [email, setEmail] = useState('test@hansung.com'); 
     const [dateText, setDateText] = useState('2023년 4월 6일');
@@ -38,6 +38,9 @@ function TEMP2() {
                                 <br></br>
                                 <br></br>
 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╱<br></br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/<br></br>
                                 &nbsp;╲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╱<br></br>
@@ -68,16 +71,16 @@ function TEMP2() {
                                 <br></br>
                                 <br></br>
                                 <br></br>
-                                ┳┻|__∧<br></br>
-                                ┻┳|•﹃ •)  
-                                ┳┻|⊂ﾉ <br></br>
-                                ┻┳|Ｊ┻┳|     
-                                ┳┻|__∧<br></br>
-                                ┻┳|•﹃ •)<br></br>
-                                ┳┻|⊂ﾉ<br></br>
-                                ┻┳|Ｊ<br></br>
-                                우己l ○l제 못봐?<br></br>
-                                (´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)<br></br>
+                                &nbsp;&nbsp;┳┻|__∧<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┻┳|•﹃ •)&nbsp;우己l<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┳┻|⊂ﾉ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┻┳|Ｊ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)<br></br>
+                              ○l제 &nbsp;&nbsp;&nbsp;&nbsp;┻┳|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <br></br>   
+                               &nbsp;&nbsp;┳┻|__∧<br></br>
+                               (´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┻┳|•﹃ •)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┳┻|⊂ﾉ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;못봐..?<br></br>
+                                ┻┳|Ｊ<br></br><br></br>
+                                
                                 <br></br>
                                 <br></br>
                                 <br></br>
@@ -96,12 +99,13 @@ function TEMP2() {
                                 <br></br>
                                 <br></br>
                                 <br></br>
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;;ハ＿ハ;+ヾ<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⊂(+ ｀Д´)つ&nbsp;&nbsp;<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;;/&nbsp;&nbsp;゜。゜。&nbsp;<br></br>
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;;し￣Ｊ。゜。゜<br></br>
                                 &nbsp;&nbsp;;ハ＿ハ;+ヾ<br></br>
-                                &nbsp;⊂(+ ｀Д´)つ<br></br>
-                                &nbsp;;/&nbsp;&nbsp;゜。゜。<br></br>
-                                &nbsp;;し￣Ｊ。゜。゜&nbsp;&nbsp;;ハ＿ハ;+ヾ<br></br>
-                                &nbsp;⊂(+ ｀Д´)つ<br></br>
-                                &nbsp;;/&nbsp;&nbsp;゜。゜。<br></br>
+                                &nbsp;⊂(+ ｀Д´)つ&nbsp;&nbsp;<br></br>
+                                ;/&nbsp;&nbsp;゜。゜。&nbsp;<br></br>
                                 &nbsp;;し￣Ｊ。゜。゜<br></br>
                                 <br></br>
                                 ㄴr 없๐ㅣ 잘 ⋌トㄴr 보ㅈr ! 흥<br></br>
@@ -123,9 +127,9 @@ function TEMP2() {
                                 <br></br>
                                 <br></br>
                                 <br></br>
-                                ⠀ ^∧＿∧^              ㅁビㄴr서  즐ᥐㅓ웠Ꙕ<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⠀ ^∧＿∧^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅁビㄴr서  즐ᥐㅓ웠Ꙕ&nbsp;<br></br>
                                 ( ´ •̥̥̥ ω •̥̥̥ )&nbsp;&nbsp;  ❀   행복ṑΗ࿁ㅇㅑ ṑΗ<br></br>
-                                ,, ( ヽ∩∩ ) ,, ヽ|〃 ,,,  또 ㅁビㄴrㅈr  ♡<br></br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,, ( ヽ∩∩ ) ,, ヽ|〃 ,,,  또 ㅁビㄴrㅈr  ♡<br></br>
                                 <br></br>
                                 <br></br>
                                 <br></br>
@@ -159,7 +163,7 @@ function TEMP2() {
 
              
                 <div className="bottom">
-                    다시한번 생각해 보긔,,
+                     다시한번 생각해 보긔,,
                 </div>
             </div>
         </div> 
@@ -167,4 +171,4 @@ function TEMP2() {
   );
 }
 
-export default TEMP2;
+export default DeleteAccount;

@@ -22,11 +22,12 @@
         //position: absolute;
         width: 100%;
         height: 100%;
-        outline: solid 10px #808080;
-        border : solid 10px #000000;
-        border-right: solid 15px #505050;
-        border-bottom: solid 15px #000000;
+        outline: solid 5px #808080;
+        border : solid 5px #000000;
+        border-right: solid 10px #505050;
+        border-bottom: solid 10px #000000;
         background-color: #00017F;
+
 
        // overflow: auto; // 내용이 넘칠 경우 스크롤을 생성합니다.
         position:relative;
@@ -44,7 +45,7 @@
 
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            font-size: 70px;
+            font-size: 25px;
             color: #8E8A8A;
             margin-bottom:3%;
 
@@ -78,14 +79,14 @@
           
           
             @media screen and (min-width: 700px) {
-              border-top: 7px dashed #d0d0d0;
-              border-bottom: 7px dashed #d0d0d0;
+              border-top: 3px dashed #d0d0d0;
+              border-bottom: 3px dashed #d0d0d0;
             }
     
             
             font-family: "DungGeunMo", sans-serif;
             color: white;
-            font-size: 50px;
+            font-size: 20px;
           
         }
         
@@ -107,22 +108,22 @@
                 font-weight: bold;
                 font-family: "DungGeunMo", sans-serif;
                 color: #c2c2c2;
-                font-size: 60px; 
+                font-size: 20px; 
             }
         
           
         }
         .btn_bye {
     
-            margin : 150px;
-            margin-bottom: 200px;
+            margin : 50px;
+            margin-bottom: 100px;
             outline: solid 3px #c2c2c2;
             border-left: solid 3px #000000;
             border-top: solid 3px #000000;
             //background-color: #d0d0d0;
             cursor: pointer;
             
-            font-size: 60px;
+            font-size: 20px;
             font-family: "DungGeunMo", sans-serif;
 
            // margin: 5%;
@@ -144,7 +145,7 @@
 
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            font-size: 70px;
+            font-size: 20px;
             color: #8E8A8A;
             margin-bottom:3%;
 
