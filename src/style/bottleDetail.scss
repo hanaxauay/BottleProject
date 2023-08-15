@@ -23,22 +23,6 @@
     z-index: 1;
   }
 
-  .title_line1 {
-    position: absolute;
-    left: 3%;
-    top: 6.6%;
-    height: 10%;
-    width: 93%;
-    color: #ffffff;
-    font-size: 160%;
-    font-family: "DungGeunMo";
-    font-weight: bold;
-    display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    z-index: 2;
-  }
-
   .recv_num {
     display: inline-block; /* 옆으로 나열 */
     position: absolute;
@@ -83,22 +67,6 @@
     z-index: 4;
   }
 
-  .title_line2 {
-    position: absolute;
-    left: 3%;
-    top: 15%;
-    height: 10%;
-    width: 93%;
-    color: #ffffff;
-    font-size: 160%;
-    font-family: "DungGeunMo";
-    font-weight: bold;
-    display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    z-index: 5;
-  }
-
   .recv_list1 {
     text-decoration: none;
 
@@ -120,78 +88,40 @@
     }
   }
 
-  .title_line3 {
-    position: absolute;
-    left: 3%;
-    top: 83%;
-    height: 10%;
-    width: 93%;
-    color: #ffffff;
-    font-size: 160%;
-    font-family: "DungGeunMo";
-    font-weight: bold;
-    display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    z-index: 4;
-  }
-
-  .back_btn {
-    display: inline-block;
-    position: absolute;
-    font-size: 140%;
-    font-family: "DungGeunMo";
-    font-weight: bold;
-    left: 4%;
-    top: 89%;
-    right: 9%;
-    height: 8%;
-    width: 20%;
-    z-index: 4;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-
-    .back {
-      text-decoration: none;
-      color: #ffffff;
-    }
-
-    .back:hover {
-      color: #666;
-    }
-  }
-
   .recv_content {
     display: inline-block;
     position: absolute;
+    font-size: 160%;
+    font-family: "DungGeunMo";
+    color: #ffffff;
+    font-weight: bold;
     left: 5%;
-    top: 89%;
+    top: 28%;
   }
-  .send_btn {
+
+  .chat_btn {
     display: inline-block;
     position: absolute;
     font-size: 140%;
     font-family: "DungGeunMo";
     font-weight: bold;
-    left: 63%;
+    left: 40%;
+    width: 20%;
     top: 89%;
     height: 8%;
-    width: 30%;
     background: none;
     border: none;
     outline: none;
     z-index: 6;
     cursor: pointer;
 
-    .sending {
+    .cha_btn_text {
       text-decoration: none;
       color: #ffffff;
     }
-
-    .sending:hover {
+    .cha_btn_text:hover {
       color: #666;
     }
   }
+
 }

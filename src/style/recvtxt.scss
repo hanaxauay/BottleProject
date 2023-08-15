@@ -26,17 +26,15 @@
   .title_line1 {
     position: absolute;
     left: 3%;
-    top: 6.6%;
-    height: 10%;
+    top: 12%;
+    height: 0.5%;
     width: 93%;
-    color: #ffffff;
-    font-size: 160%;
-    font-family: "DungGeunMo";
-    font-weight: bold;
+    background-image: linear-gradient(100deg, white 80%, transparent 0%);
+    background-size: 30px 1px; /* 점의 간격을 조정할 수 있습니다. */
     display: flex;
     justify-content: center; /* 가로 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
-    z-index: 2;
+    z-index: 4;
   }
 
   .recv_num {
@@ -68,21 +66,18 @@
     align-items: center; /* 세로 중앙 정렬 */
     z-index: 4;
   }
-
   .title_line2 {
     position: absolute;
     left: 3%;
-    top: 15%;
-    height: 10%;
+    top: 22%;
+    height: 0.5%;
     width: 93%;
-    color: #ffffff;
-    font-size: 160%;
-    font-family: "DungGeunMo";
-    font-weight: bold;
+    background-image: linear-gradient(100deg, white 80%, transparent 0%);
+    background-size: 30px 1px; /* 점의 간격을 조정할 수 있습니다. */
     display: flex;
     justify-content: center; /* 가로 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
-    z-index: 5;
+    z-index: 4;
   }
 
   .recv_list1 {
@@ -109,13 +104,11 @@
   .title_line3 {
     position: absolute;
     left: 3%;
-    top: 83%;
-    height: 10%;
+    top: 85%;
+    height: 0.5%;
     width: 93%;
-    color: #ffffff;
-    font-size: 160%;
-    font-family: "DungGeunMo";
-    font-weight: bold;
+    background-image: linear-gradient(100deg, white 80%, transparent 0%);
+    background-size: 30px 1px; /* 점의 간격을 조정할 수 있습니다. */
     display: flex;
     justify-content: center; /* 가로 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
@@ -128,9 +121,8 @@
     font-size: 140%;
     font-family: "DungGeunMo";
     font-weight: bold;
-    left: 4%;
+    left: 0%;
     top: 89%;
-    right: 9%;
     height: 8%;
     width: 20%;
     z-index: 4;
@@ -140,6 +132,7 @@
     cursor: pointer;
 
     .back {
+      display: flex;
       text-decoration: none;
       color: #ffffff;
     }
@@ -155,10 +148,10 @@
     font-size: 140%;
     font-family: "DungGeunMo";
     font-weight: bold;
-    left: 63%;
+    right: 2%;
     top: 89%;
     height: 8%;
-    width: 30%;
+    width: 20%;
     background: none;
     border: none;
     outline: none;
@@ -166,6 +159,7 @@
     cursor: pointer;
 
     .sending {
+      display: flex;
       text-decoration: none;
       color: #ffffff;
     }

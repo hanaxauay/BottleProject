@@ -38,15 +38,11 @@ export default function RecvList(rightContainerProps) {
     <>
       <div className="recvtxt_content">
         <div className="recv_text">[ 내가 받은 쪽지함 ]</div>
-        <div className="title_line1">
-          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-        </div>
+        <div className="title_line1" />
 
         <div className="recv_num">번호</div>
         <div className="recv_title">제목</div>
-        <div className="title_line2">
-          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-        </div>
+        <div className="title_line2" />
 
         {bottles.map((item, index) => (
           <Link
@@ -62,9 +58,7 @@ export default function RecvList(rightContainerProps) {
           </Link>
         ))}
 
-        <div className="title_line3">
-          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-        </div>
+        <div className="title_line3" />
         {/* 뒤로가기 버튼 */}
         <button className="back_btn">
           <Link to="/mypage" className="back">
@@ -75,7 +69,7 @@ export default function RecvList(rightContainerProps) {
         <button className="send_btn">
           {/* 내가 보낸 쪽지함으로 이동 */}
           <Link to="/SentList" className="sending">
-            ㅤ 내가보낸쪽지함가기 &gt;
+            ㅤ 보낸쪽지함 &gt;
           </Link>
         </button>
       </div>
