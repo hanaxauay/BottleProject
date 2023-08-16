@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import "../style/main.scss";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import LeftContainer from "../components/LeftContainer";
-import RightContainer from "../components/RightContainer";
+import React, { useState } from 'react';
+import '../style/main.scss';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import LeftContainer from '../components/LeftContainer';
+import RightContainer from '../components/RightContainer';
 export default function Main() {
   return (
     <>

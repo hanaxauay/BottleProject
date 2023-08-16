@@ -7,7 +7,7 @@ import { async } from '@firebase/util';
 import axios from 'axios';
 
 export default function Setting() {
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState([]);
   const [dateText, setDateText] = useState('2023년 4월 6일');
   const [daysText, setDaysText] = useState('3 4 5');
   const [sentMessages, setSentMessages] = useState('66');
@@ -31,13 +31,12 @@ export default function Setting() {
         },
       });
       if (resGetUserInfo.data.status === 'success') {
-        const message = resGetUserInfo.data.message;
-        console.log(message);
-        setEmail(message.EMAIL);
-        setDateText(message.JOIN_DT);
-        setDaysText(message.DDAY);
-        setSentMessages(message.CNT_SENT);
-        setReceivedMessages(message.CNT_RECEIVED);
+        const userInfo = JSON.parse(resGetUserInfo.data.message);
+        setEmail(userInfo.email);
+        setDateText(userInfo.joinDt);
+        setDaysText(userInfo.dday);
+        setSentMessages(userInfo.cntSent);
+        setReceivedMessages(userInfo.cntReceived);
       }
     } catch (error) {
       console.error(error);
@@ -77,7 +76,6 @@ export default function Setting() {
             많๐ㅣ 쌓ㅈr ε=٩(●❛ö❛)۶<br></br>
             └〓〓〓〓〓<span style={{ color: '#850000' }}>♡</span>〓〓〓〓〓┘
             <br></br>
-
           </div>
           <div className="click_area">
             <div className="find-pw" onClick={() => alert('비번찾긔@ㅁ@')}>
