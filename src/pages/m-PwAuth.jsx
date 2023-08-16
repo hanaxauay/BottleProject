@@ -47,8 +47,8 @@ const MPwAuth = () => {
               <input
                 type="button"
                 className="btn_reg"
-                onClick={() => alert("가입완@ㅁ@")}
-                value="인증확인하긔"
+                onClick={() => alert("엥 틀림@ㅁ@")}
+                value="클릭하긔"
               />
               <div className="click_back" onClick={() => alert("빼애애액@ㅁ@")}>
                 &#8592; 빽
