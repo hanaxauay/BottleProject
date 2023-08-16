@@ -8,10 +8,10 @@ import axios from 'axios';
 
 export default function Setting() {
   const [email, setEmail] = useState([]);
-  const [dateText, setDateText] = useState('2023년 4월 6일');
-  const [daysText, setDaysText] = useState('3 4 5');
-  const [sentMessages, setSentMessages] = useState('66');
-  const [receivedMessages, setReceivedMessages] = useState('55');
+  const [dateText, setDateText] = useState();
+  const [daysText, setDaysText] = useState();
+  const [sentMessages, setSentMessages] = useState();
+  const [receivedMessages, setReceivedMessages] = useState();
 
   const handleInputChange = (setterFunc, value) => {
     setterFunc(value);
