@@ -2,6 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import '../style/m-setting.scss';
 
+import RightContainer from '../components/RightContainer';
+import { useEffect } from 'react';
+import { async } from '@firebase/util';
+import axios from 'axios';
+
 function btn_goback() {
     alert("뒤로가기 클z릭!");
   }
@@ -14,7 +19,8 @@ function btn_goback() {
 
 const MSetting = () => {
 
-    const [email, setEmail] = useState('test@hansung.com'); 
+    const [email, setEmail] = useState([]);
+   // const [email, setEmail] = useState('test@hansung.com'); 
     const [dateText, setDateText] = useState('2023년 4월 6일');
     const [daysText, setDaysText] = useState('3 4 5');
     const [sentMessages, setSentMessages] = useState('66');
@@ -29,7 +35,38 @@ const MSetting = () => {
       setEmail(newEmail);
     };
 
-
+    const getUserInfo = async () => {
+        console.log('잘 찍힘 ');
+        try {
+          const resGetUserInfo = await axios.get('/user/getUserInfo', {
+            params: {
+              auth: sessionStorage.getItem('auth'),
+            },
+          });
+          if (resGetUserInfo.data.status === 'success') {
+            const message = resGetUserInfo.data.message;
+            
+            console.log("ㅡ모발ㅡㅡㅡㅡㅡㅡ");
+           
+            console.log(message);
+           
+            const userInfo = JSON.parse(resGetUserInfo.data.message);
+            setEmail(userInfo.email);
+            setDateText(userInfo.joinDt);
+            setDaysText(userInfo.dday);
+            setSentMessages(userInfo.cntSent);
+            setReceivedMessages(userInfo.cntReceived);
+          }
+        } catch (error) {
+          console.error(error);
+          console.log('UserInfo 가져오는 부분 에러');
+        }
+      };
+    
+      //  TEMP 화면 들어오는 순간 useEffect 로 getUserInfo 함수 호출
+      useEffect(() => {
+        getUserInfo();
+      }, []);
 
 
   return (

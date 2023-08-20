@@ -31,6 +31,12 @@ export default function Setting() {
         },
       });
       if (resGetUserInfo.data.status === 'success') {
+        const message = resGetUserInfo.data.message;
+        
+        console.log("ㅡㅡㅡㅡㅡㅡㅡ");
+       
+        console.log(message);
+       
         const userInfo = JSON.parse(resGetUserInfo.data.message);
         setEmail(userInfo.email);
         setDateText(userInfo.joinDt);
@@ -51,7 +57,6 @@ export default function Setting() {
 
   return (
     <div className="bg">
-      <div className="Right">
         <div className="Container">
           <div className="email">
             <br></br>
@@ -89,10 +94,10 @@ export default function Setting() {
               onClick={() => alert('뒤로가기 버튼 클릭')}
             >
               |비번변경|
+            
             </div>
           </div>
         </div>
-      </div>
     </div> /*bg*/
   );
 }
