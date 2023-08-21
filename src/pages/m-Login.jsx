@@ -8,7 +8,7 @@ import firebase from '../firebase';
 import messaging from '../firebase';
 import { getMessaging, getToken, onMessage } from 'firebase/messaging';
        
-const MLogin = () => {
+export default function MLogin(rightContainerProps) {
 
 
   const [email, setEmail] = useState();
@@ -56,8 +56,8 @@ const MLogin = () => {
   // Login button 눌렸을떄 setLogin 함수 호출.
   const setLogin = async () => {
     if (!loginEmailInput.current.value || !loginPwInput.current.value) {
-   //   rightContainerProps.alertTextArea.current.innerHTML = '값을 입력해주세요';
-   //   rightContainerProps.alertBox.current.style.display = 'block';
+      rightContainerProps.alertTextArea.current.innerHTML = '값을 입력해주세요';
+      rightContainerProps.alertBox.current.style.display = 'block';
     }
     var aes128SecretKey = process.env.REACT_APP_AES_SECRET_KEY;
     var aes128Iv = process.env.REACT_APP_AES_SECRET_IV;
@@ -88,14 +88,14 @@ const MLogin = () => {
         console.log("로그인실패");
         alert("로깅@ㅇ노노@");
 
-   //     rightContainerProps.alertTextArea.current.innerHTML =
-   //       '이메일 혹은 비밀번호를 확인해주세요.';
-   //     rightContainerProps.alertBox.current.style.display = 'block';
+        rightContainerProps.alertTextArea.current.innerHTML =
+          '이메일 혹은 비밀번호를 확인해주세요.';
+        rightContainerProps.alertBox.current.style.display = 'block';
       }
     } catch (error) {
-  //    rightContainerProps.alertTextArea.current.innerHTML =
-  //      '서버 내부 오류입니다.\n 관리자에게 문의하세요.';
-  //    rightContainerProps.alertBox.current.style.display = 'block';
+      rightContainerProps.alertTextArea.current.innerHTML =
+        '서버 내부 오류입니다.\n 관리자에게 문의하세요.';
+      rightContainerProps.alertBox.current.style.display = 'block';
       console.error(error);
     }
   };
@@ -177,4 +177,4 @@ const MLogin = () => {
   );
 };
 
-export default MLogin;
+//export default MLogin;

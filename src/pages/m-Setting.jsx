@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import '../style/m-setting.scss';
 
-import RightContainer from '../components/RightContainer';
+//import RightContainer from '../components/RightContainer';
 import { useEffect } from 'react';
 import { async } from '@firebase/util';
 import axios from 'axios';
