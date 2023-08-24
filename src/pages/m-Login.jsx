@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import "../style/m-login.scss";
+import React, { useEffect, useRef, useState } from 'react';
+import '../style/m-login.scss';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import crypto, { HmacSHA256, SHA256 } from 'crypto-js';
@@ -7,17 +7,13 @@ import CryptoJS from 'crypto-js';
 import firebase from '../firebase';
 import messaging from '../firebase';
 import { getMessaging, getToken, onMessage } from 'firebase/messaging';
-       
+
 export default function MLogin(rightContainerProps) {
-
-
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [currentToken, setCurrentToken] = useState(null);
   const loginEmailInput = useRef(); //email input
   const loginPwInput = useRef(); // pwd input
-
-
 
   // 토큰 뺴오기
   useEffect(() => {
@@ -78,15 +74,15 @@ export default function MLogin(rightContainerProps) {
         //로컬 스토리지 저장해보기.
         sessionStorage.clear();
         sessionStorage.setItem('auth', response.data.auth);
-        console.log("로그인성공");
-        alert("로깅@ㅁ@");
+        console.log('로그인성공');
+        alert('로깅@ㅁ@');
 
         window.location.replace(process.env.REACT_APP_FRONT_SERVER + '/mypage');
       } else {
         loginEmailInput.current.value = '';
         loginPwInput.current.value = '';
-        console.log("로그인실패");
-        alert("로깅@ㅇ노노@");
+        console.log('로그인실패');
+        alert('로깅@ㅇ노노@');
 
         rightContainerProps.alertTextArea.current.innerHTML =
           '이메일 혹은 비밀번호를 확인해주세요.';
@@ -102,13 +98,6 @@ export default function MLogin(rightContainerProps) {
   useEffect(function () {
     sessionStorage.clear();
   }, []);
-
-
-
-
-
-
-
 
   return (
     <div id="mhtml">
@@ -138,43 +127,43 @@ export default function MLogin(rightContainerProps) {
                 className="pw-input"
                 type="password"
                 placeholder="Enter your password"
-                ref={loginPwInput} onChange={onChangePwd}
+                ref={loginPwInput}
+                onChange={onChangePwd}
               />
-            </div>  
-            <div className ="btnarea">
-                <input
-                    type="button"
-                    className="btn_login"
-                    onClick={setLogin}
-                    value="로그인하긔"
-                  />
-                <input
-                  type="button"
-                  className="btn_reg"
-                  onClick={() => alert("회원가입@ㅁ@")}
-                  value="회원가입하긔"
-                />
+            </div>
+            <div className="btnarea">
+              <input
+                type="button"
+                className="btn_login"
+                onClick={setLogin}
+                value="로그인하긔"
+              />
+              <input
+                type="button"
+                className="btn_reg"
+                onClick={() => alert('회원가입@ㅁ@')}
+                value="회원가입하긔"
+              />
             </div>
           </div>
           <div className="bottom">
             <div className="click_area">
-              
               <button
                 className="find-email"
-                onClick={() => alert("이메일찾긔@ㅁ@")}
+                onClick={() => alert('이메일찾긔@ㅁ@')}
               >
                 |이메일찾긔|
               </button>
-              <div className="find-pw" onClick={() => alert("비번찾긔@ㅁ@")}>
+              <div className="find-pw" onClick={() => alert('비번찾긔@ㅁ@')}>
                 |비번찾긔|
               </div>
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>{' '}
       {/*end of mbody */}
     </div>
   );
-};
+}
 
 //export default MLogin;
