@@ -13,9 +13,10 @@ import Register from '../pages/Register';
 import '../style/right.scss';
 import BottleDetail from '../pages/BottleDetail';
 import ChgPassword from '../pages/ChgPassword';
-import ChatDetail from "../pages/ChatDetail";
+import ChatDetail from '../pages/ChatDetail';
 //import Temp from '../pages/Temp';
 import Setting from '../pages/Setting';
+import FindPassword from '../pages/FindPassword';
 export default function RightContainer() {
   const [component, setComponent] = useState();
   const alertBox = useRef(null);
@@ -111,10 +112,11 @@ export default function RightContainer() {
                     element={<ChgPassword {...rightContainerProps} />}
                   />
                   <Route
-                      path="/ChatDetail"
-                      element={<ChatDetail {...rightContainerProps} />}
+                    path="/ChatDetail"
+                    element={<ChatDetail {...rightContainerProps} />}
                   />
                   <Route path="/Temp" element={<Setting />} />
+                  <Route path="/findPassword" element={<FindPassword />} />
                 </Routes>
               </div>
             </div>

@@ -37,6 +37,7 @@ export default function Login(rightContainerProps) {
   const onChangePwd = (e) => {
     setPassword(SHA256(e.target.value).toString());
   };
+
   const aes128Encode = (secretKey, Iv, data) => {
     const cipher = CryptoJS.AES.encrypt(
       data,

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import '../style/setting.scss';
 import RightContainer from '../components/RightContainer';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { async } from '@firebase/util';
 import axios from 'axios';
 
@@ -32,11 +33,11 @@ export default function Setting() {
       });
       if (resGetUserInfo.data.status === 'success') {
         const message = resGetUserInfo.data.message;
-        
-        console.log("ㅡㅡㅡㅡㅡㅡㅡ");
-       
+
+        console.log('ㅡㅡㅡㅡㅡㅡㅡ');
+
         console.log(message);
-       
+
         const userInfo = JSON.parse(resGetUserInfo.data.message);
         setEmail(userInfo.email);
         setDateText(userInfo.joinDt);
@@ -57,47 +58,51 @@ export default function Setting() {
 
   return (
     <div className="bg">
-        <div className="Container">
-          <div className="email">
-            <br></br>
-            {email}
-          </div>
-          <div className="info">
-            <br></br>
-            ┌〓〓〓〓〓<span style={{ color: '#FF0000' }}>♡</span>〓〓〓〓〓┐
-            <br></br>҉ ٩(๑{'>'}ω{'<'}๑)۶҉ <br></br>
-            방フГ방フГ しΗ친구~!<br></br>
-            <span style={{ color: '#FF0000' }}>{dateText}</span>ના フГ입ṑΗᨈㅓ
-            <br></br>
-            벌써 ㅎ占께ㅎŁスı <br></br>♡ D +{' '}
-            <span style={{ color: '#FF0000' }}>{daysText}</span> 일 ♡ 째긔
-            <br></br>ユ 동ㅇビ Ꮣㅓ는 <br></br>♥{' '}
-            <span style={{ color: '#FF0000' }}>{sentMessages}</span>통 ♥의
-            편スı를 보냈ヱ<br></br>♥{' '}
-            <span style={{ color: '#FF0000' }}>{receivedMessages}</span>통 ♥의
-            편スı를 받았Ꙕ<br></br>
-            ｡｡ ᕕ༼✿•̀︿•́༽ᕗ<br></br>
-            앞으로도 우ય 추억 <br></br>
-            많๐ㅣ 쌓ㅈr ε=٩(●❛ö❛)۶<br></br>
-            └〓〓〓〓〓<span style={{ color: '#850000' }}>♡</span>〓〓〓〓〓┘
-            <br></br>
-          </div>
-          <div className="click_area">
-            <div className="find-pw" onClick={() => alert('비번찾긔@ㅁ@')}>
-              |로그아웃|
-            </div>
-            <div className="find-pw" onClick={() => alert('비번찾긔@ㅁ@')}>
-              |회원탈퇴|
-            </div>
-            <div
-              className="back-button"
-              onClick={() => alert('뒤로가기 버튼 클릭')}
-            >
-              |비번변경|
-            
-            </div>
-          </div>
+      <div className="Container">
+        <div className="email">
+          <br></br>
+          {email}
         </div>
+        <div className="info">
+          <br></br>
+          ┌〓〓〓〓〓<span style={{ color: '#FF0000' }}>♡</span>〓〓〓〓〓┐
+          <br></br>҉ ٩(๑{'>'}ω{'<'}๑)۶҉ <br></br>
+          방フГ방フГ しΗ친구~!<br></br>
+          <span style={{ color: '#FF0000' }}>{dateText}</span>ના フГ입ṑΗᨈㅓ
+          <br></br>
+          벌써 ㅎ占께ㅎŁスı <br></br>♡ D +{' '}
+          <span style={{ color: '#FF0000' }}>{daysText}</span> 일 ♡ 째긔
+          <br></br>ユ 동ㅇビ Ꮣㅓ는 <br></br>♥{' '}
+          <span style={{ color: '#FF0000' }}>{sentMessages}</span>통 ♥의 편スı를
+          보냈ヱ<br></br>♥{' '}
+          <span style={{ color: '#FF0000' }}>{receivedMessages}</span>통 ♥의
+          편スı를 받았Ꙕ<br></br>
+          ｡｡ ᕕ༼✿•̀︿•́༽ᕗ<br></br>
+          앞으로도 우ય 추억 <br></br>
+          많๐ㅣ 쌓ㅈr ε=٩(●❛ö❛)۶<br></br>
+          └〓〓〓〓〓<span style={{ color: '#850000' }}>♡</span>〓〓〓〓〓┘
+          <br></br>
+        </div>
+        <div className="click_area">
+          <div className="find-pw" onClick={() => alert('비번찾긔@ㅁ@')}>
+            |로그아웃|
+          </div>
+          <Link
+            to="#"
+            className="find-pw"
+            onClick={() => alert('비번찾긔@ㅁ@')}
+          >
+            |회원탈퇴|
+          </Link>
+          <Link
+            to="/findPassword"
+            className="back-button"
+            onClick={() => alert('비밀번호 찾기 버튼 클릭')}
+          >
+            |비번변경|
+          </Link>
+        </div>
+      </div>
     </div> /*bg*/
   );
 }
