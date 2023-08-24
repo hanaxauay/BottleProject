@@ -77,12 +77,12 @@
       height: 50%;
       position: absolute;
       margin: auto;
-      top: 20%;
+      top: 30%;
   
       font-size: 35px;
       font-weight: bold;
       font-family: "DungGeunMo", sans-serif;
-      color: white;
+      color: yellow;
     }
   }
   
@@ -91,8 +91,7 @@
     height: 40%;
     position: relative;
     float: left;
-    border-top : 4px dashed #d0d0d0;
-    border-bottom : 4px dashed #d0d0d0;
+
    
   
   
@@ -112,18 +111,20 @@
         width: 7.5%;
         height: 7.5%;
         bottom: 70%;
-        right: 2.5%;
+        right: 4%;
         
     
-        outline : solid 5px #c2c2c2;
-        border-left: solid 5px #000000;
-        border-top: solid 5px #000000;
+        // outline : solid 5px #c2c2c2;
+        // border-left: solid 5px #000000;
+        // border-top: solid 5px #000000;
     
-        background-color: #d0d0d0;
+        background-color: transparent;
+        border: none;
         cursor: pointer;
     
-        font-size: 15px;
+        font-size: 20px;
         font-weight: bold;
+        color: yellow;
         font-family: "DungGeunMo", sans-serif;
     
         }
@@ -145,7 +146,7 @@
             font-size: 20px;
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            color: white;
+            color: #c2c2c2;
         }
     
         .email-input {
@@ -158,7 +159,7 @@
             font-size: 18px;
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            color: white;
+            color: #c2c2c2;
         }
     
         .pw {
@@ -171,7 +172,7 @@
             font-size: 20px;
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            color: white;
+            color: #c2c2c2;
           
         }
     
@@ -185,7 +186,7 @@
             font-size: 18px;
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            color: white;
+            color: #c2c2c2;
         }
 
         .repw {
@@ -198,7 +199,7 @@
             font-size: 20px;
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            color: white;
+            color: #c2c2c2;
           }
           
          .repw-input {
@@ -211,7 +212,7 @@
             font-size: 18px;
             font-weight: bold;
             font-family: "DungGeunMo", sans-serif;
-            color: white;
+            color: #c2c2c2;
           }
       }
     }
@@ -226,7 +227,7 @@
   
     font-weight: bold;
     font-family: "DungGeunMo", sans-serif;
-    color: white;
+    color: #c2c2c2;
     font-size: 12px;
   
     @media screen and (min-width: 300px) {
@@ -277,7 +278,7 @@
         font-size: 32px;
         font-weight: bold;
         font-family: "DungGeunMo", sans-serif;
-        color: white;
+        color: #c2c2c2;
         background: none;
         border: none;
         cursor: pointer;
