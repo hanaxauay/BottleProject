@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 // import Main from './pages/Main';
 
 //import MobileMain from './pages/MobileMain';//<MobileMain />
+//import MoblieMain from "./pages/MoblileMain';
 //import MLogin  from './pages/m-Login';
 import MMain from './pages/m-Main';
 import Mobile from './pages/Mobile';
